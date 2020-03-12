@@ -13,22 +13,67 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+# Site wide configuration
+
+title:            Perpetually Learning
+locale:           en_US
+url:              http://www.bradaallen.com
+
+description: > # this means to ignore newlines until "baseurl:"
+  Brad Allen's personal blog. I love building things (and learning how to build
+  new things). Preferably those that scale. Keywords: Product Management, Data Science,
+  Data Engineering, Python, Stanford, Stanford GSB, Penn State, Pennsylvania, TFA,
+  Teach For America, Bain, Embrace, Aclima, Peloton Technology, Mechatronics, C+
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-theme: minimal-mistakes-jekyll
+theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-sitemap
+permalink:   /:categories/:title/
+markdown:    kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: compressed  
+
+# Site owner
+owner:
+  name: Brad Allen
+  avatar: Brad_Thumbs_Up.jpg
+  bio: "Doing a little more each day."
+  email: bradaallen@gmail.com
+  disqus-shortname: 
+  twitter: bradaallen
+  facebook: bradaallen
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
+  github: bradaallen
+  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
+  linkedin: bradaallen
+  xing: #username
+  instagram: bradaallen
+  lastfm: #username
+  tumblr: #username
+  pinterest: #username
+  foursquare: #username
+  steam: #username
+  dribbble: #username
+  youtube: #username
+  soundcloud: #username
+  weibo: #username
+  flickr: #username
+  codepen: #username
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

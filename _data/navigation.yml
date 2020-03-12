@@ -1,0 +1,13 @@
+# Site navigation links
+
+- title: Writing
+  url: /writing/
+
+- title: Photos
+  url: /photos/
+
+- title: About
+  url: /about/
+  
+- title: Keep in Touch!
+  url: /signup/
