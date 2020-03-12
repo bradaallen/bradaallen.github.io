@@ -24,7 +24,7 @@ description: > # this means to ignore newlines until "baseurl:"
   new things). Preferably those that scale. Keywords: Product Management, Data Science,
   Data Engineering, Python, Stanford, Stanford GSB, Penn State, Pennsylvania, TFA,
   Teach For America, Bain, Embrace, Aclima, Peloton Technology, Mechatronics, C+
-baseurl: "" # the subpath of your site, e.g. /blog
+# baseurl: "" # the subpath of your site, e.g. /blog
 
 # Build settings
 markdown: kramdown
@@ -36,9 +36,9 @@ plugins:
 permalink:   /:categories/:title/
 markdown:    kramdown
 highlighter: rouge
-sass:
-  sass_dir: _sass
-  style: compressed  
+#sass:
+#  sass_dir: _sass
+#  style: compressed  
 
 # Site owner
 owner:
