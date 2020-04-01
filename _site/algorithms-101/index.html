@@ -1,0 +1,273 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Algorithms 101: Walking through the greatest hits. &#8211; Perpetually Learning</title>
+<meta name="description" content="Gaining intuition with theory and Java.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Algorithms 101: Walking through the greatest hits.">
+<meta name="twitter:description" content="Gaining intuition with theory and Java.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Algorithms 101: Walking through the greatest hits.">
+<meta property="og:description" content="Gaining intuition with theory and Java.">
+<meta property="og:url" content="http://localhost:4000/algorithms-101/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/algorithms-101/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/algorithms-101/" rel="bookmark" title="Algorithms 101: Walking through the greatest hits.">Algorithms 101: Walking through the greatest hits.</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>I recently completed two courses on algorithms at Coursera: Roughgarden’s <a href="https://www.coursera.org/learn/algorithm-design-analysis/home/welcome">“Algorithms: Design &amp; Analysis”</a> and Sedgewick’s <a href="https://www.coursera.org/learn/introduction-to-algorithms/home/welcome">“Introduction to Algorithms.”</a> Both covered very similar material—a “greatest hits” of classic algorithms (quicksort, graphing—e.g., Djikstra’s shortest paths) and a few of the underlying data types that facilitate efficient runtime (e.g., heaps, search trees, hashing).</p>
+
+<p>Although they were very similar in content, the two were very different in presentation. Sedgewick’s course assignments are java-based, with very strict APIs on memory management, code quality, etc. The video lectures then walked through the code required to implement the algorithms—with visualizations to give an intuitive sense of runtime. Roughgarden’s course is much more theoretical—for example, explaining how to calculate topological ordering or strongly connected components through depth- or breadth-first searches. It also explains the differences between different “O” notations, and asks students to think about work / computation and the associated number of operations required for a given algorithm.</p>
+
+<p>##Was it worth it?</p>
+
+<p>With any type of online course, the hope is that the material will be targeted learning that has direct daily applications. My friends who have CS degrees hear “introductory algorithms course” and either think of it as a rite of passage a long, long time ago or an intellectual exercise. The expectation is that this course, in practice, would have little utility.</p>
+
+<p>I didn’t find this to be the case. Having now studied different NoSQL database types and taken a few certifications on data science, I found the courses to be incredibly useful—perhaps because I can now refer back to times that I “brute forced” a fuzzy join (using double for loops) that would have been ~1000x faster with a hash. A few key lessons:</p>
+
+<ul>
+  <li><em>When runtime can be managed.</em> Knuth, Sedgewick, Tarjan—taking this course, it feels like the 1960s and 1970s were full of very smart guys who were very good at discrete mathematics. As a result, we are able to put all sorts of use cases into production that wouldn’t be possible without clever workarounds. It’s really useful to have an intuition for the difference between quadratic, logarithmic, linearithmic, and constant time in the code.</li>
+  <li><em>The relationship between data structures and algorithms.</em> The projects I’ve worked with, to date, have been files with the data in a table or an array. I did not have exposure to heaps or search trees. It’s amazing the performance improvements one can create in basic searching by changing the underlying structure of the data. One quote I enjoyed in Sedgewick’s class was from Linus Torvalds, regarding the difference between a bad programmer and a good one: “Bad programmers worry about the code, good programmers worry about data structures, and their relationships.” I have a much better intuition for why this is true, and how to think about product performance at scale.</li>
+  <li><em>A new way of thinking about NoSQL databases.</em> When I started at SVDS, I took some time to study different NoSQL database types. I ended up with a catalogue of different structures and associated use cases (e.g., When do you use Redis? When do you use Cassandra?). However, I did not have an intuition for why read-write performance might be different between these database structures and the challenges / tension that this may have with being able to query the data. After this course, it is much more clear how those use cases emerge and how architects make their infrastructure decisions.</li>
+</ul>
+
+<p>##What does this lead to next?</p>
+
+<p>These courses were an inspiration for me to push further on application development and to think about production-level code. I’m putting together a project to set up a weather sensor at my home in San Francisco and create some visualizations / analytics against a <a href="https://www.pubnub.com/developers/realtime-data-streams/state-capital-weather/">streaming “weather in state capitols” dataset</a> and the <a href="https://www.wunderground.com/weather/api/">WeatherUnderground API</a>.</p>
+
+<p>A few additional topics I’d like to pull the thread on:</p>
+
+<ul>
+  <li><em>Distributed Systems.</em> How do algorithms and data management change when data is stored in different clusters?</li>
+  <li><em>Model Scoring and Management.</em> Java seems like a default language for production-level code because it is widely used and extensible. However, many models are generated in statistical packages—e.g., in R, scikit-learn in Python, or SAS. How are these models put into production effectively, and how is runtime managed for models that are complex by nature (e.g., the blended models in a Random Forest)?</li>
+  <li><em>All non-database related factors that have an effect on user runtime.</em> For example, what is the effect of networking on runtime? I currently don’t have an intuition for all of the different things that affect the user experience and the different tools a product designer might have to manage an excellent experience—I am excited to learn more, though.</li>
+</ul>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/algorithms-101/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/algorithms-101/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/algorithms-101/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Algorithms 101: Walking through the greatest hits.</strong> was published on <time datetime="2016-09-05T00:00:00-07:00">September 05, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>A review of the Johns Hopkins Data Science course. &#8211; Perpetually Learning</title>
+<meta name="description" content="Getting very good at R, in 3-4 week increments.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="A review of the Johns Hopkins Data Science course.">
+<meta name="twitter:description" content="Getting very good at R, in 3-4 week increments.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A review of the Johns Hopkins Data Science course.">
+<meta property="og:description" content="Getting very good at R, in 3-4 week increments.">
+<meta property="og:url" content="http://localhost:4000/jhu-coursera-review/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/jhu-coursera-review/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/jhu-coursera-review/" rel="bookmark" title="A review of the Johns Hopkins Data Science course.">A review of the Johns Hopkins Data Science course.</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>Over the past few months, I did the <a href="https://www.coursera.org/specializations/jhu-data-science">Johns Hopkins Data Science course</a> on Coursera - a 10-course specialization that culminates in a capstone project for a certificate. The courses provide a crash instruction for doing data science in R: early courses focus on the R programming syntax, cleaning data, reproducibility, and performing exploratory analysis. This foundation allows for lessons in statistics, regression, and building data products using Shiny, which is a web application framework for R.</p>
+
+<p>For folks that might be thinking about doing the program, I wanted to share a bit of what a participant can expect to learn, some pros and cons, and things to consider when determining if it is right for you.</p>
+
+<p>##Overview of Course</p>
+
+<p>To start, I would probably not recommend taking all of the courses. Unless you want to pay for the certificate (which I did, but is not necessary) - the utility of the courses are highly variable. I’ll describe each course a bit more below, but the TL;DR version is R Programming, Exploratory Data Analysis and Regression Models are the winning classes to take here.</p>
+
+<p><em>Regarding reproducibility and statistics:</em> The concept of reproducibility in data analysis is hugely important; I think it is better articulated elsewhere. I would recommend <a href="https://www.youtube.com/watch?v=WckByln71bg">Bill Howe’s lectures</a> on reproducible research. Not only is it important to understand the underlying inputs to a given model, statistical performance tends to change over time (e.g., findings that are surprising to be statistically significant tend to trend towards the mean as a data set grows). Reproducibility allows for confidence in a model’s given performance and makes it easier for these models to be updated over time. The statistics course tries to pack a few months into a few weeks and ends up putting an uncharacteristic strain on the student. It would be better to go slower and take a bit more time with the concepts elsewhere.</p>
+
+<figure>
+	<img src="/images/ddp.png" />
+	<figcaption>Exploring NYCDOE graduation rates.</figcaption>
+</figure>
+
+<ul>
+  <li><strong>Data Scientist’s Toolbox:</strong> This course asks users to download RStudio and set up a Github account - it really is not more than that.</li>
+  <li><strong>R Programming:</strong> In one month, you can go from knowing nothing about R to writing your own functions. Also, StackOverflow becomes your best friend. Highly recommended. A few weeks ago, I opened an .xls file in Excel and immediately closed it because I found it easier to understand the data in R. That is thanks to this class.</li>
+  <li><strong>Getting and Cleaning Data:</strong> This is a good course for understanding the data science pipeline - taking data in its raw form, writing code to get it in a structure for analysis, and then writing code to perform analysis. It also walks through the benefit of having a robust README and Codebook.</li>
+  <li><strong>Exploratory Data Analysis:</strong> EDA is a set of practices for developing hypotheses around the value data may hold. One particularly useful tool is visualization; this course introduces the ggplot2 package, which was developed by <a href="http://hadley.nz/">Hadley Wickham</a>, a guy who has developed a ton of influential packages for R.</li>
+  <li><strong>Reproducible Research:</strong> Many concepts for making research reproducible is covered in the previous two courses. This course adds the use of Markdown and Knitr (hello <a href="http://daringfireball.net/projects/">Daring Fireball</a>). Markdown is a plain text language; Knitr is a package for creating documents that contain both text and executable code. At a high-level, it helps a researcher communicate and summarize their thoughts when performing an analysis.</li>
+  <li><strong>Statistical Inference:</strong> In 4 weeks, this course goes from nothing to bootstrapping. That is a good thing with R; it is not a good thing with statistics. Week 2 includes rate measurement and the Poisson distribution! In my opinion, it would be more helpful to find an introduction to statistics course - something that gets into the actual mathematics of the equations. It would be better to take time understanding how sampling relates to a population and how the Central Limit Theorem works instead of trying to use a t.test() in R as quickly as possible.</li>
+  <li><strong>Regression Models:</strong> This course is a high-level introduction to regression, which is one tool in the “DS toolkit.” It identifies how to use ANOVA tests, how t-tests work, and how to determine when results are statistically significant. <a href="https://rpubs.com/bradaallen/147721">I learned a lot about residual analysis from this course</a>; namely how to plot different charts of the residuals to ensure that the regression captures as much of the “structure” of the data as possible (and that the residuals represent truly random information).</li>
+  <li><strong>Practical Machine Learning:</strong> There is too much information beyond regressions to lump into one course (e.g., dimensionality reduction, classification, clustering - and when different models work). These classes end up being an introduction to the caret() package and exercises in which random forests are the best answer. The final project was very interesting, though; I learned how to use a correlation plot ( cor() ) and more about principle component analysis (PCA), which I had heard of before, but not encountered.</li>
+  <li><strong>Developing Data Products:</strong> This course was a great description for how Shiny works as a web application framework for R. I also really enjoyed the final project - I used data from the NYCDOE to <a href="https://bradaallen.shinyapps.io/ddp_project/">explore graduation rates when I had been teaching</a>. The only reason I am downgrading this as a course is that I will probably never use it professionally. I write more about <a href="http://bradaallen.com/nycdoe-gradrates/">this project here</a>.</li>
+  <li><strong>Capstone Project:</strong> The Capstone project was a partnership with Swiftkey, <a href="https://swiftkey.com/en">a predictive text application</a>. My project can be found <a href="https://bradaallen.shinyapps.io/Swiftkey/">here</a>. You’ll find it does predict, but barely. :) In the background, I make a list of the things I would do differently provided I had more time.</li>
+</ul>
+
+<p>The capstone is a good introduction to Natural Language Processing (NLP); it is not a good capstone for the course. It felt like it came out of left field. I needed to teach myself a significant amount of new concepts regarding n-grams, smoothing, Katz backoff models, and developing holdout data for text models. It was <em>a lot</em> more than the natural conclusion of the preceding nine courses. (Now that being said, I did learn a ton.)</p>
+
+<p>##Benefits</p>
+
+<p>Rereading these course summaries, I definitely learned a lot. It was great to have a few months of curated learning: with dedication, someone could feasibly go from nothing to data products in R. The course has also developed credibility: the certificate is <a href="https://www.class-central.com/report/nsa-coursera-data-science-specialization/">apparently equivalent to 1-year of education by the NSA</a>. I won’t be applying anytime soon, but I’ll take it. :)</p>
+
+<p>##Challenges</p>
+
+<p>Ultimately, the reason that I don’t recommend paying for the full course is it really is a challenge to validate learning. Three key reasons:</p>
+
+<ul>
+  <li><strong>Uneven Feedback:</strong> Everyone taking the class is presumably a novice - for example, I know I could have had better code, better structured my regressions, and done more with my NLP model. I got this feedback from my coworkers at <a href="www.svds.com">SVDS</a>, but it wasn’t present in my grading. Therefore, it is very hard to trust that I learned everything correctly.</li>
+  <li><strong>Uneven Course Pacing:</strong> Several courses don’t do much more than introduce packages or programs to download - they are tools. They don’t teach the techniques data scientists use to create inference, and as a result, don’t really facilitate personal learning. On the whole, this is not the case. At the same time, I am a little disappointed I spent $29 for a course that helps you download RStudio.</li>
+  <li><strong>Unclear Applications:</strong> Many of the projects are “problem statements” - that is, they seem designed to facilitate a specific goal (e.g., proficiency in ggplot2) but lack the broader context for me to say, “This is how I can use this at work!” Even the predictive text model capstone feels like a narrow domain problem - I work at a data science consultancy and few of my colleagues have experience with these techniques. It could be more generalizable.</li>
+</ul>
+
+<p>##So, who is this course for?</p>
+
+<p>Would I recommend this course? I would, with heavy qualifications. For example, I would not treat this as true knowledge - I would not recommend someone to take this course and then go build their own data products trusting they did everything correctly. However, if someone took this course with the support of a community of data scientists - then it is a great tool for getting advice and starting a conversation.</p>
+
+<p>In fact, double points if you can get your employer to pay for it. For example, <a href="http://www.nytimes.com/2014/06/18/business/economy/udacity-att-nanodegree-offers-an-entry-level-approach-to-college.html?_r=0">AT&amp;T and Udacity recently partnered for “nanodegrees.”</a> It would be AMAZING if this course was sponsored by a company making the transition to a digital business and wanted their employees to develop a cursory intuition about data products and services. <em>(Note: I recognize the irony in highlighting something great Udacity does in a Coursera review - Coursera should do this!!)</em></p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/jhu-coursera-review/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/jhu-coursera-review/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/jhu-coursera-review/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>A review of the Johns Hopkins Data Science course.</strong> was published on <time datetime="2016-05-15T00:00:00-07:00">May 15, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

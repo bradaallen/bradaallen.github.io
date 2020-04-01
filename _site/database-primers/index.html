@@ -1,0 +1,404 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Choosing a new database. &#8211; Perpetually Learning</title>
+<meta name="description" content="A few high-level considerations when updating an architecture.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Choosing a new database.">
+<meta name="twitter:description" content="A few high-level considerations when updating an architecture.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Choosing a new database.">
+<meta property="og:description" content="A few high-level considerations when updating an architecture.">
+<meta property="og:url" content="http://localhost:4000/database-primers/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/database-primers/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/database-primers/" rel="bookmark" title="Choosing a new database.">Choosing a new database.</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>I recently caught up with my colleague Gary (here’s an <a href="http://www.svds.com/evaluating-microservices-real-world-lessons/">article he wrote on microservices for SVDS</a>) to get his advice on choosing database systems: specifically, when to recommend certain databases, how to think about meeting a customer’s needs, incorporating user requirements into design, etc. He knows these things inside and out, having been heavily involved in open source development with Apache and a member of <a href="https://wiki.apache.org/cassandra/Committers">Cassandra’s Project Management Committee</a>.</p>
+
+<p>Below, I include some of key use cases for modern database structures (and when not to use). In my conversation with Gary, I was most surprised by the human aspect of maintaining these systems - and how much of a priority it is to determine what’s feasible for a given organization based on their talent and expectations.</p>
+
+<p>##Some key questions to explore when updating an architecture:</p>
+<ul>
+  <li><strong>Maintenance &amp; Hosted vs. On-Site.</strong> Always be sure to ask, <em>“What are the ongoing maintenance requirements?”</em>
+    <ul>
+      <li>For example, am I going to need to hire new staff? Do I have people that can already do this?</li>
+      <li>If the answer is no (re: hiring) then maybe we need to swing to hosted systems. A lot of these big systems are rather high-maintenance. They require a lot of monitoring and operations people that know what is going on there.
+        <ul>
+          <li>Note: The same is true for relational systems, except that relational systems are better understood and it is easier to find people who know those skills. Making sure that customers have a handle on maintenance req and ensuring they are comfortable with that.</li>
+        </ul>
+      </li>
+      <li>These are not things that will be fixed by QA. Discs getting full, servers going down, ongoing things like that. This is more about teaching, showing, and making sure that clients are prepared.</li>
+    </ul>
+  </li>
+  <li><strong>Migrations.</strong> What happens in 5, 10, 20 years when we want to migrate off of this system? I think about this - because I’ve been around when it happens.
+    <ul>
+      <li>Migrations depend on how much data is in the system. If there are TB &amp; TB of data, there are time and space constraints. The possibility of scheduling downtime for maintenance is less pragmatic.</li>
+      <li>This is done through parallel updates and backfilling - systems run parallel with same data - then migrate applications over to new system, then shut the old system off. This is a pretty standard way of migrating off of a big data platform. Every once in awhile, folks will say, “Nope, I don’t mind having some downtime.”</li>
+    </ul>
+  </li>
+  <li><strong>Developing Architectural Intuition.</strong> Designing architectures well come from experience- from having bad deployments and seeing how things fail. A good start (if that experience is nascent) is to find blog posts in which people have complained about an installation.</li>
+  <li><strong>General Things to Cover:</strong>
+    <ul>
+      <li>What is the actual size of the data corpus initially, and what does it grow to? Do I need one machine or a whole flock of machines? (Cassandra, Riak, Mongo)</li>
+      <li>For easy argument, what is going to be the ratio of reads to writes? Some systems have quicker writes, some have quicker reads. How difficult is it going to be to get data in and out of these systems? Some have good client libraries and some don’t.
+        <ul>
+          <li>Cassandra has a good client ecosystem, but HBase doesn’t.</li>
+          <li>Cassandra has SQL, HBase doesn’t.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>In the future, I hope to include more detail on situations in which certain database types might be preferred over other: for example, HBase’s lack of SQL querying or Redis’ lack of sharding.</p>
+
+<p>##First-pass: Key Use Cases for Schemaless Databases</p>
+
+<p>####<em>Key-Value Store</em> (eg, BerkeleyDB, LevelDB, Memchached, Project Voldemort, Redis, Riak)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Suitable Use Cases</strong></td>
+      <td><strong>When Not to Use</strong></td>
+    </tr>
+    <tr>
+      <td>Storing Session Information</td>
+      <td>Relationships among Data</td>
+    </tr>
+    <tr>
+      <td>User Profiles, Preferences</td>
+      <td>Structure of Data</td>
+    </tr>
+    <tr>
+      <td>Shopping Cart Data</td>
+      <td>Scaling</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Multioperation Transactions</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Query by Data</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>Operations by Sets</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>####<em>Document Databases</em> (eg, CouchDB, MongoDB, OrientDB, RavenDB, Terrastore)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Suitable Use Cases</strong></td>
+      <td><strong>When Not to Use</strong></td>
+    </tr>
+    <tr>
+      <td>Event Logging</td>
+      <td>Complex Transactions Spanning Operations</td>
+    </tr>
+    <tr>
+      <td>Content Management Systems, Blogging</td>
+      <td>Queries against Varying Aggregate Structure</td>
+    </tr>
+    <tr>
+      <td>Web Analytics / Real-Time Analytics</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>E-Commerce Applications</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note: Documents are stored in the ‘Value’ part of a KV database.</p>
+
+<p>####<em>Column-Family Stores</em> (eg, Amazon SimpleDB, Cassandra, HBase, Hypertable)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Suitable Use Cases</strong></td>
+      <td><strong>When Not to Use</strong></td>
+    </tr>
+    <tr>
+      <td>Event Logging</td>
+      <td>Early Prototypes</td>
+    </tr>
+    <tr>
+      <td>Content Management Systems, Blogging</td>
+      <td>Initial Tech Spikes</td>
+    </tr>
+    <tr>
+      <td>Counters</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Expiring Usage</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note: RDBMS impose high cost on schema change, which is traded off for a low cost of query change; in Cassandra, the cost may be higher for query change as compared to schema change.</p>
+
+<p>####<em>Graph Databases</em> (eg, FlockDB, HyperGraphDB, Infinite Graph, Neo4J, Orient DB)</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Suitable Use Cases</strong></td>
+      <td><strong>When Not to Use</strong></td>
+    </tr>
+    <tr>
+      <td>Connected Data</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Routing, Dispatch, and Location-Based Svcs</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Recommendation Engines</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note: Graph databases provide the opportunity to store entities and relationships between entities.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/database-primers/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/database-primers/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/database-primers/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Choosing a new database.</strong> was published on <time datetime="2016-01-25T00:00:00-08:00">January 25, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

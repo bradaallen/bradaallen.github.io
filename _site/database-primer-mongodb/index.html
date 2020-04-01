@@ -1,0 +1,303 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Database Primer: MongoDB &#8211; Perpetually Learning</title>
+<meta name="description" content="Figuring out what MongoDB's all about.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Database Primer: MongoDB">
+<meta name="twitter:description" content="Figuring out what MongoDB's all about.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Database Primer: MongoDB">
+<meta property="og:description" content="Figuring out what MongoDB's all about.">
+<meta property="og:url" content="http://localhost:4000/database-primer-mongodb/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/database-primer-mongodb/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/database-primer-mongodb/" rel="bookmark" title="Database Primer: MongoDB">Database Primer: MongoDB</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>A key tension when choosing an infrastructure concerns how to manage product performance with issues of extensibility (ie, confidence in future usability of a language or tool) and ongoing maintenance. Part of this tension is that infrastructure management is a dynamic effort. For example, distributed (and/or NoSQL) systems, but they only become pertinent as a company’s user base <a href="http://highscalability.com/blog/2016/1/11/a-beginners-guide-to-scaling-to-11-million-users-on-amazons.html">moves into the millions (or tens of millions)</a>. This is the point at which the organization might run into database issues around contention with the write master, which basically means you’re sending too much write traffic to one server.</p>
+
+<p>Part of the tension is rooted in experience: large companies, some of whom may have little experience with managing a digital-scale infrastructure, are being asked to adopt these evolving technologies that require a very specific skillset. On top of this, a common adage is that <a href="http://firstround.com/review/the-three-infrastructure-mistakes-your-company-must-not-make/">the best operators won’t use a component until they know how it breaks</a>. So, how might one generate this experience?</p>
+
+<p>To start, I’ve pulled together a few primers on more commonly used NoSQL databases to give a sense of:</p>
+
+<ul>
+  <li>When they are used (use cases), and</li>
+  <li>Common considerations / limitations / challenges</li>
+</ul>
+
+<p>Let’s begin with <a href="https://www.mongodb.com/">MongoDB</a>, a popular document-oriented database. It is used by organizations of all sizes to power mission-critical, operational applications where low latency, high throughput and continuous availability are critical requirements of the system—you think about using MongoDB when you need fast use cases that can’t fail.</p>
+
+<p>##MongoDB: A Background</p>
+
+<p>MongoDB provides horizontal scale-out for databases using a technique called sharding, which is transparent to applications. MongoDB distributes data across multiple Replica Sets called shards. Sharding is basically when datasets are split amongst multiple servers (e.g., by name: A-G in Server 1, H-R in Server 2, and S-Z in Server 3, or by geography: I am in the West Coast Server and my parents are in the East Coast Server).</p>
+
+<p>With automatic balancing, MongoDB ensures data is equally distributed across shards as data volumes grow or the size of the cluster increases or decreases. Sharding allows MongoDB deployments to scale beyond the limitations of a single server, such as bottlenecks in RAM or disk I/O, without adding complexity to the application. MongoDB supports three types of sharding policy, enabling administrators to accommodate diverse query patterns:</p>
+
+<ul>
+  <li><em>Range-based sharding:</em> Documents are partitioned across shards according to the shard key value.</li>
+  <li><em>Hash-based sharding:</em> Documents are uniformly distributed according to an MD5 hash of the shard key value.</li>
+  <li><em>Location-aware sharding:</em> The data set needs to be assigned to a specific data center to support low latency local reads and writes.</li>
+</ul>
+
+<p>##Common Considerations with MongoDB</p>
+
+<ul>
+  <li><em>The obstacles to scaling performance as your usage grows may not be what you’d expect.</em> Performance bottlenecks usually are (in this order):
+    <ul>
+      <li>Sub-optimal schema design for application access patterns</li>
+      <li>Poor or missing indexes, occasionally too many unneeded indexes</li>
+      <li>Slow disks/insufficient disk IOPS for workload, especially to the write throughput</li>
+      <li>Insufficient RAM for indexes, will cause a lot of page faulting</li>
+    </ul>
+  </li>
+  <li><em>Replica set health is more than replication lag.</em> “Replication lag,” which is a measure of how far a secondary is behind the primary, is just one indicator of the health of your replica sets. Just as important as monitoring replication lag is keeping an eye on your replication oplog window.</li>
+  <li><em>Place your database server at the inner data storage layer.</em> If public network exposure is combined with lack of access control, the entire content of the database is up for grabs for anyone who cares to look. In addition, an attacker could intentionally or accidentally change the database configuration, modify the application behavior or perform a Denial of Service (DoS) attack. It is surprisingly common to deploy MongoDB database servers directly online or in a DMZ.</li>
+  <li><em>MongoDB’s map-reduce functionality just isn’t meant for real time computing.</em> It is extremely slow, especially when you have a large amount of data in a sharded environment. Especially in a sharded mongoDB setup the I/O load increases rapidly with growing data, so fast disks are even more important than computing power or even memory for scaling your mongoDB servers.</li>
+  <li><em>The debugging experience is very painful.</em> There is no proper debugger, no console.log. The best tool you have is conditionally throwing, because the only thing you can get back from a MapReduce operation is the final data or the first uncaught error (which stops the operation). That’s annoying when your map or reduce or finalize function gets above 30 lines.</li>
+  <li><em>The user will need to start with an intuition of chunks and sharding protocol.</em> MongoDBs documents are stored in so called chunks. For each chunk the maximum and minimum shardKey as well as the location (on which shard it is stored) and its size are known. Now when another document is inserted it will be stored within the chunk with the fitting id (shardKey) range. Then a few things happen:
+    <ul>
+      <li>If you are lucky and the shards are balanced already, and the document doesn’t increase the chunks size over a given limit, thats just it, the document is inserted and you are fine.</li>
+      <li>If the document exceeds the chunks size limit, the chunk will be split into two different chunks.</li>
+      <li>And if the shards are unbalanced, on top of that the new chunk will be moved to another shard. The split is a rather inexpensive operation, but moving the data to a different shard can be very expensive.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Hopefully this record helps clarify some situations in which MongoDB might be useful, and some associated maintenance considerations. Many thanks to these articles as the primary references when putting this together:</p>
+
+<ul>
+  <li><a href="http://highscalability.com/blog/2014/3/5/10-things-you-should-know-about-running-mongodb-at-scale.html">10 Things You Should Know About Running MongoDB at Scale (High Scalability)</a></li>
+  <li><a href="http://blog.mongodb.org/post/87691901392/mongodb-security-part-ii-10-mistakes-that-can">MongoDB Security Part II: 10 mistakes that can compromise your database (MongoDB blog)</a></li>
+  <li><a href="https://blog.mayflower.de/2408-MongoDB-the-pitfalls-and-how-to-avoid-them.html">MongoDB – the pitfalls and how to avoid them (Mayflower)</a></li>
+  <li><a href="https://longtermlaziness.wordpress.com/2012/08/24/a-post-you-wish-to-read-before-considering-using-mongodb-for-your-next-app/">Read before considering using MongoDB for your next app (Long Term Laziness)</a></li>
+</ul>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/database-primer-mongodb/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/database-primer-mongodb/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/database-primer-mongodb/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Database Primer: MongoDB</strong> was published on <time datetime="2016-08-11T00:00:00-07:00">August 11, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

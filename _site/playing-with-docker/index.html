@@ -1,0 +1,315 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Playing Around with Docker &#8211; Perpetually Learning</title>
+<meta name="description" content="Taming the Whale.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Playing Around with Docker">
+<meta name="twitter:description" content="Taming the Whale.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Playing Around with Docker">
+<meta property="og:description" content="Taming the Whale.">
+<meta property="og:url" content="http://localhost:4000/playing-with-docker/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/playing-with-docker/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/playing-with-docker/" rel="bookmark" title="Playing Around with Docker">Playing Around with Docker</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <figure>
+	<img src="/images/docker-jenkins.png" />
+	<figcaption>Refined delivery! (I love this image.)</figcaption>
+</figure>
+
+<p>I recently completed a great Docker tutorial offered by <a href="http://prakhar.me/docker-curriculum/">Prakhar Srivastav</a>. In this exercise, we set up <a href="https://www.docker.com/">Docker</a>, log into the DockerHub, and pull down “images.” We also publish these images to the web, and create a dynamic website using EC2 Container Service using AWS and two docker images networked together.</p>
+
+<h2 id="what-is-docker-what-are-containers">What is Docker? What are “containers”?</h2>
+
+<p>The industry standard today is to use Virtual Machines (VMs) to run software applications. VMs run applications inside a guest Operating System, which runs on virtual hardware powered by the server’s host OS.</p>
+
+<p>VMs are great at providing full process isolation for applications: there are very few ways a problem in the host operating system can affect the software running in the guest operating system, and vice-versa. But this isolation comes at great cost — the computational overhead spent virtualizing hardware for a guest OS to use is substantial.</p>
+
+<p>Containers take a different approach: by leveraging the low-level mechanics of the host operating system, containers provide most of the isolation of virtual machines at a fraction of the computing power. Docker specifically interacts directly with the Linux kernel. Containerization has grown rapidly, especially with the growth of cloud computing and services. For example, <a href="http://www.informationweek.com/cloud/infrastructure-as-a-service/google-docker-does-containers-right/d/d-id/1319146">Google launches roughly 2 billion containers per week</a>.</p>
+
+<p>Why has the containerization movement risen with cloud computing? This lower overhead means that <a href="https://blog.codeship.com/why-docker/">cloud providers like Amazon and others getting a 26 to 1 performance improvement on the virtual machines that they sell per hour</a>. It’s a huge enabler for their businesses because you’re suddenly able to do a lot more for the same price. Instead of needing to buy two virtual machines (for load balancing/availability) for every isolated application that you need to deploy, you could just cluster three larger VMs and deploy all of them to it, actual processor limits aside. It makes cloud computing cheaper for both AWS/Azure/GCP and the businesses consuming those services. When business makes cost-benefit decisions around cloud migrations, this resource efficiency creates a swing in favor of cloud providers.</p>
+
+<p>On the other side of the equation, containerization is well-loved by developers because it de-risks creating production level software:</p>
+
+<ul>
+  <li>Your development team is able to create complex requirements for a microservice within an easy-to-write Dockerfile.</li>
+  <li>Push the code up to your git repo.</li>
+  <li>Let the continuous integration (CI) server pull it down and build the EXACT environment that will be used in production to run the test suite without needing to configure the CI server at all.</li>
+  <li>Tear down the entire thing when it’s finished.</li>
+  <li>Deploy it out to a staging environment for testers or just notify the testers so that they can run a single command to configure and start the environment locally.</li>
+  <li>Confidently roll exactly what you had in development, testing, and staging into production without any concerns about machine configuration.</li>
+</ul>
+
+<h2 id="what-is-an-image">What is an image?</h2>
+
+<p>You can think of a docker “image” as a fully packaged container. It includes all of the executable code for an application, as well as defines the packages and dependencies required to run the application effectively. Often, images can be automatically stood up on a server with a few lines of code.</p>
+
+<p>Images can also be shared publicly in the <a href="https://store.docker.com/search?category=application_framework&amp;source=verified">Docker Store</a>. In the Docker store, you can find projects that other teams are willing to publish—helping you see pre-existing code or logic that may help you get your projects off the ground faster. In this sense, it has functionality similar to Github, a site in which teams manage version control of their codebase, but users can also publish and share their code publicly.</p>
+
+<p>Prakar’s exercises involves loading a single image of cat photos, and then a slightly more complex site of two images networked together, seen here:</p>
+
+<figure>
+	<img src="/images/foodtrucks.png" />
+	<figcaption>The final view of Prakhar's project.</figcaption>
+</figure>
+
+<p>We also get experience with pushing containers to AWS’s EC2 Container Service. I would recommend closing down the instances once you get your IP address up and running / know the project is live — I found that hosting the project on 2 containers cost ~$50/month.</p>
+
+<p>In the above picture, the two images are a base image (the underlying map) and an elasticsearch image. This allows site owners to troubleshoot and edit different aspects of the site independently—for example, if aspects of the “search” experience were broken, users would still be able to utilize other parts of the site. This functionality also allows the site to scale only on the services that are finding increased use.</p>
+
+<h2 id="how-does-containerization-enable-microservices">How does containerization enable microservices?</h2>
+
+<p>I was curious about Docker as a representation of the <a href="http://www.martinfowler.com/articles/microservices.html">microservices movement</a>. The microservice architectural style is an approach to developing a single application as a suite of small services, each running in its own process and communicating with lightweight mechanisms, often an HTTP resource API. In the last few years, it has become the default style for building enterprise applications and is considered to be a key enabler of software platforms. It is a validation of Jeff Bezos’s mandate to have all teams communicate their work through externalizable APIs (reference: <a href="https://plus.google.com/+RipRowan/posts/eVeouesvaVX">Steve Yegge’s insightful and fun “rant”</a>).</p>
+
+<figure>
+	<img src="/images/microservices.png" />
+	<figcaption>Differences between a "monolithic" and a "microservices" design.</figcaption>
+</figure>
+
+<p>In service-oriented architectures (SOA), integration relies heavily on middleware, in particular enterprise service bus (ESB). Microservices architecture may often make use of a message bus, but there is no logic in the messaging layer whatsoever—it is purely used as a transport for messages from one service to another. This differs dramatically from ESB, which contains substantial logic for message routing, schema validation, message translation, and business rules. As a result, microservices architectures are substantially less cumbersome than traditional SOA, and don’t require the same level of governance and canonical data modeling to define the interface between services. (Source found <a href="https://medium.com/aws-activate-startup-blog/using-containers-to-build-a-microservices-architecture-6e1b8bacb7d1#.yul4pgcng">here</a>.)</p>
+
+<p>Docker provides an isolation between containers running on the same host that makes deploying microservice code developed using different languages and frameworks very easy. Using Docker, we could create a DockerFile describing all the language, framework, and library dependencies for that service. With microservices, development is rapid and services evolve alongside the needs of the business.</p>
+
+<h2 id="what-next">What next?</h2>
+
+<p><em>Understanding Benefits to Web Design, Challenges with Pipelines/Clusters:</em> In having conversation with data engineers at SVDS, we disucced the complications associated with Docker networking - which is a problem for distributed applications (Docker is trying to manage this with <a href="https://technologyconversations.com/2015/11/04/docker-clustering-tools-compared-kubernetes-vs-docker-swarm/">Docker Swarm</a>). Their opinion was that it works great for web apps. It doesn’t really change “per environment.” These “scale out” in easily parallelizable ways. This gets a little bit tricker with things that have to communicate with each other—like Cassandra.</p>
+
+<p>They questioned how well Docker could solve the problem of Spark executions. The class of applications in which things can be modeled as a web app are situations in which containers can help a lot. In the class of stuff that we do—in building platforms — containers and networking complicate that, and the benefits of containers don’t really materialize when execution can’t take place there.</p>
+
+<p><em>Network Bounds and Product Management:</em> At SVDS, we might use Docker between each other for development. Then it would play the same role as a <a href="https://www.vagrantup.com/">Vagrant</a>, for example. It should be said that one have to be strong at deploying microservices well (<a href="https://12factor.net/">general design principles</a>), before even thinking about how to isolate and decouple the functionality. In that sense, each team will need to have good explicit or implicit product management.</p>
+
+<p>From a performance standpoint, if 40 services are needed to load networking has to be incredibly robust. There are a lot of pings back and forth.</p>
+
+<p><em>Additional link: <a href="https://gist.github.com/hellerbarde/2843375">Pretty cool chart</a> I found on latency from Peter Norvig and Jeff Dean.</em></p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/playing-with-docker/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/playing-with-docker/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/playing-with-docker/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Playing Around with Docker</strong> was published on <time datetime="2016-11-05T00:00:00-07:00">November 05, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

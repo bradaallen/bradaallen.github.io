@@ -1,0 +1,316 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Data Weekends: A ML crash course. &#8211; Perpetually Learning</title>
+<meta name="description" content="Alternate title: 16 hours of Francesco.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Data Weekends: A ML crash course.">
+<meta name="twitter:description" content="Alternate title: 16 hours of Francesco.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data Weekends: A ML crash course.">
+<meta property="og:description" content="Alternate title: 16 hours of Francesco.">
+<meta property="og:url" content="http://localhost:4000/data-weekends-review/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/data-weekends-review/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/data-weekends-review/" rel="bookmark" title="Data Weekends: A ML crash course.">Data Weekends: A ML crash course.</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>Last month, I did the <a href="http://www.dataweekends.com/">Data Weekends</a> program - a 2-day machine learning workshop hosted by Francesco Mosconi. <a href="https://www.linkedin.com/in/framosconis">Francesco</a> is a great leader for the program; he teaches at General Assembly and was also the Chief Data Officer for a Y-Combinator backed company, <a href="https://www.spire.io/">Spire</a>. Basically.. he knows a <em>“thing or two about a thing or two.”</em></p>
+
+<p>For folks that might be thinking about doing the program, I wanted to share a bit of what a participant can expect to learn, some pros and cons, and things to consider when determining if it is right for you.</p>
+
+<p>##Weekend Overview</p>
+
+<p>Each day of the workshop went from 9am - 5pm and was a full day of activity. There was some lecturing to give context, but the time was spent predominantly interacting with python code to fully intuit the concepts and allow for questions. There were 8 of us in my workshop: some were data scientists, backend engineers, and co-founders of data start-ups. I paired with a woman named Vanessa who was a backend engineer for Rdio / Pandora. She was <em>super</em> helpful as I felt like I had a good grasp on the concepts, but needed more help with the programming.</p>
+
+<p>The instructor starts by working through a few examples of practical applications of machine learning: instances in which regression, classification, clustering, or dimensionality reduction might be used. He then showed us how these techniques match well to the type of data being collected and the kind of problem one wants to solve. It came together in an easy framework:</p>
+
+<figure>
+	<img src="/images/dataweekends.png" />
+	<figcaption>Not quite a napkin, but it will do. Note: Unsupervised learning is used when trying to determine the underlying structure of the data. It helps generate new knowledge, but there is no direct desired output (e.g., a prediction).</figcaption>
+</figure>
+
+<p>We then worked through modules for each section, with specific call-outs for cleaning data, and improving accuracy. The instructor uses pre-built Jupyter notebooks to help the participants grapple with the problems; we then can work with our partners to solve them, and, when stuck, get the instructor’s guidance.</p>
+
+<p>The topics are meaty and move quickly; we discuss cost-functions and overfitting in statistics and work through how the cost-function is calculated differently for a sum-of-squares method vs. a support vector machine (SVM). We also gain a familiarity using different functions in the scikit-learn and pandas packages.</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">from sklearn.cluster import KMeans</code>
+<code class="language-plaintext highlighter-rouge">X = df[['sepal_length_cm','sepal_width_cm','petal_length_cm','petal_width_cm']]</code>
+<code class="language-plaintext highlighter-rouge"># look for 3 clusters</code>
+<code class="language-plaintext highlighter-rouge">km = KMeans(3)</code>
+<code class="language-plaintext highlighter-rouge">km.fit(X)</code>
+<code class="language-plaintext highlighter-rouge"># try changing the initialization parameters of KMeans to 'random'. What happens?</code></p>
+</blockquote>
+
+<p><em>Example code and discussion.</em></p>
+
+<p>For each module, the instructor allowed for good discussion around the underlying intuition of the most popular machine learning models, and the types of problems in which each are best suited. To accommodate the varying levels of proficiency within the room, we also had access to more “advanced” iPython notebooks that operated as standalone guided instruction.</p>
+
+<p>At the end of the two days, we built a simple web application using Heroku and Flask that is designed to do language prediction. The underlying model takes a few scraped text corpora from Wikipedia home pages for several languages (eg. English, Italian, French, Russian). We then vectorize those set of words into 3-character n-grams and create test and holdout sets. The goal of the model is to predict the language based on the probability that a vectorized string of text matches the n-grams for a given language in the database.</p>
+
+<p>After testing a few different models, I found the highest accuracy for the <a href="http://scikit-learn.org/stable/modules/sgd.html">SGDClassifier()</a> in the scikit-learn package. You can find my Language Predictor <a href="http://salty-inlet-1328.herokuapp.com/">here</a>!</p>
+
+<figure>
+	<img src="/images/Heroku_App.png" />
+	<figcaption>NLP(ish).</figcaption>
+</figure>
+
+<p>##Benefits</p>
+
+<p>There were quite a few things I really enjoyed about Data Weekends:</p>
+
+<ul>
+  <li><strong>Great Conceptual Model:</strong> I found the instructor’s work to be a great blend of programming, statistics, and real world examples. With this, the overarching framework / conceptual model helped me understand when to apply different techniques and why. I had many similar concepts in a statistics class at Stanford, but I had trouble rooting that learning in something practical - this class actually gave me confidence to use things I had learned elsewhere as well!</li>
+  <li><strong>Pair Programming:</strong> I really enjoyed being paired with someone who was a professional software engineer. My goal is to work with an engineering team, and Vanessa was really kind and patient with my syntax questions. Hopefully, I was of some help with the statistics.</li>
+  <li><strong>Guided Jupyter Notebooks:</strong> Pre-built Jupyter notebooks were helpful for understanding “what we were working towards.” For learning exercises, we could get a sense of what we were going to cover end-to-end and what knowledge was being built. At the same time, since none of the code was executed - we could guess how models would perform, test them, and get feedback immediately.</li>
+  <li><strong>Advanced Sessions:</strong> Once we developed a basic intuition, the instructor would push us to get a better sense of how K-Means clustering works: for example, by changing the number of nodes, or dictating where calculations start from. Or to discuss the differences between Ridge and LASSO regressions. We also had notebooks for these sections.</li>
+  <li><strong>Focus on Practical Application:</strong> More than any online course, I appreciated the direct feedback from someone with practical experience in the field. I also appreciated that these activities were always connected back to how they could be used in the real world, and that we were given the opportunity to stage an environment and host an application - soup-to-nuts development.</li>
+</ul>
+
+<p>##Challenges</p>
+
+<p>This doesn’t mean that Data Weekends is for everyone, though - there are a few things based on the structure that may make the course challenging for others:</p>
+
+<ul>
+  <li><strong>Uneven Skills:</strong> First, data science and machine learning are nascent fields - and therefore the backgrounds of people trying to develop these skills are pretty diverse. For me, there were times in the class in which it felt like it was moving too slow or too fast. The same was true for others, but at different times.</li>
+  <li><strong>Big Time Commitment:</strong> Saturday and Sunday 9am-5pm is a pretty heavy commitment - an entire weekend spent exhausting your brain. Not only does it limit what you can do with your weekend nights, it also doesn’t necessarily leave you recharged for Monday morning. Energy levels are something to consider - and we definitely got tired even during the lectures themselves.</li>
+  <li><strong>Presumed Knowledge:</strong> The course moves pretty quickly through statistics and programming to the applications. I would say, in retrospect, that my python was not as good as it could have been to make the most of the class (I did <a href="http://learnpythonthehardway.org/">LPTHW</a>, <a href="https://developers.google.com/edu/python/">Google’s Python Tutorial</a>, and a <a href="http://pandas.pydata.org/pandas-docs/stable/10min.html">pandas tutorial</a> beforehand.)</li>
+</ul>
+
+<p>##So, Who is Data Weekends For?</p>
+
+<p>Data Weekends was great and I would wholeheartedly recommend it. That being said, it is certainly not for everyone. Perhaps someone who is an “advanced beginner” in programming and statistics: maybe with one Coursera course in each under their belt.</p>
+
+<p>For the price, I would also recommend that a participant have a clear sense of how they’ll use the material professionally. I am not sure that the program would help someone get a <em>new</em> job, but it definitely can help a transition within a company and can help someone get a better sense of what is possible, technically speaking. Since I’ve just started to work for a data science consulting firm, I felt like the education helped me get a better sense of how I can be a better partner to the folks I work with.</p>
+
+<p>Good luck! If you are considering taking this program, feel free to reach out to me at anytime to talk about it.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/data-weekends-review/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/data-weekends-review/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/data-weekends-review/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Data Weekends: A ML crash course.</strong> was published on <time datetime="2015-12-12T00:00:00-08:00">December 12, 2015</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Information Pioneers: A Conversation with Ion Stoica. &#8211; Perpetually Learning</title>
+<meta name="description" content="The CEO of Databricks discusses evolutions in distributed computing.">
+<meta name="keywords" content="Databricks, Spark, distributed computing, Information Pioneers, Britt Jamison, Stanford, Berkeley, information, data science, data, CS, technology">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Information Pioneers: A Conversation with Ion Stoica.">
+<meta name="twitter:description" content="The CEO of Databricks discusses evolutions in distributed computing.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Information Pioneers: A Conversation with Ion Stoica.">
+<meta property="og:description" content="The CEO of Databricks discusses evolutions in distributed computing.">
+<meta property="og:url" content="http://localhost:4000/information-pioneers-ion-stoica/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/information-pioneers-ion-stoica/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/information-pioneers-ion-stoica/" rel="bookmark" title="Information Pioneers: A Conversation with Ion Stoica.">Information Pioneers: A Conversation with Ion Stoica.</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p><em>Information Pioneers is a series I helped start in 2014 as part of <a href="https://sdsi.stanford.edu/">SDSI</a>, the Stanford Data Science 
+Initiative. The goal was to bring thought leaders to campus to help students learn from visionaries in
+the data science field. It is currently hosted by the <a href="http://web.stanford.edu/group/informs/cgi-bin/">INFORMS chapter</a> at Stanford.</em></p>
+
+<p><em><a href="http://www.cs.berkeley.edu/~istoica/">Ion Stoica</a> is the CEO of <a href="https://databricks.com/">Databricks</a>, and, at Berkeley, is a professor in CS and the former 
+Director of the <a href="https://amplab.cs.berkeley.edu/">AMP Lab</a>. Ion was interviewed by my colleague Britt Jamison. Errors and omissions are my own, 
+and any good stuff can be completely credited to them.</em></p>
+
+<figure>
+	<img src="/images/Ion_Britt.png" />
+	<figcaption>Ion and Britt for Information Pioneers.</figcaption>
+</figure>
+
+<h2 id="off-the-bat-lets-talk-a-bit-about-databricks-some-folks-might-be-familiar-with-spark-but-not-databricks---tell-us-more-about-that">Off the bat, let’s talk a bit about Databricks. Some folks might be familiar with Spark, but not Databricks - tell us more about that.</h2>
+
+<p>Databricks was founded in 2013. It is based around commercializing Spark, a project started in 2009 in Berkeley
+and open sourced in 2010. In terms of the product, Databricks is providing a hosted service which is based on
+Spark and the vision of the company is to simplify big data. Our aim is to build a platform in which you can run
+your data pipeline from data ingestion, preparation, interactive query processing, insights from
+machine learning, graphics, algorithms, all the way to data products.</p>
+
+<h2 id="you-have-been-working-around-data-for-a-long-time-what-initially-got-you-interested-in-the-field">You have been working around data for a long time. What initially got you interested in the field?</h2>
+
+<p>We started at Berkeley with these “Five Years Labs.” They try to serve big problems. Right now, we are doing
+AMP Lab - the previous lab was called RAM Lab, and was built around cluster computing. That was started around</p>
+<ol>
+  <li>That got us in touch with a few companies, including Facebook. Their big data cluster was 80 nodes, and their
+team was 3 people - they hired a few folks from Yahoo and started doing new stuff, which was Hive on top of Hadoop. 
+We started to work with them and then <a href="https://people.csail.mit.edu/matei/">Matei Zaharia</a> ended up creating Spark.</li>
+</ol>
+
+<p>The first problem we tried to address with Facebook was getting around this problem of batch process and 
+scheduling. Basically, Hadoop initially was a batch-processing system, with many jobs are submitted in a queue,
+and you process them in the order in which they arrive. This means, when you have a huge job of a few
+hours, the subsequent jobs, even if small, have to wait after a big job. We developed then an algorithm called “file
+sharing” which has become a popular scaling algorithm for Hadoop. It basically tries to create different queues and 
+partitioned resources across jobs to process orders in tandem, large and small.</p>
+
+<p>The other thing we worked on in 2006 was founding this company, <a href="http://www.conviva.com/">Conviva</a>. Conviva was peer-to-peer distribution. The 
+application was video distribution. Quite soon, we switched from P2P to a model that uses existing distribution infrastructure,
+but we aggregated the intelligence and the decision-making. Still today, our customers are premium content providers. For example,
+we power HBO GO and MLB and places like this. We provide a service of real-time analytics: we take information from all of our
+clients and we aggregate them. We answer questions like, “Are there buffers? What is the bitrate we are streaming at?” The 
+other side tries to provide hints to the clients about optimal bitrates and streaming for clients. That was the vision: 
+real-time analytics and real-time control. Even then, it was big data. Right now, we have approximately 1 million clients at 
+any given time. Then, Hadoop was only for historical data and batch computation. We started to build home-grown solutions, 
+for streaming and for real-time control. We needed a distributed infrastructure for that. When I came back to Berkeley, 
+I knew there were big problems - I had seen that.</p>
+
+<p>The third thing was, in the <a href="https://radlab.cs.berkeley.edu/">RAD Lab</a>, we were working next to the machine learning folks. And they wanted to do it at 
+scale. Implementation at that time was very slow. Hadoop and MapReduce at that time were not very mature. Each ML algorithm
+is about iteration and converging to a great model. Each iteration on Hadoop is a MapReduce job. Between each job, the data
+gets written to disc on HDFS, and the next iteration needs to read it. This is very slow! We have this use case scenario: real-time
+streaming, real-time decisions, interactive query processing, iterative algorithms. When I got back to Berkeley, I had this
+seminar in 2009. These are one of the perks of the jobs. We had about 30 students discussing the problems in cloud computing
+and we would have class projects. One of the projects was <a href="http://mesos.apache.org/">Mesos</a>. That was one of the first systems we started to build.</p>
+
+<p>Mesos was a system that allowed multiple cluster computing frameworks to run on the same cluster. We were expanding the idea
+from the Facebook case (jobs of different size). There are really different categories of jobs and they can run on different
+cluster computing frameworks. For instance, MapReduce, or streaming systems like <a href="http://storm.apache.org/">Storm</a>, or <a href="http://www.open-mpi.org/">MPI</a> in 
+high-performance computing. At that point, you have to create a cluster for everyone, but you don’t want that 
+because it is very expensive. And how are you going to share data between the clusters? That is basically Mesos - trying 
+to solve this problem for data centers. Writing multiple applications on one machine. Now, how do you illustrate and evaluate 
+Mesos? You run MapReduce, and MPI, and many variations of MapReduce at the same time. This is pretty cool, but Mesos is 
+something like an operating system. It provides a lot of services, provides a lot of plumbing. If a node fails, it thinks 
+it is down, it tries to provide isolation between different slices of computing frameworks. We said, well - another way to 
+evaluate this is to show it is much easier to develop a new class of computing framework on top of it because we an leverage 
+all of the services of Mesos. There is no need for the services to do themselves, like scheduling. The first framework 
+we developed was Spark. We said, ok, Hadoop-MapReduce is good at batch processing, so we are going to target some of 
+the workloads we knew from our experiences in industry that are important. We focused on interactive query processing and 
+iterative algorithms. <a href="http://spark.apache.org/">Spark</a> was created towards the end of 2009.</p>
+
+<h2 id="what-a-great-history-it-seems-like-a-lot-of-tools-have-been-developed-since-the-2002-2004-timeframe-what-was-the-impetus-for-these-tools-to-be-developed-you-have-been-fortunate-to-be-in-silicon-valley---is-this-coming-from-a-business-need-or-from-the-technical-side-that-is-there-is-so-much-data-and-processing-to-do-that-new-tools-need-to-be-developed">What a great history. It seems like a lot of tools have been developed since the 2002-2004 timeframe. What was the impetus for these tools to be developed? You have been fortunate to be in Silicon Valley - is this coming from a business need, or from the technical side? That is, there is so much data and processing to do that new tools need to be developed.</h2>
+
+<p>That is definitely the case, the latter. Many great ideas come from solving real problems. <a href="http://research.google.com/archive/mapreduce.html">MapReduce comes from Google in 2004</a>. 
+It was a great piece of work. They had to process a huge amount of data, and needed a flexible system to do that. What were the
+choices at that time? One one hand, they could buy a big database: very expensive and inflexible. On the other hand, they
+could use some of the high performance computing software. That could be another. But that doesn’t really match the problem.
+They wanted to do ever growing amounts of data, cheaply. They had to solve the problem - they wanted to run the system, the software,
+on commodity hardware. The more nodes one has, the higher the probability of failure. There are software failures, and there
+are hardware failures. You need something fault tolerant. This is one of the places HPC fell short. They are supposed to run
+on supercomputers, which are very expensive. If there is a crash, they have to rerun the program. So, MapReduce - run on commodity
+software and be fault tolerant. The way it was fault tolerant: there are two stages, Map and Reduce, and each stage consists
+of a set of task and if one stage fails, the schedule has enough information about what has failed and it recovers that task
+by rerunning that task on the input data. The input data is typically replicated on three different nodes, so one can survive on
+two node failures or one direct failure. Very nice solution, general, flexible, and simple.</p>
+
+<h2 id="we-talk-a-lot-about-mapreduce-which-is-maybe-one-of-the-most-important-papers-written-in-the-last-20-years-now-some-people-are-saying-mapreduce-is-dead-do-you-think-so">We talk a lot about MapReduce, which is maybe one of the most important papers written in the last 20 years. Now, some people are saying MapReduce is dead. Do you think so?</h2>
+
+<p>So, MapReduce is a logical decomposition of a parallel program. As a second item, MapReduce is an artifact, an implementation.
+I think it was a great first system. But in any area where there is a lot of work, there is a lot of progress. We learned a lot
+from MapReduce, and now there are second generation systems that are better. We generalize MapReduce and extend it, to get
+higher performance. One of these systems is Spark. It’s not about MapReduce about being dead, it is about a new generation that
+generalize and expands the framework.</p>
+
+<h2 id="so-do-you-see-spark-as-solving-some-of-the-problems-with-the-mapreduce-portion-of-hadoop-or-do-you-see-spark-as-part-of-a-larger-system">So, do you see Spark as solving some of the problems with the MapReduce portion of Hadoop? Or do you see Spark as part of a larger system?</h2>
+
+<p>That’s a very good question. Right now, there are three main layers to Hadoop. First, the Hadoop Distributed File System, which
+is HDFS. Then there is <a href="https://hadoop.apache.org/docs/current/hadoop-yarn/hadoop-yarn-site/YARN.html">YARN</a>, which is similar to mesos mentioned earlier and supports different frameworks. And then on top 
+of that, one framework is Hadoop MapReduce. Spark is an execution engine, a cluster computing framework, that is roughly at the
+same level as Hadoop MapReduce. On one side, Spark runs in the Hadoop ecosystem. If you have data in HDFS you can run Spark and
+process the data in HDFS. On the other side, because it is a general cluster computing framework, Spark doesn’t necessarily need
+HDFS and it can consume data from other distributed storage systems. “Running in the cloud” is on S3. Or from <a href="http://cassandra.apache.org/">Cassandra</a>. 
+<a href="http://www.gluster.org/">GlusterFS</a>. One one hand it can be a part of a Hadoop stack, which occurs in many cases. There are also other contexts or
+deployments in which it is used.</p>
+
+<h2 id="i-want-to-get-into-some-of-the-problems-spark-is-solving-there-is-also-a-pretty-big-theme-here-of-open-source-its-just-exploded-in-the-last-5-or-8-years-being-very-involved-in-this-community-what-are-your-thoughts-on-why-it-has-exploded-and-what-do-you-think-the-impact-will-be-going-forward">I want to get into some of the problems Spark is solving. There is also a pretty big theme here of open source. It’s just exploded in the last 5 or 8 years. Being very involved in this community, what are your thoughts on why it has exploded? And what do you think the impact will be going forward?</h2>
+
+<p>Again, a very good question. The interesting thing here is that open source is exploding in multiple areas. For big data,
+it is one of the rare cases in which open source was the incumbent almost from Day 1. Google is very advanced, but everything
+is closed and they do not commercialize the systems because they consider it a key asset and competitive advantage. Microsoft
+has not moved that fast, despite being interesting, and has also not commercialized that work. We now have all of these 
+startups beginning to get a lot of data - in particular Facebook and Twitter. And Yahoo creates Hadoop MapReduce. So everyone 
+then takes Yahoo’s open source, Oracle is expensive, and there are no commercial offerings. It has limitations, though, so 
+people begin innovating on top of that, since it is with Apache. That was the core with where we started. Now, all of the big 
+offerings are open sourced.</p>
+
+<p>There were quite a slew of companies in 2010-2012 that developed proprietary solutions to deal with Hadoop’s limitations.
+A new layer on top - cacheing for example. But there was so much energy going to open source, that it becomes difficult to
+remain competitive in the long run and keep your advantage. Many of these companies over time then shift to open source, for
+example, to Spark.</p>
+
+<h2 id="with-regard-to-commercialization-i-assume-you-are-referring-to-companies-like-cloudera-hortonworks-mapr-could-you-talk-a-bit-about-what-that-collaboration-has-been-like">With regard to commercialization, I assume you are referring to companies like Cloudera, Hortonworks, MapR. Could you talk a bit about what that collaboration has been like?</h2>
+
+<p>Let me take a step back and talk a bit about our business, because I think it will help describe our relationship with
+Hadoop distributors. When we started with Databricks, we asked ourselves, “What kind of company do we want to build?”
+One obvious choice was to build something like Cloudera or Red Hat for Spark. We have our own distributions, and we support
+that with professional services and things like that. We did not do that. We decided instead to go for a service offering
+on the cloud. We saw it was the right time, and we saw it was in our DNA to go in that direction instead of a more support
+heavy company. Our strategy then became very simple: first, we want Spark to be successful as open sourced. The more successful
+Spark is, the more successful our services are. So, to promote this, we partner with the Hadoop distributors and encouraged
+them to provide some level of support to make it comfortable to include Spark in their distribution.</p>
+
+<h2 id="could-you-explain-a-bit-more-about-the-cloud-offering-of-databricks-how-do-you-see-customers-using-your-offering">Could you explain a bit more about the cloud offering of Databricks? How do you see customers using your offering?</h2>
+
+<p>Fundamentally, “big data” work is pretty hard. What do you need to do this as a company? First, you have to put together
+a Hadoop cluster, which is not easy. Maybe you can get Cloudera or Hortonworks to help you with that. Then, you need to
+build a data pipeline on top of that. It is noisy, it needs to be cleaned, and turned into a table for interactive queries.
+So, at this point, Hadoop is no longer enough. Maybe you need another open source system: <a href="https://prestodb.io/">Presto</a> from Facebook, 
+<a href="http://www.cloudera.com/content/www/en-us/products/apache-hadoop/impala.html">Impala</a> from Cloudera, or <a href="https://www.mapr.com/products/apache-drill">Drill</a> from MapR. This is just some exploration to get some idea about the data.</p>
+
+<p>Now you want more insights. To do that, you have to run some machine learning algorithms or graph algorithms. Maybe you 
+want to productize these insights and develop a recommendation engine or something like that. One needs to deal and stitch 
+together an extremely complicated system. This is where Databricks brings value. First, it uses Spark, which in itself 
+is a unified engine. It supports batch processing, interactive query processing, streaming, machine learning, and graph 
+processing. In addition, we also provide cluster management, which makes it very easy to spin off new clusters and scale 
+them up and down, really in seconds. We then have a set of tools on top of that that make it much easier to interact 
+with the data. We built a notebook for collaboration, there is interactive visualization, we can programmatically run 
+jobs. The final piece is, “What are you going to do with the data?” Typically, you want reports or dashboards to share 
+within the company. We make this very easy as well.</p>
+
+<p>This is what you get: tools and a cluster manager, that is packaged with Spark, and sold as a service.</p>
+
+<h2 id="you-mentioned-how-difficult-it-is-unlocking-value-from-data-that-is-probably-a-bit-of-an-understatement-right-60-of-data-projects---maybe-even-higher---fail-what-are-your-reasons-for-this-challenge-and-how-does-databricks-help-this">You mentioned how difficult it is unlocking value from data. That is probably a bit of an understatement, right? 60% of data projects - maybe even higher - fail. What are your reasons for this challenge? And how does Databricks help this?</h2>
+
+<p>The tools are still at the beginning. We are very early on. It is command line debugging, as opposed to being in the IDE.
+It’s pretty different, right? It is the difference between interactive debugging and debugging with screen tests in a program.
+The tools have a long way to go. The other reason for which there is no silver bullet… [there is an] assumption that, in the 
+log, there is enough information to achieve the goal. This is sometimes not the case. You don’t have the data, or the data
+is too noisy. So the data itself is not enough to succeed. What can be done about this? Well, fail fast. Don’t spend 6 months
+and say, “Hey, there is not enough data.” You want to say that in two weeks. So you can go back and say, “We need more logs.”</p>
+
+<p>So that’s what it boils down to: not enough data, inaccessible or clunky tools, and not enough trained people. Training is
+important. Data science today is a cool and hot job - but most people in industry don’t have formal training. When Databricks
+does training, we give out surveys. And 35% say they are data scientists and 40-50% say they are software engineers. When 
+we ask them, where they are heading and where they want to go - now it is more like 50-55% of data scientists and 30% of 
+software engineers. Many engineers want to be trained to become data scientists.</p>
+
+<h2 id="i-like-that-you-are-speaking-about-skillsets-in-these-organizations-we-also-are-talking-about-facebook-and-google---do-you-think-companies-like-uber-and-airbnb-can-also-benefit-from-tools-like-spark">I like that you are speaking about skillsets in these organizations. We also are talking about Facebook and Google - do you think companies like Uber and Airbnb can also benefit from tools like Spark?</h2>
+
+<p>Well, they are definitely not small companies. And they can benefit - that is what is exciting about big data. It creates a
+lot of value. It is a fascinating thing. At the end of the data, what is Google, Facebook, or Twitter? They are data companies.
+That is where they are spending their engineering efforts. To build the tools, to build the systems, to mine the data, to
+build the data products. You can also see how this data is disrupting traditional industries. At the end of the day, Uber is
+building a pretty sophisticated infrastructure. Another example is Netflix. All of their infrastructure is in Amazon and it
+is very sophisticated, and celebrated. So, a lot of these companies are more nimble in using the data. It is pretty easy to
+get a lot of data. Successful applications will send a lot of logs back. The problem today is that many of these companies
+hope to get some value from the data, but it is hard. We see a lot of use cases. This goes from small startups to large 
+companies.</p>
+
+<h2 id="great-one-last-question-from-me-weve-spent-a-lot-of-time-describing-the-ecosystem-today-what-do-you-think-the-ecosystem-is-going-to-look-like-in-five-or-ten-years">Great, one last question from me. We’ve spent a lot of time describing the ecosystem today. What do you think the ecosystem is going to look like in five or ten years?</h2>
+
+<p>Yes, that’s interesting. In order to get an answer, one should look at what has happened in other similar cases. There are
+three phases. One phase is when a new problem creates a new technology to solve that problem. A second stage is the creation
+of new use cases from the new technology and people building additional systems for each of them. The third is then a
+consolidation. We have two examples for this. One, is mobile technology. Initially, it was the cell phone. There were new
+capabilities, you can call from anywhere. Then, at the end of the 90s, there was a 2nd stage. People want to take notes/PDAs 
+in addition to calls, or maps, or play games. You get a plethora of devices to cover these use cases. This consolidates into
+a smartphone. And now there is a new wave: Waze, for crowdsourcing traffic, or Snapchat. They are possible because of this
+integration that took place in disparate devices over 15 years.</p>
+
+<p>Big data initially was MapReduce - a new problem with new technology. Right now, we are pretty much in the second stage.
+You have a new workload? Build a new system. Machine Learning? Use <a href="http://mahout.apache.org/">Mahout</a>. Graph processing? GraphLab or <a href="http://giraph.apache.org/">Giraph</a>. 
+Streaming? Storm. Interactive processing? Impala, or Drill. You want to put the system together, now, which is kind of hard. 
+I think the next stage is going to be a consolidation. It may be Spark, or it may be something else. It will be a system or 
+a platform that will allow you to run different workloads that create new applications. Let me give one example. Suppose you
+have data streaming in, and you want to have interactive queries on the streaming data. Something happens, and you want to 
+drill down in seconds. Today, in the traditional Hadoop ecosystem, it is very hard to do. How are you going to have Impala 
+operating on the system in Storm? You cannot. You need the move the data through HDFS to Impala, which already defeats the 
+goal of interactive querying streamed data. Something like Spark can do this. The workloads share the same engine and data 
+structures. It is already in place. I think this is what will happen.</p>
+
+<figure>
+	<a href="https://vimeo.com/122465105" target="_blank"><img src="/images/Ion_Britt_Play.png" /></a>
+	<figcaption>Please click here to watch an original link of the video.</figcaption>
+</figure>
+
+<h2 id="additional-qa">Additional Q&amp;A</h2>
+
+<ul>
+  <li>How do you view innovation coming out of academia vs. the commercial world? For example, Tachyon and most recently Velox out of
+AMP Lab.</li>
+  <li>You discussed the importance of consolidating processing frameworks? What are your thoughts on using traditional storage,
+like Oracle systems, and have the processing done where the data is ingested?</li>
+  <li>In terms of testing, how do you ensure that all the use cases are covered when testing is distributed?</li>
+  <li>Knowing we have a bunch of folks thinking about their careers, what advice you would give for being able to stay at the “edge”
+of development?</li>
+</ul>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/information-pioneers-ion-stoica/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/information-pioneers-ion-stoica/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/information-pioneers-ion-stoica/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Information Pioneers: A Conversation with Ion Stoica.</strong> was published on <time datetime="2015-03-11T00:00:00-07:00">March 11, 2015</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

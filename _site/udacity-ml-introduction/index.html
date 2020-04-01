@@ -1,0 +1,349 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>ML Practice: Exploring the Enron Set &#8211; Perpetually Learning</title>
+<meta name="description" content="Figuring out what is different about Jeff Skilling.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="ML Practice: Exploring the Enron Set">
+<meta name="twitter:description" content="Figuring out what is different about Jeff Skilling.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ML Practice: Exploring the Enron Set">
+<meta property="og:description" content="Figuring out what is different about Jeff Skilling.">
+<meta property="og:url" content="http://localhost:4000/udacity-ml-introduction/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/udacity-ml-introduction/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/udacity-ml-introduction/" rel="bookmark" title="ML Practice: Exploring the Enron Set">ML Practice: Exploring the Enron Set</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p><em>Note: If you would like to skip directly to my Jupyter notebook of this exercise, you can find it <a href="https://github.com/brad-svds/udacity_practice/blob/master/poi_id.py.ipynb">at this link</a>.</em></p>
+
+<h2 id="project-summary">Project Summary</h2>
+
+<p>This project is the capstone for the <a href="https://www.udacity.com/course/intro-to-machine-learning--ud120">“Introduction to Machine Learning”</a> course in the Udacity Machine Learning Engineering nanodegree. It involves using the “Enron corpus”—a body of information that was made publicly available following the Enron scandal in the early 2000s. It has all salary information and email communications. It is rare, as most companies keep these communications private. For CS folks, it is particularly valuable—it is a dataset that reveals common networks, patterns, and communications. This is a useful basis for developing and testing new models about how people interact in the workplace.</p>
+
+<p>The goal of project is to use a dataset built from the corpus to create a model that identifies “Persons of Interest” (POIs). A POI is someone whom we believe is a strong candidate for having committed fraudulent activities—for example, Jeffrey Skilling and Kenneth Lay. The dataset includes characteristics about the different individuals at Enron—for example, their known interactions with POIs (how many emails did they send or receive), the portion of their total compensation that was a bonus, etc. Doing some cursory analysis, we have 21 characteristics/columns we could use as “features” in our model. There are 146 individuals in the dataset, of whom 128 are NOT POIs, and 18 are POIs.</p>
+
+<figure align="center">
+	<img src="/images/skilling.jpg" />
+	<figcaption>This guy is definitely a "POI".</figcaption>
+</figure>
+
+<p>The model we are trying to create is an algorithm that will comb the dataset to predict the probability of whether an individual is a POI. Therefore, it is important that we build this algorithm with accurate underlying data. It is most likely that we will not need all 21 columns as “features” in the model, as some will have more predictive capabilities than others, and some may have no predictive capabilities at all. Finally, we may want to create new columns using outside data, or the provided dataset. We would do this if we expect the new columns to be more predictive of POIs than the information we currently have in its existing representation. Here are a few changes I made:</p>
+
+<ul>
+  <li>I threw away the “email_address” field as there isn’t meaningful information between the different values to help us identify a POI.</li>
+  <li>I threw away the ‘TRAVEL AGENCY IN THE PARK’ and ‘TOTAL’ rows as outliers.</li>
+  <li>I created several new “ratio” fields: the percentage of emails to or from a POI, the percentage of compensation that came in bonus, salary, and restricted stock.</li>
+</ul>
+
+<h2 id="feature-selection-and-tuning">Feature Selection and Tuning</h2>
+
+<p>The NaN values in the dataset are a blend of string and nan values. I converted all NaN values to a numpy nan (np.nan) value, and then converted the values to an outlier value (I used -0.42, which is close to (but not quite) the “Answer to the Ultimate Question of Life, the Universe, and Everything.” This allows the dataframe to be processed by classification algorithms that can’t take N/A values, such as Random Forest.</p>
+
+<p>I ran a Random Forest classification quickly to see what my preliminary values were—the answer was not very good. I had “mild” predictive capabilities for people who are NOT POIs, and 0% accuracy/recall/precision for predicting POIs. Part of the reason for this is the imbalance between the two classes (noted earlier, ~85% of the list are not POIs) and the model is trying to predict for the larger class. Fortunately, my colleague Tom Fawcett has written about this (see: <a href="https://svds.com/learning-imbalanced-classes/">Learning from Unbalanced Classes</a>). I began building ROC curves and precision-recall curves to understand performance for different tuning parameters.</p>
+
+<p>To determine the right features and tuning parameters, I built a Pipeline using SelectKBest and GridSearchCV together. The pipeline applies the first step by choosing the best k features and transforms the input data to have only these features. After transformation, this is then fit with different estimators. GridSearchCV helps to tune the “number of features to be selected” and the hyperparameter of the estimator, by selecting the parameters that give the best score on validation data.</p>
+
+<p><em>Sample code for testing SVMs:</em></p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">kbest = SelectKBest(f_classif)</code>
+<code class="language-plaintext highlighter-rouge">pipeline = Pipeline([('kbest', kbest), ('svm', SVC())])</code>
+<code class="language-plaintext highlighter-rouge">grid_search_svm = GridSearchCV(pipeline, {'kbest__k': [1,2,3,4], 'svm__C': [1, 2, 3, 4], 
+                                      'svm__kernel': ['linear', 'poly', 'rbf', 'sigmoid'] })</code>
+<code class="language-plaintext highlighter-rouge">grid_search_svm.fit(features.values, labels['poi'].values)</code>
+<code class="language-plaintext highlighter-rouge">labels_pred_svm = grid_search_svm.predict(features_test)</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">print classification_report(labels_test, labels_pred_svm)</code>
+<code class="language-plaintext highlighter-rouge">print confusion_matrix(labels_test, labels_pred_svm)</code>
+<code class="language-plaintext highlighter-rouge">print grid_search_svm.best_params_</code>
+<code class="language-plaintext highlighter-rouge">print plot_ROC_curve(grid_search_svm, features.values, labels['poi'].values)</code>
+<code class="language-plaintext highlighter-rouge">print plot_PR_curve(grid_search_svm, features.values, labels['poi'].values)</code></p>
+</blockquote>
+
+<h2 id="selecting-an-algorithm-and-performance">Selecting an Algorithm and Performance</h2>
+
+<p>I tested 3 different types of algorithms on the dataset with the pipeline method described above:</p>
+
+<ul>
+  <li><em>Decision Trees:</em> A decision tree can be thought of as a flowchart that classifies samples based on feature performance. They are very useful in practice as it is easy to determine provenance—I can articulate how and why an algorithm makes a decision. This is helpful in industries like financial services, in which there are regulations against favoring or biasing against specific groups. The performance for POI prediction can be found below:</li>
+</ul>
+
+<figure>
+	<img src="/images/decision-trees.png" />
+	<figcaption>Decision Tree performance.</figcaption>
+</figure>
+
+<ul>
+  <li><em>Random Forests:</em> A “random forest” is an ensemble model of different decision trees. Roughly speaking, random forests create several decision trees and then “blend” their results to create a newly predicted outcome. When it comes to accuracy, they are very useful in practice. At the same time, there is a greater challenge in understanding “how” predictions are made. Also, since multiple trees are created and blended, there is often a significant runtime associated with Random Forests, which needs to be accounted for in data products and analytic workflows. The performance for POI prediction can be found below:</li>
+</ul>
+
+<figure>
+	<img src="/images/random-forest.png" />
+	<figcaption>Random Forest performance.</figcaption>
+</figure>
+
+<ul>
+  <li><em>Gaussian NB:</em> Naive Bayes classifiers treat different features as independent of one another. For example, a fruit may be considered to be an apple if it is red, round, and about 10 cm in diameter. A naive Bayes classifier considers each of these features to contribute independently to the probability that this fruit is an apple, regardless of any possible correlations between the color, roundness, and diameter features. It has been found useful in text retrieval and medical diagnoses. The performance for POI prediction can be found below:</li>
+</ul>
+
+<figure>
+	<img src="/images/Gaussian.png" />
+	<figcaption>Gaussian NB performance.</figcaption>
+</figure>
+
+<p>These calculations are derived from each model’s confusion matrix, which is a table outlining how different predictions performed against a holdout set of data with known labels. If we treat the predictions as probabilities instead of hard labels (for example, an individual is “54% likely” to be a POI as opposed to only 0% or 100%), we can create an ROC chart as a metric for performance: an explanation of how to use ROC curves <a href="http://gim.unmc.edu/dxtests/roc2.htm">can be found here</a>. Below is the ROC chart for Decision Trees:</p>
+
+<figure>
+	<img src="/images/ROC-curve.png" />
+</figure>
+
+<p>The code I used split the data into 3 “folds”, each of which has different performance—the “mean ROC” is the final measure when deciding the performance of the algorithm. The greater the area indicates stronger predictiveness. There is no absolute threshold for determining good performance—one needs to consider the context surrounding the decision being made.
+I found that Decision Trees performed the best, as measured by Precision, Recall, and F1 Score.</p>
+
+<ul>
+  <li>Precision is a measure of the number of identified True Positives divided by the total number of Positive test results (including False Positives). FPs are known as Type I Error.</li>
+  <li>Recall is the number of identified True Positives divided by the total number of actual Positive samples (including False Negatives). FNs are known as Type II Error.</li>
+  <li>A F1 Score is a measure of accuracy, calculated as the harmonic mean of Precision and Recall.</li>
+</ul>
+
+<p>When looking at these scores, I was more focused on the ability to predict “1s” than the overall measures. The value 1 represents a POI. Since the data is skewed towards non-POIs (80%+ of the set), the overall numbers give the impression that the models are more highly predictive than what would be representative of their intended use. Similarly, since the goal of the activity is to identify POIs, we might be comfortable with a lower Precision measurement (increased FPs) if it provides a higher Recall (minimized FNs). Similar biases are present in medical testing.</p>
+
+<p>As an important note, all of my measurements regarding performance are calculated using a “holdout” set or a “fold” that is independent of the data upon which the model is constructed. This is referred to as “validation.” Validation is important because we are trying to generate models that have inference—some predictive capability—on a general population. We want to make sure that our models perform more effectively (much more effectively) than random chance.</p>
+
+<p>To do this, we use a set of data that the model <em>has never seen</em> and may not be entirely representative of the distribution of data upon which the model was constructed. Articulating the model’s performance using these metrics helps ensure that we are not “overfitting” the data—models that are highly predictive of the datasets on which they were trained, but perform poorly in general practice. Here is <a href="https://www.ibm.com/blogs/research/2015/08/preserving-validity-in-adaptive-data-analysis/">a great article</a> from IBM Research on preserving validity in analysis.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This was a fun project that helped hammer home some of the key concepts of data preparation and model selection. Much of my prior training in data science was done in R, and I wanted a guided introduction to scikit-learn, numpy, and pandas. It is amazing how transferable the approach and libraries are for the two languages—at the same time, there are funny anachronisms for how scikit-learn takes data from pandas dataframes vs. numpy arrays.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/udacity-ml-introduction/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/udacity-ml-introduction/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/udacity-ml-introduction/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>ML Practice: Exploring the Enron Set</strong> was published on <time datetime="2016-12-07T00:00:00-08:00">December 07, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

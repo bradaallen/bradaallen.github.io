@@ -1,0 +1,312 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Open Data Exploration - SF Crime Rates. &#8211; Perpetually Learning</title>
+<meta name="description" content="Figuring out where not to go, and when.">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Open Data Exploration - SF Crime Rates.">
+<meta name="twitter:description" content="Figuring out where not to go, and when.">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Open Data Exploration - SF Crime Rates.">
+<meta property="og:description" content="Figuring out where not to go, and when.">
+<meta property="og:url" content="http://localhost:4000/sf-opendata/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/sf-opendata/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/sf-opendata/" rel="bookmark" title="Open Data Exploration - SF Crime Rates.">Open Data Exploration - SF Crime Rates.</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <p>###What is the assignment?</p>
+
+<p>I recently did some analyses of crime rates in San Francisco using their Open Data datasets. This was part of two different assignments for the <a href="https://www.coursera.org/specializations/data-science">University of Washington’s “Data Science at Scale” course</a>. One assignment was to use visualization to develop some new inference - I used an iPython / Jupyter notebook that can be found <a href="https://github.com/brad-svds/DataSciAssn/blob/master/Analyzing%20SF%20Crime%20Patterns.ipynb">at this link</a>. The second assignment was to compete in a Kaggle competition. My detailed write-up can be found <a href="https://github.com/brad-svds/kagglesubmission2/blob/master/Submission.Rmd">here</a>.</p>
+
+<p>###What did I learn?</p>
+
+<p>I did the exploratory exercise first, and the Kaggle exercise second. Using what I had learned from the exploratory exercise, I began creating new fields before even developing a model. I thought I had information that had explanatory power and that I already knew the solution. This was a huge mistake! I should have started with the dataset and let it give me a sense of what data was valuable and the overall structure. For example, using a cor() plot and/or pulling a variable importance (VarImp() ) from a Random Forest model. Not doing this led to several hours of wasted time and effort.</p>
+
+<p>Running through this exercise had me thinking about the <a href="http://static.googleusercontent.com/media/research.google.com/en//pubs/archive/35179.pdf">Unreasonable Effectiveness of Data</a>:</p>
+
+<blockquote>
+  <p><em>“Choose a representation that can use unsupervised learning on unlabeled data, which is so much more plentiful than labeled data. Represent all the data with a nonparametric model rather than trying to summarize it with a parametric model, because with very large data sources, the data holds a lot of detail.</em></p>
+
+  <p><em>For those with experience in small-scale machine learning who are worried about the <a href="http://www.stat.ucla.edu/~sabatti/statarray/textr/node5.html">curse of dimensionality</a> and overfitting of models to data, note that all the experimental evidence from the last decade suggests that throwing away rare events is almost always a bad idea, because much Web data consists of individually rare but collectively frequent events.“</em></p>
+</blockquote>
+
+<p>This is useful when trying to develop the most accurate, dynamic model. But what if I am just trying to learn what is present in the data, and only want a semi-accurate high-level understanding? I had this conversation with one of our Principal Data Scientists, <a href="http://www.svds.com/team/drew-hardin/">Drew Hardin</a>. His guidance was to, in those situations, <em>throw away</em> as much data as possible. Why run a model on a sample of 700K if a 10K set is just as representative of the population? At the same time (and similar to the Halevy paper), don’t necessarily imbue assumptions of the underlying structure of the data because you made them elsewhere.</p>
+
+<p>###Exploration
+Theft/Larceny is by far the most reported crime in the city. After analyzing at reported crimes by day and month, contrary to expectation, I found that July had more crimes reported “midweek” than over the weekends. I peeled into the type of crimes being addressed and found that “Warrants” and “Non-Criminal” activities rise during the week - during weekdays, the police are performing work that can be predicted in advance and managed.</p>
+
+<p>I then looked at different neighborhoods/police districts to see if any patterns might emerge. The city center (SoMA = Southern, Financial District = Central, Tenderloin, etc) is where the highest crime emerges. Peculiarly, weekday crimes have a bump around 12pm and then again between 5-7pm. Presumably, this is when victims realize that a theft has occurred and contact the police. No such pattern is present on the weekends.</p>
+
+<p>Looking here, we can see that July’s pattern of increased reporting during weekdays holds true across the board. There are, on average, almost 50% higher reporting of theft on weekdays than weekends - a trend that is not true for the month of August.</p>
+
+<figure>
+	<img src="/images/weekdaycrimes.png" />
+	<figcaption>What is going on with weekdays and weekends?</figcaption>
+</figure>
+
+<p>My conclusion is that over the weekend, people are not in town to report crimes. The elevated numbers are not due to the distribution of when the events occurred, but rather when they were reported.</p>
+
+<p>Let’s now look at the Police Departments in San Francisco and where crimes are reported. The Top 4 (by volume of crime) are Central, Northern, Southern, and Mission. This would be expected, as they are in the city center and cover a relatively large volume of the city. The Tenderloin (#7) is known for not being safe, but is comparatively small.</p>
+
+<figure>
+	<img src="/images/crimebyneighborhood.png" />
+	<figcaption>Do you see the evening bumps?</figcaption>
+</figure>
+
+<p>###Kaggle Competition</p>
+
+<p>The <a href="https://www.kaggle.com/c/sf-crime">task is to predict the category of of a crime in San Francisco</a> based on a variety of attributes, including the time at which the crime was reported, the street address, the day of the week, a general description of the crime, the precint reporting, and Lat/Long information. We are given the last 12 years of information, from 2003-2015, which provides ~878K reports.</p>
+
+<p>There are 39 different different classes in the category we are trying to predict, although they are certainly not distributed evenly. The top 3 are “Larceny/Theft”, “Other Offenses”, and “Non-Criminal” with ~175K, ~125K, and ~92K reports, respectively. Solutions are evaluated by comparing the percentage of correct answers on a test dataset. The actual scoring is based “log loss.” It takes the probability of being able to predict the correct answer and uses the equation “LN(P(x)) - 1”.</p>
+
+<p>Not seeing a good way to take the text data from “Address” and seeing that the precincts are too large to offer predictive value, I used the Lat/Long information to bin the different crimes. I dropped the ~700 values that did not have Lat/Long info (marked as -120.5, -90), and originally split the rest into a 100x100 grid. However, the bins were too small, some having only ~100 crimes. I reestablished the bins for a 25x25 grid (625 bins for SF).</p>
+
+<p>Originally, I wanted to run a RandomForest model against all features and have the model tell me the variable importance of the different features (using the varImp() function). However, I ran into quite a few snags before making a submission.</p>
+
+<ul>
+  <li>First, randomForest in R does not take NAs. It has a few options for addressing this in ‘na.action’, but I wasn’t sure if there was information I might have been leaving out by imputing the NAs.</li>
+  <li>Second, randomForest in R only takes features with 53 or fewer bins. Therefore, my location bucketing (625 bins) was not acceptable. I split them into Lat and Long variables separately and hoped that the interaction would be picked up in the model.</li>
+  <li>The randomForest challenges led me to try R’s other decision trees package, rpart(). However, the dataset was too large to get the algorithm to converge. I tried several things, none of which worked:
+    <ul>
+      <li>I adjusted the sample size from ~878K down to 10K using the sample() function,</li>
+      <li>I adjusted the minimum bucket size to 100 samples to reduce the number of splits in the model,</li>
+      <li>I adjusted the complexity parameter to 0.01 to adjust when the model would accept a split as being necessary, and</li>
+      <li>I took the 39 classes in the predictor and reduced it to 5 for model simplicity. In this final state, I let R run for ~4 hours and decided for a different approach when it did not converge.</li>
+    </ul>
+  </li>
+  <li>To get a convergence, I went back to the randomForest() model and decided to drop all rows that have an “NA” present. I also used the 10K sample instead of the full ~878K set</li>
+  <li>Finally, running the model against the test set results in a list of ~885K predictions. Kaggle asks for the submission to be a sparse matrix of 1s and 0s (with the different classes as the column headings). I wrote a nested for loop to make this conversion, which isn’t great for R’s memory capabilities. That is - it starts off fast, and then slows as the matrix builds. I switched to the lapply() and my speeds dropped considerably.</li>
+  <li>There seem to be two poles to the submissions - the first thousand submissions and the second thousand submissions have very different predictive capabilities. Reading through some answers, I realized the fields that I added were what gave me poor predictive information. If I ran randomForest without the extra fields, that would have put me in the top bucket of answers.</li>
+</ul>
+
+<p>Now, if I had tried to place in the top ~25 spots - that would have required the Unreasonable Effectiveness of Data approach: I read through the open scripts for a few of the top answers, which use a combination of <a href="http://keras.io/">Keras</a>, a deep learning library for <a href="http://deeplearning.net/software/theano/">Theano</a> or <a href="https://www.tensorflow.org/">TensorFlow</a>, and a count featurizer from Microsoft Azure, which uses the frequency of events to indicate the strength or importance of different given features.</p>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/sf-opendata/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/sf-opendata/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/sf-opendata/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Open Data Exploration - SF Crime Rates.</strong> was published on <time datetime="2016-02-10T00:00:00-08:00">February 10, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>

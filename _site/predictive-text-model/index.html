@@ -1,0 +1,334 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Building a predictive text.. &#8211; Perpetually Learning</title>
+<meta name="description" content="..model. (Get it?).">
+<meta name="keywords" content="">
+
+
+<!-- Twitter Cards -->
+<meta name="twitter:title" content="Building a predictive text..">
+<meta name="twitter:description" content="..model. (Get it?).">
+<meta name="twitter:site" content="@bradaallen">
+<meta name="twitter:creator" content="@bradaallen">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://localhost:4000/images/default-thumb.png">
+
+<!-- Open Graph -->
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Building a predictive text..">
+<meta property="og:description" content="..model. (Get it?).">
+<meta property="og:url" content="http://localhost:4000/predictive-text-model/">
+<meta property="og:site_name" content="Perpetually Learning">
+
+<meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/predictive-text-model/">
+<!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- HTML5 Shiv and Media Query Support -->
+<!--[if lt IE 9]>
+	<script src="http://localhost:4000/assets/js/vendor/html5shiv.min.js"></script>
+	<script src="http://localhost:4000/assets/js/vendor/respond.min.js"></script>
+<![endif]-->
+
+<!-- Modernizr -->
+<script src="http://localhost:4000/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
+
+<!-- Google Analytics Account -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-30527258-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="http://localhost:4000/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+
+<!-- Setting up an RSS Feed -->
+<link rel="alternate" type="application/rss+xml" title="The Perpetual Apprentice" href="/feed.xml" />
+
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.ico">
+<!-- 32x32 -->
+<link rel="shortcut icon" href="http://localhost:4000/favicon.png">
+<!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+<link rel="apple-touch-icon-precomposed" href="http://localhost:4000/images/apple-touch-icon-precomposed.png">
+<!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://localhost:4000/images/apple-touch-icon-72x72-precomposed.png">
+<!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://localhost:4000/images/apple-touch-icon-114x114-precomposed.png">
+<!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://localhost:4000/images/apple-touch-icon-144x144-precomposed.png">
+
+</head>
+
+<body class="post">
+
+<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+
+<div class="navigation-wrapper">
+	<div class="site-name">
+		<a href="http://localhost:4000/">Perpetually Learning</a>
+	</div><!-- /.site-name -->
+	<div class="top-navigation">
+		<nav role="navigation" id="site-nav" class="nav">
+		
+		
+		    <ul>
+		        
+				    
+				    <li><a href="http://localhost:4000/writing/" >Writing</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/photos/" >Photos</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/about/" >About</a></li>
+				
+				    
+				    <li><a href="http://localhost:4000/signup/" >Keep in Touch!</a></li>
+				
+		    </ul>
+		</nav>
+	</div><!-- /.top-navigation -->
+</div><!-- /.navigation-wrapper -->
+
+
+
+<div id="main" role="main">
+  <div class="article-author-side">
+    
+
+<div itemscope itemtype="http://schema.org/Person">
+
+
+	<img src="http://localhost:4000/images/Brad_Thumbs_Up.jpg" class="bio-photo" alt="Brad Allen bio photo">
+
+
+  <h3 itemprop="name">Brad Allen</h3>
+  <p>Doing a little more each day.</p>
+  <a href="mailto:bradaallen@gmail.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
+  <a href="http://twitter.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-twitter-square"></i> Twitter</a>
+  <a href="http://facebook.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-facebook-square"></i> Facebook</a>
+  
+  <a href="http://linkedin.com/in/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-linkedin-square"></i> LinkedIn</a>
+  
+  <a href="http://instagram.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-instagram"></i> Instagram</a>
+  
+  <a href="http://github.com/bradaallen" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+
+  </div>
+  <article class="post">
+    <div class="headline-wrap">
+      
+        <h1><a href="http://localhost:4000/predictive-text-model/" rel="bookmark" title="Building a predictive text..">Building a predictive text..</a></h1>
+      
+    </div><!--/ .headline-wrap -->
+    <div class="article-wrap">
+      <figure>
+	<img src="/images/swiftkey.png" />
+	<figcaption>I wasn't even close to doing anything like this.</figcaption>
+</figure>
+
+<p>I recently was asked to build a predictive text application (a la <a href="https://swiftkey.com/en">Swiftkey</a>) as part of the capstone project for the <a href="https://www.coursera.org/specializations/jhu-data-science">Johns Hopkins data science course</a>. It was my second project involving natural language processing (NLP) in the past few months; I also built a <a href="https://www.coursera.org/specializations/jhu-data-science">small language prediction tool</a> as the capstone for a machine learning workshop I attended.</p>
+
+<p>The goal of my first NLP project was to learn more about model selection and implementing a model as part of a web application framework. As a result, much of the “up front” work was addressed: several Wikipedia pages were scraped in different languages, labeled, and then passed through a vectorizer to create 3-char tokens.</p>
+
+<p>This project, the predictive text application, would require significantly more work, for two reasons: (1) we were starting with a raw corpus, and (2) predictive activities (ie, inferring the “future”) are harder than descriptive activities (ie, inferring “characteristics”). I ony focused on predictions of the English language.</p>
+
+<figure>
+	<img src="/images/predictivemodel.png" />
+	<figcaption>Simple, clean, somewhat accurate.</figcaption>
+</figure>
+
+<p>In this post, I’ll describe the process of building the application with an eye towards how I might approach the problem if done again in the future.</p>
+
+<p>##Exploring the Corpus</p>
+
+<p>In the exercise, we used the <a href="http://salty-inlet-1328.herokuapp.com/">HC Corpora</a> to develop a predictive text model. The HC Corpora is web-scraped text from a guy named Hans Christensen (thus, HC) in the form of blogs, twitter, and news sources. He has more than 2.5 billion words in 67 languages, which is amazing.</p>
+
+<p>To start, I wanted to get a sense of what common n-grams would look like without cleaning. I also wanted to get a sense of what the n-grams would look like if I took out “stop words.” Stop words are common fillers like “of”, “a”, or “the”. I saved both of these experiments as .csv files to demonstrate why a cleaning of the data was necessary, and why I left stop words in. Removing stop words resulted in a frequency that likely would not be helpful for users. For example, the 2nd most common 3-gram without stopwords was “happy mothers day”. I sampled 2% of the full Corpora.</p>
+
+<figure>
+	<img src="/images/chart.png" />
+	<figcaption>"I don t"... Not very useful.</figcaption>
+</figure>
+
+<p>Using the common cleaning functions from the tm package in R, I created a master function for cleaning the corpora. Note that the order of the functions is important. For example, the list of profanities are all in lowercase. Therefore, if ‘tolower’ did not come earlier - I would have left in some profanities. Per the recommendation of the <a href="http://www.corpora.heliohost.org/">RWeka documentation</a>, I also created functions for the different multi-word tokens that I will be creating.</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">clean_text &lt;- function(text){</code>
+  <code class="language-plaintext highlighter-rouge"># Helper function to preprocess corpus</code>
+  <code class="language-plaintext highlighter-rouge">text &lt;- tm_map(text, content_transformer(tolower))</code>
+  <code class="language-plaintext highlighter-rouge">text &lt;- tm_map(text, removeNumbers)</code>
+  <code class="language-plaintext highlighter-rouge">text &lt;- tm_map(text, removePunctuation)</code>
+  <code class="language-plaintext highlighter-rouge">text &lt;- tm_map(text, stripWhitespace)</code>
+  <code class="language-plaintext highlighter-rouge">text &lt;- tm_map(text, removeWords, stopwords("english"))</code>
+  <code class="language-plaintext highlighter-rouge">text &lt;- tm_map(text, removeWords, profanities)</code>
+  <code class="language-plaintext highlighter-rouge">return(text)</code>
+<code class="language-plaintext highlighter-rouge">}</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">BiTokens &lt;- function(x) {RWeka::NGramTokenizer(x, RWeka::Weka_control(min = 2, max = 2))}</code>
+<code class="language-plaintext highlighter-rouge">TriTokens &lt;- function(x) {RWeka::NGramTokenizer(x, RWeka::Weka_control(min = 3, max = 3))}</code>
+<code class="language-plaintext highlighter-rouge">QuadTokens &lt;- function(x) {RWeka::NGramTokenizer(x, RWeka::Weka_control(min = 4, max = 4))}</code></p>
+</blockquote>
+
+<p>For some reason, RWeka has trouble parallelizing the different cores on my OSx. I could only get the functions to work if I specifically stated that I will only use one core. Here, I am creating a 2-, 3-, and 4-gram model. The TDM function creates a very sparse matrix, which I collapse, and then turn into sorted dataframes by frequency.</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">tdm3a &lt;- TermDocumentMatrix(clean_join, control=list(tokenize=TriTokens))</code>
+<code class="language-plaintext highlighter-rouge">tdm3 &lt;- removeSparseTerms(tdm3a, 0.9999)</code>
+<code class="language-plaintext highlighter-rouge">freq3 &lt;- sort(row_sums(tdm3, na.rm = T), decreasing=TRUE)</code>
+<code class="language-plaintext highlighter-rouge">freq_frame3 &lt;- data.frame(word=names(freq3), freq=freq3)</code></p>
+</blockquote>
+
+<p>Tokenizing is a computationally-heavy exercise - since I was only using one core, it would take me more than an hour just to parse 2% of the Corpora once (say, for a 3-gram instead of a 4-gram). As a result, I took shortcuts in developing my database - I would have wanted to ensure that I knew how much of the overall vocabulary was covering, and I chose not to calculate this. There must be a threshold for which additional information is low utility - probably more extreme than Pareto rules (ie, 80% of info covered in 20% of Corpora) - but I am sure that I did not hit that threshold.</p>
+
+<p>##Building the Model:</p>
+
+<p>To predict text, I wrote a function that represented a stupid backoff model. This model works by first matching a database of different “n-grams” to the provided text, and then assigning strengths to different outcomes based on how the match takes place. For example, take the phrase, “The quick brown fox jumps over the lazy dog.” If I have typed “The quick brown fox jumps…” my backoff model would first look at “brown fox jumps” (a 3-gram), then “fox jumps” (a 2-gram), then “jumps” (a 1-gram) - if a match occurs in those three lookups, that answer is provided.</p>
+
+<p>As opposed to my approach of taking the “strongest match,” the backoff model applies a discount for each recursive step (traditionally 0.4) and then provides a “score” for each potential match. The highest score at the end of the process results in the prediction.</p>
+
+<figure>
+	<img src="/images/katz.png" />
+	<figcaption>Katz Backoff model.</figcaption>
+</figure>
+
+<p>The project was coded in R - as a result I used the Shiny framework and <a href="https://cran.r-project.org/web/packages/RWeka/RWeka.pdf">hosted the application on Shinyapps</a>.</p>
+
+<p>##So, what did I learn?</p>
+
+<ul>
+  <li><strong>Stanford has a lot of good research on different ‘smoothing methods’ (eg, Jelinek-Mercer, Witten-Bell, Good Turing, and Kneser-Ney).</strong> Descriptions of those methods can be found here: <a href="https://bradaallen.shinyapps.io/Swiftkey/">Stanford NLP Smoothing Tutorial</a>. Many academics have worked to tackle this problem in the last 15-20 years, and there is sufficient literature as a basis for developing a model.</li>
+  <li><strong>There should be triggers for when to use ‘stopwords’ and when to refrain.</strong> Words like ‘to’, ‘of’, and ‘the’ don’t necessarily convey the context of what someone may be trying to communicate - at the same time, they are used frequently enough that they should be included in a predictive model.</li>
+  <li><strong>Database structure / type provides a lot of flexibility for fast recall.</strong> For example, Redis or MongoDB. This was <a href="http://nlp.stanford.edu/~wcmac/papers/20050421-smoothing-tutorial.pdf">a great attempt</a> to try different database structures for this project. These are tools that are commonly used in my day job, and I would have loved a bit more time to play around with them. Especially how the use of the database might influence use of memory, speed of access, and the required structure for how the data is stored.</li>
+</ul>
+
+<p>Two things I would have loved to explore are:</p>
+
+<ul>
+  <li><strong>Dynamic improvement of the model.</strong> How can user inputs (and the knowledge that a prediction is correct or incorrect) help develop a model that greatly increases in accuracy over time?</li>
+  <li><strong>Refining model accuracy.</strong> I refrained from constructing a holdout set, as I did not have enough free time to build a separate model. For example, does one separate the holdout Corpora by lines and then choose both the random placement of a word and a random set of preceding words for matching? I would love to learn more about best practices.</li>
+</ul>
+
+
+      <hr />
+      <footer role="contentinfo">
+        <div class="social-share">
+  <h4>Share on</h4>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/predictive-text-model/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/predictive-text-model/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/predictive-text-model/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+  </ul>
+</div><!-- /.social-share -->
+        <p class="byline"><strong>Building a predictive text..</strong> was published on <time datetime="2016-04-15T00:00:00-07:00">April 15, 2016</time>.</p>
+      </footer>
+    </div><!-- /.article-wrap -->
+  </article>
+</div><!-- /#main -->
+
+<script>
+/**
+* RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+* LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+
+s.src = '//bradaallen.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<div class="footer-wrap">
+  
+  <div class="related-articles">
+  <h4>You might also enjoy <small class="pull-right">(<a href="http://localhost:4000/writing/">View all posts</a>)</small></h4>
+    <ul>
+    
+      <li><a href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" title="Welcome to Jekyll!">Welcome to Jekyll!</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+    
+      <li><a href="http://localhost:4000/customer-journey-success-part-1/" title="Is Your Customer Journey Set Up for Success? Part I.">Is Your Customer Journey Set Up for Success? Part I.</a></li>
+    
+    </ul>
+    <hr />
+  </div><!-- /.related-articles -->
+  
+  <footer>
+    
+
+<span>&copy; 2020 Brad Allen. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> using the <a href="http://mademistakes.com/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a> theme.</span>
+
+  </footer>
+</div><!-- /.footer-wrap -->
+
+<script src="http://localhost:4000/assets/js/scripts.min.js"></script>
+
+
+<script id="dsq-count-scr" src="//bradaallen.disqus.com/count.js" async></script>
+
+</body>
+</html>
