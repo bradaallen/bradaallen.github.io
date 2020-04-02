@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technology is Not Enough"
+title: "Data Maturity: Technology is Not Enough"
 modified:
 excerpt: "Knowing what to do with it is what matters most."
 comments: true

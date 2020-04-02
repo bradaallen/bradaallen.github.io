@@ -185,13 +185,37 @@ var store = [{
         "url": "http://localhost:4000/udacity-ml-introduction/",
         "teaser": null
       },{
+        "title": "Exploring Digital's Effect on the Economy: Intro",
+        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog. Introduction Living in Silicon Valley, it is difficult to not get caught up in techno-optimism. The World Economic Forum, many McKinsey reports, and Ray Kurzweil frequently remind...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/digital-economy-intro/",
+        "teaser": null
+      },{
+        "title": "Digital Economy Part I: Slow Productivity & Strong Incumbents",
+        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog.   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/digital-economy-part-1/",
+        "teaser": null
+      },{
+        "title": "Digital Economy Part II: Aging & Unproven Learning Models are Headwinds to Growth.",
+        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog.   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/digital-economy-part-2/",
+        "teaser": null
+      },{
+        "title": "Digital Economy Part III: Technology requires deeper integration into our work lives. ",
+        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog.   ","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/digital-economy-part-3/",
+        "teaser": null
+      },{
         "title": "Understanding Your Data Maturity",
         "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog. How effective are you with your capabilities? Businesses today are experiencing rapid change, inside and outside of Silicon Valley. Even coffee isn’t immune—just last year, Starbucks crossed...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/understanding-data-maturity/",
         "teaser": null
       },{
-        "title": "Technology is Not Enough",
+        "title": "Data Maturity: Technology is Not Enough",
         "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog. Success with data involves managing strengths and weaknesses The great data rush is well and truly under way. Across virtually every industry, companies large and small are...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/technology-isnt-everything/",
