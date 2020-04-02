@@ -233,9 +233,21 @@ var store = [{
         "url": "http://localhost:4000/customer-journey-success-part-2/",
         "teaser": null
       },{
-        "title": "Welcome to Jekyll!",
-        "excerpt":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...","categories": ["jekyll","update"],
+        "title": "True Agile: Core to a DS Workflow.",
+        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/jekyll/update/welcome-to-jekyll/",
+        "url": "http://localhost:4000/data-science-and-agile/",
+        "teaser": null
+      },{
+        "title": "Preparing Data Scientists to Develop in Agile.",
+        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/developing-agile-data-scientists/",
+        "teaser": null
+      },{
+        "title": "Moving hosting from AWS to Github.",
+        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/moving-to-github/",
         "teaser": null
       }]

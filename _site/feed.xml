@@ -1,17 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-02T13:12:25-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Perpetually Learning</title><subtitle>Brad Allen's personal blog. I love building things (and learning how to build new things). Preferably those that scale. Keywords: Product Management, Data Science, Data Engineering, Python, Stanford, Stanford GSB, Penn State, Pennsylvania, TFA, Teach For America, Bain, Embrace, Aclima, Peloton Technology, Mechatronics, C+
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2020-03-11T17:28:12-07:00</published><updated>2020-03-11T17:28:12-07:00</updated><id>http://localhost:4000/jekyll/update/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/welcome-to-jekyll/">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-02T16:08:54-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Perpetually Learning</title><subtitle>Brad Allen's personal blog. I love building things (and learning how to build new things). Preferably those that scale. Keywords: Product Management, Data Science, Data Engineering, Python, Stanford, Stanford GSB, Penn State, Pennsylvania, TFA, Teach For America, Bain, Embrace, Aclima, Peloton Technology, Mechatronics, C+
+</subtitle><entry><title type="html">Moving hosting from AWS to Github.</title><link href="http://localhost:4000/moving-to-github/" rel="alternate" type="text/html" title="Moving hosting from AWS to Github." /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/moving-to-github</id><content type="html" xml:base="http://localhost:4000/moving-to-github/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;GH Pages:1. Use WSL, don’t mess with the devkits: https://kiazhi.github.io/blog/Working-with-Jekyll-and-Ruby-on-Windows-for-GitHub-Pages/#getting-started-with-jekyll-on-windows-10-using-windows-subsystem-for-linux&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Use rbenv, don’t mess with bare installations: https://brainwipe.github.io/jekyll/hyde/ubuntu/2017/05/16/pulling-jekyll-teeth/&lt;/li&gt;
+  &lt;li&gt;Make sure you are using the gh-pages dependencies for Ruby and Jekyll: https://pages.github.com/versions/* if you had other versions pre-installed, make sure you are loading from rbenv (eg, the shims in ruby and jekyll)&lt;/li&gt;
+  &lt;li&gt;Pick your theme; I like minimal mistakes: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/&lt;/li&gt;
+  &lt;li&gt;Follow this site for then creating your GH repo, testing locally, etc: https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll&lt;/li&gt;
+  &lt;li&gt;Set up a custom domain, if desired: https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site
+Don’t forget the ~/.bashrc and . in jekyll new! rbenv init -, etc.
+https://bryancshepherd.com/data-science/setting-bluehost-dns-github-jekyll-blog/  &lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site 
+https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site
+https://medium.com/@kimcodes/setting-up-a-web-page-with-github-pages-f77d45573ab2&lt;/p&gt;</content><author><name></name></author><summary type="html">Quick notes on setting up a gh-pages blog using Windows 10.</summary></entry><entry><title type="html">Preparing Data Scientists to Develop in Agile.</title><link href="http://localhost:4000/developing-agile-data-scientists/" rel="alternate" type="text/html" title="Preparing Data Scientists to Develop in Agile." /><published>2019-06-07T00:00:00-07:00</published><updated>2019-06-07T00:00:00-07:00</updated><id>http://localhost:4000/developing-agile-data-scientists</id><content type="html" xml:base="http://localhost:4000/developing-agile-data-scientists/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated. To add new posts, simply add a file in the _posts directory that follows the convention YYYY-MM-DD-name-of-post.ext and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works. Jekyll also offers powerful support for code snippets: def print_hi(name) puts &quot;Hi, #{name}&quot; end print_hi('Tom') #=&amp;gt; prints 'Hi, Tom' to STDOUT. Check out the Jekyll docs for more info on how to get the most out of Jekyll. File all bugs/feature requests at Jekyll’s GitHub repo. If you have questions, you can ask them on Jekyll Talk.</summary></entry><entry><title type="html">Is Your Customer Journey Set Up for Success? Part II.</title><link href="http://localhost:4000/customer-journey-success-part-2/" rel="alternate" type="text/html" title="Is Your Customer Journey Set Up for Success? Part II." /><published>2018-07-10T00:00:00-07:00</published><updated>2018-07-10T00:00:00-07:00</updated><id>http://localhost:4000/customer-journey-success-part-2</id><content type="html" xml:base="http://localhost:4000/customer-journey-success-part-2/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Lead in with Eric Colson blog: https://hbr.org/2019/03/why-data-science-teams-need-generalists-not-specialists&lt;/p&gt;
+
+&lt;p&gt;•	DS:
+o	Programming &amp;amp; Architecture: 
+	Ability to write tested, functional, modular code.
+	Ability to work with git, in a gitflow environment.
+	Can work in single- and distributed-machine environments with guidance.
+o	ML:
+	Understand the requirements of a full end-to-end ML solution (ie, target definition, ETL, KPI definition, training vs. scoring, model maintenance tooling)
+	Has experience in 2 of 3: classification, regression, optimization. 
+o	Consulting:
+	Developing skills in workplanning, time management, written and verbal communication (pyramid principle – “tailoring the message”)
+	Developing skills in knowing when to involve leadership to “unblock” vs. solving independently
+•	SDS:
+o	Programming &amp;amp; Architecture:
+	Can perform code reviews.
+	Can set up and manage the integrity of a codebase (refactor and redesign as needed, separate out cross-cutting functionality)
+	Can identify the required solution architecture (infrastructure, programming languages req., storage patterns). – SDS2
+o	ML:
+	Can design a full E2E ML solution and offer alternatives based on resources, timeline, and client need.
+o	Consulting:
+	Focus is on module ownership – the ability to iterate a solution’s design to fit the client’s needs, plus the ability to design an E2E workplan for the module.
+	Can begin to design consumable output (ie, feeding into campaign mgmt. system vs. Tableau vs. API vs. application)&lt;/p&gt;
+
+&lt;p&gt;•	Overall (LDS+): Greater appreciation required for the benefits of clean code. Timelines and Gamma experience leads to “tactical programming” instead of “strategic programming.” We prioritize on quick output over the design of clean systems. This leads to bugs and complexity that make changes more difficult – this is where projects get burned.
+•	Overall (LDS+): Better understanding up front of the technical tools required for a solution. Resources aren’t fungible and too much risk if the full team is implementing a new technology for the first time. 
+•	Overall (LDS+): Agile Product Management. Designing full solutions early and adding functionality/complexity over time.
+•	SDS: 
+o	Wide variety in programming and engineering skillset. Many have gaps for what I would consider a high performing DS. Makes it difficult to work with them and focus on the logic of the problem.
+o	Need greater “big picture focus” on how the solution will be owned and maintained by the client. In the solution design, lots of small complexity/optimizations that appear interesting over the course of a project, but end up running out of time, isn’t handed over well, or is not maintainable. Results orientation should be towards “what works 18mo after we leave.” 
+	^^ translates into better workplanning, more curiosity around client dynamics (eg, req. process redesign, teaming, skills)
+o	Need greater focus on the “so what” – being able to understand how we are creating value for the client and designing systems that prove the incremental gain
+•	DS: 
+o	Focus should be on gaining a mental map for what skills are required to be a successful DS. Can be myopic in going very deep in a few areas, with large gaps in other parts. This pattern (and rewarding it) may be a cause for the unevenness in the SDS cohort.&lt;/p&gt;
+
+&lt;p&gt;•	All Martin Fowler / XP programming books on writing clean code and continuous delivery (I can send a list).
+o	Surviving Legacy Code: https://www.jbrains.ca/training/surviving-legacy-code/&lt;/p&gt;</content><author><name></name></author><summary type="html">How to iterate towards valuable, sustainable output.</summary></entry><entry><title type="html">True Agile: Core to a DS Workflow.</title><link href="http://localhost:4000/data-science-and-agile/" rel="alternate" type="text/html" title="True Agile: Core to a DS Workflow." /><published>2019-04-18T00:00:00-07:00</published><updated>2019-04-18T00:00:00-07:00</updated><id>http://localhost:4000/data-science-and-agile</id><content type="html" xml:base="http://localhost:4000/data-science-and-agile/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Include Tristan Handy stuff: https://blog.getdbt.com/4-questions-to-help-you-more-accurately-scope-analytics-engineering-projects/&lt;/p&gt;
+
+&lt;p&gt;Framing the approach: Data Science requires Agile &amp;amp; Product Management Skills&lt;/p&gt;
+
+&lt;p&gt;Agile develops products faster by acknowledging the current uncertainty in the final solution. In my workplan, I am trading time for information that helps me manage this uncertainty. 
+At the beginning of a model’s development, I don’t know:
+The client’s preferred metrics for measurement
+Business constraints that shape the necessary inputs/outputs
+The right form factor that will ensure a tool is used
+Any required changes to operational processes if a tool is not currently used (and associated resistance to change)
+The greatest uncertainty should be “pulled forward” the farthest. Things that have material risk on the outcome should be (1) broken down into tests that (2) generate information that (3) allow for decision-making under greater certainty.
+Acknowledging uncertainty is the key differentiator from an Agile and a waterfall process. The fact that my original plan could be wrong is the only reason iterations or adjustments are necessary. J
+Erroneous assumptions can be very dangerous. If I assume a fact without designing a test, I am propagating the risk that I could be wrong “throughout” the project.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;By having a solution-mindset, and by trying to define clear product and technical requirements - I can then build slices of functionality that allow me to iterate towards a final solution.
+Establish an MVP and build complexity over time. Google’s Rules of ML suggest starting after heuristics become too complex.
+UI/UX and “core” (technical) functionality can be developed separately and in parallel. Each informs the other and is driven by usability. Looks like vs. Works like.
+For UI/UX and systems design, design thinking is powerful. Particularly: 
+Prioritizing visual tools (eg, wireframes, excel mockups) for feedback
+Using user feedback to argue for change (BCG tool recommendations are made “on behalf of the user”)
+Effective use of divergent + convergent thinking modes when brainstorming (called out to me by BCG Classics as a particularly powerful method)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Internal priority #1: Technical debt is a killer - need to trust the process.
+Clean code really pays off - it reduces team velocity and makes it hard to create options
+Code Spikes
+Good PR process - complexity is added in small chunks. 
+Sprint Goals need to be output driven. DS and SDS can have a tendency to be task oriented; it makes acceptance criteria less valuable and can lead to reduced productivity.
+User Stories shouldn’t be more than 1-2 story points. Story Points are used to size work during sprints. They aren’t a tool to measure a developer’s productivity. User Stories shouldn’t bleed between sprints.
+Have a Plan B that is viable. Creating options is what makes Agile work work well.&lt;/p&gt;
+
+&lt;p&gt;External priority #1: Communication in cross-functional teams is paramount&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Keep high transparency with the business. Onboard them into the “back-office” work of model building and management.
+    &lt;ul&gt;
+      &lt;li&gt;They should know they are on a learning journey, and what we are finding together.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Always be clear - to everyone - on the definition of “done.”
+    &lt;ul&gt;
+      &lt;li&gt;And what level of “done” is appropriate for the problem at hand.&lt;/li&gt;
+      &lt;li&gt;A key client understanding is on the tradeoffs between flexibility and automation.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nobody should believe the model is a “black box.”
+    &lt;ul&gt;
+      &lt;li&gt;Code is logic. If it can’t be explained clearly, it’s poor logic.&lt;/li&gt;
+      &lt;li&gt;We have a lot of smart people - when we do this, we deny ourselves the opportunity for good feedback.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;What makes this particularly challenging is how orthogonal DS is - and its heavy reliance on apprenticeship – both sides are gaining experience and may not have the language yet to communicate effectively.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;“Defining done” is a common source of frustration between Classics and Gamma. 
+Eg, the difference between the same output but where the code is (1) a rough script, vs (2) functional/modular/parametric, vs. (3) tested, vs. (4) automated
+https://www.oreilly.com/radar/lessons-learned-turning-machine-learning-models-into-real-products-and-services/&lt;/p&gt;</content><author><name></name></author><summary type="html">Or, 'how I got good at managing expectations under uncertainty.'</summary></entry><entry><title type="html">Is Your Customer Journey Set Up for Success? Part II.</title><link href="http://localhost:4000/customer-journey-success-part-2/" rel="alternate" type="text/html" title="Is Your Customer Journey Set Up for Success? Part II." /><published>2018-07-10T00:00:00-07:00</published><updated>2018-07-10T00:00:00-07:00</updated><id>http://localhost:4000/customer-journey-success-part-2</id><content type="html" xml:base="http://localhost:4000/customer-journey-success-part-2/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
 
@@ -331,142 +436,4 @@ Redesigning the client’s architecture to identify and articulate the customer�
   &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-3/&quot;&gt;Part III: Technology requires deeper integration into our work lives.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;My goal in putting this together was to clarify my own thinking - and to present it in a way that can be challenged and deepened by others. I would be grateful to learn what may resonate (or differ) from your personal perspectives and work.&lt;/p&gt;</content><author><name></name></author><summary type="html">In aggregate, things aren't changing as much as times past.</summary></entry><entry><title type="html">Exploring Digital’s Effect on the Economy: Intro</title><link href="http://localhost:4000/digital-economy-intro/" rel="alternate" type="text/html" title="Exploring Digital's Effect on the Economy: Intro" /><published>2017-05-01T00:00:00-07:00</published><updated>2017-05-01T00:00:00-07:00</updated><id>http://localhost:4000/digital-economy-intro</id><content type="html" xml:base="http://localhost:4000/digital-economy-intro/">&lt;p&gt;&lt;em&gt;These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the “march towards AGI was safe.” UBI was actively being discussed by Sam Altman and Ray Kurzweil was promoting 10x / exponential thinking. At the same time, economists like Robert Gordon were arguing that we were actually living in a time of low progress.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;I tried to develop my own perspective on what was happening, with key conclusions presented below. Greater detail supporting these conclusions can be found in &lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-1/&quot;&gt;Part I&lt;/a&gt;, &lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-2/&quot;&gt;Part II&lt;/a&gt;, and &lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-3/&quot;&gt;Part III&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;2015-2016---conflicting-narratives-in-the-media&quot;&gt;2015-2016 - Conflicting narratives in the media&lt;/h3&gt;
-
-&lt;p&gt;Living in Silicon Valley, it is difficult to not get caught up in techno-optimism. The &lt;a href=&quot;http://reports.weforum.org/digital-transformation-of-industries/&quot;&gt;World Economic Forum&lt;/a&gt;, many &lt;a href=&quot;http://www.mckinsey.com/industries/high-tech/our-insights/digital-america-a-tale-of-the-haves-and-have-mores&quot;&gt;McKinsey reports&lt;/a&gt;, and &lt;a href=&quot;http://www.kurzweilai.net/ray-kurzweil-biography&quot;&gt;Ray Kurzweil&lt;/a&gt; frequently remind us of the “unique time” we live in and the benefits of increasingly digital tools - the “4th Industrial Revolution.” It is easy to get caught up in the narrative that, collectively, we are building a service-oriented future, one of unprecedented disruption and progress. Is there any reason to call this into question?&lt;/p&gt;
-
-&lt;p&gt;The answer is “yes.” As a simple statistic, the &lt;a href=&quot;https://www.whitehouse.gov/sites/default/files/docs/cea_2015_erp.pdf&quot;&gt;2015 Economic Report of the President&lt;/a&gt; noted that if economic productivity growth had continued to grow at its 1948–1973 rate, the average household income in the United States would be $30,000 higher today.&lt;/p&gt;
-
-&lt;p&gt;Technology has undoubtedly provided tremendous benefits to our society. With increased globalization in trade, innovation in information and communication technologies (ICT) is the second defining macroeconomic trend of the late 20th Century and early 21st Century. Together, they have raised hundreds of millions out of poverty, have removed countless information asymmetries (redefining the role of intermediaries and brokers in value chains), and have changed how groups organize, communicate, and exert political influence.&lt;/p&gt;
-
-&lt;p&gt;But despite their influence, these two sources of growth have not been able to provide comparable growth to historical innovations and trends. Furthermore, looking forward, there are many reasons to believe that this “quest for growth” may be even more difficult in the next few decades than it has been over the past 40 years. Our faith in technology, while directionally correct, may mask the amount of work required to create the future we want for ourselves and our children.&lt;/p&gt;
-
-&lt;p&gt;Unclear of what to make of these apparent paradoxes, I spent time researching economic literature, policy papers, and investment recommendations to understand the impact of digital technologies on the economic growth of the United States. My general conclusion was that digital’s anticipated effect on growth may not be enough to overcome weaknesses in a few common markers of a healthy, burgeoning economy: broad innovation, strong labor trends, and general competition.&lt;/p&gt;
-
-&lt;p&gt;In the United States, companies leading digital transformations are winning the battle for market share and profit growth; some (but not many) are reshaping entire industries to their own advantage. Workers with the most sophisticated digital skills are in such high demand that they command wages far above the national average. Meanwhile, there is a growing opportunity cost for the organizations and individuals that fall behind—and too many are falling behind.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;After this research, I was left with five conclusions for improving future opportunity:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Due to today’s market structures, digital skills most benefit incumbent firms. Economic shifts will be slow without large shocks to competition.&lt;/li&gt;
-  &lt;li&gt;Greater investments should be made in basic science R&amp;amp;D, to identify future growth and diversify areas of productivity in the economy.&lt;/li&gt;
-  &lt;li&gt;A key differentiation for digital technology is the knowledge of how to effectively apply technology. Therefore, job skills and retraining are a particularly important area of public-private partnerships.&lt;/li&gt;
-  &lt;li&gt;As the value of synthesized data grows, greater attention will need to be given to the administration of data security and privacy.&lt;/li&gt;
-  &lt;li&gt;For those marginalized by these disruptions in society, greater guardrails and supports may need to be put in place - e.g., reform in active labor policies.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;In a later exercise, my hope is to identify caucuses, task forces, and organizations that are working on initiatives aligned with these causes. The research and additional detail that led to these conclusions can be found in a few supporting articles:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-1/&quot;&gt;Part I: We are in a time of slow productivity and strong incumbents.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-2/&quot;&gt;Part II: Aging &amp;amp; unproven learning models are headwinds to growth.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-3/&quot;&gt;Part III: Technology requires deeper integration into our work lives.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;My goal in putting this together was to clarify my own thinking - and to present it in a way that can be challenged and deepened by others. I would be grateful to learn what may resonate (or differ) from your personal perspectives and work.&lt;/p&gt;</content><author><name></name></author><summary type="html">Creating a general framework for current opportunities and challenges.</summary></entry><entry><title type="html">ML Practice: Exploring the Enron Set</title><link href="http://localhost:4000/udacity-ml-introduction/" rel="alternate" type="text/html" title="ML Practice: Exploring the Enron Set" /><published>2016-12-07T00:00:00-08:00</published><updated>2016-12-07T00:00:00-08:00</updated><id>http://localhost:4000/udacity-ml-introduction</id><content type="html" xml:base="http://localhost:4000/udacity-ml-introduction/">&lt;p&gt;&lt;em&gt;Note: If you would like to skip directly to my Jupyter notebook of this exercise, you can find it &lt;a href=&quot;https://github.com/brad-svds/udacity_practice/blob/master/poi_id.py.ipynb&quot;&gt;at this link&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;project-summary&quot;&gt;Project Summary&lt;/h2&gt;
-
-&lt;p&gt;This project is the capstone for the &lt;a href=&quot;https://www.udacity.com/course/intro-to-machine-learning--ud120&quot;&gt;“Introduction to Machine Learning”&lt;/a&gt; course in the Udacity Machine Learning Engineering nanodegree. It involves using the “Enron corpus”—a body of information that was made publicly available following the Enron scandal in the early 2000s. It has all salary information and email communications. It is rare, as most companies keep these communications private. For CS folks, it is particularly valuable—it is a dataset that reveals common networks, patterns, and communications. This is a useful basis for developing and testing new models about how people interact in the workplace.&lt;/p&gt;
-
-&lt;p&gt;The goal of project is to use a dataset built from the corpus to create a model that identifies “Persons of Interest” (POIs). A POI is someone whom we believe is a strong candidate for having committed fraudulent activities—for example, Jeffrey Skilling and Kenneth Lay. The dataset includes characteristics about the different individuals at Enron—for example, their known interactions with POIs (how many emails did they send or receive), the portion of their total compensation that was a bonus, etc. Doing some cursory analysis, we have 21 characteristics/columns we could use as “features” in our model. There are 146 individuals in the dataset, of whom 128 are NOT POIs, and 18 are POIs.&lt;/p&gt;
-
-&lt;figure align=&quot;center&quot;&gt;
-	&lt;img src=&quot;/images/skilling.jpg&quot; /&gt;
-	&lt;figcaption&gt;This guy is definitely a &quot;POI&quot;.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The model we are trying to create is an algorithm that will comb the dataset to predict the probability of whether an individual is a POI. Therefore, it is important that we build this algorithm with accurate underlying data. It is most likely that we will not need all 21 columns as “features” in the model, as some will have more predictive capabilities than others, and some may have no predictive capabilities at all. Finally, we may want to create new columns using outside data, or the provided dataset. We would do this if we expect the new columns to be more predictive of POIs than the information we currently have in its existing representation. Here are a few changes I made:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;I threw away the “email_address” field as there isn’t meaningful information between the different values to help us identify a POI.&lt;/li&gt;
-  &lt;li&gt;I threw away the ‘TRAVEL AGENCY IN THE PARK’ and ‘TOTAL’ rows as outliers.&lt;/li&gt;
-  &lt;li&gt;I created several new “ratio” fields: the percentage of emails to or from a POI, the percentage of compensation that came in bonus, salary, and restricted stock.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;feature-selection-and-tuning&quot;&gt;Feature Selection and Tuning&lt;/h2&gt;
-
-&lt;p&gt;The NaN values in the dataset are a blend of string and nan values. I converted all NaN values to a numpy nan (np.nan) value, and then converted the values to an outlier value (I used -0.42, which is close to (but not quite) the “Answer to the Ultimate Question of Life, the Universe, and Everything.” This allows the dataframe to be processed by classification algorithms that can’t take N/A values, such as Random Forest.&lt;/p&gt;
-
-&lt;p&gt;I ran a Random Forest classification quickly to see what my preliminary values were—the answer was not very good. I had “mild” predictive capabilities for people who are NOT POIs, and 0% accuracy/recall/precision for predicting POIs. Part of the reason for this is the imbalance between the two classes (noted earlier, ~85% of the list are not POIs) and the model is trying to predict for the larger class. Fortunately, my colleague Tom Fawcett has written about this (see: &lt;a href=&quot;https://svds.com/learning-imbalanced-classes/&quot;&gt;Learning from Unbalanced Classes&lt;/a&gt;). I began building ROC curves and precision-recall curves to understand performance for different tuning parameters.&lt;/p&gt;
-
-&lt;p&gt;To determine the right features and tuning parameters, I built a Pipeline using SelectKBest and GridSearchCV together. The pipeline applies the first step by choosing the best k features and transforms the input data to have only these features. After transformation, this is then fit with different estimators. GridSearchCV helps to tune the “number of features to be selected” and the hyperparameter of the estimator, by selecting the parameters that give the best score on validation data.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Sample code for testing SVMs:&lt;/em&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;kbest = SelectKBest(f_classif)&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pipeline = Pipeline([('kbest', kbest), ('svm', SVC())])&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grid_search_svm = GridSearchCV(pipeline, {'kbest__k': [1,2,3,4], 'svm__C': [1, 2, 3, 4], 
-                                      'svm__kernel': ['linear', 'poly', 'rbf', 'sigmoid'] })&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grid_search_svm.fit(features.values, labels['poi'].values)&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;labels_pred_svm = grid_search_svm.predict(features_test)&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print classification_report(labels_test, labels_pred_svm)&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print confusion_matrix(labels_test, labels_pred_svm)&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print grid_search_svm.best_params_&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print plot_ROC_curve(grid_search_svm, features.values, labels['poi'].values)&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print plot_PR_curve(grid_search_svm, features.values, labels['poi'].values)&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;selecting-an-algorithm-and-performance&quot;&gt;Selecting an Algorithm and Performance&lt;/h2&gt;
-
-&lt;p&gt;I tested 3 different types of algorithms on the dataset with the pipeline method described above:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Decision Trees:&lt;/em&gt; A decision tree can be thought of as a flowchart that classifies samples based on feature performance. They are very useful in practice as it is easy to determine provenance—I can articulate how and why an algorithm makes a decision. This is helpful in industries like financial services, in which there are regulations against favoring or biasing against specific groups. The performance for POI prediction can be found below:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/decision-trees.png&quot; /&gt;
-	&lt;figcaption&gt;Decision Tree performance.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Random Forests:&lt;/em&gt; A “random forest” is an ensemble model of different decision trees. Roughly speaking, random forests create several decision trees and then “blend” their results to create a newly predicted outcome. When it comes to accuracy, they are very useful in practice. At the same time, there is a greater challenge in understanding “how” predictions are made. Also, since multiple trees are created and blended, there is often a significant runtime associated with Random Forests, which needs to be accounted for in data products and analytic workflows. The performance for POI prediction can be found below:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/random-forest.png&quot; /&gt;
-	&lt;figcaption&gt;Random Forest performance.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Gaussian NB:&lt;/em&gt; Naive Bayes classifiers treat different features as independent of one another. For example, a fruit may be considered to be an apple if it is red, round, and about 10 cm in diameter. A naive Bayes classifier considers each of these features to contribute independently to the probability that this fruit is an apple, regardless of any possible correlations between the color, roundness, and diameter features. It has been found useful in text retrieval and medical diagnoses. The performance for POI prediction can be found below:&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/Gaussian.png&quot; /&gt;
-	&lt;figcaption&gt;Gaussian NB performance.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;These calculations are derived from each model’s confusion matrix, which is a table outlining how different predictions performed against a holdout set of data with known labels. If we treat the predictions as probabilities instead of hard labels (for example, an individual is “54% likely” to be a POI as opposed to only 0% or 100%), we can create an ROC chart as a metric for performance: an explanation of how to use ROC curves &lt;a href=&quot;http://gim.unmc.edu/dxtests/roc2.htm&quot;&gt;can be found here&lt;/a&gt;. Below is the ROC chart for Decision Trees:&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/ROC-curve.png&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;The code I used split the data into 3 “folds”, each of which has different performance—the “mean ROC” is the final measure when deciding the performance of the algorithm. The greater the area indicates stronger predictiveness. There is no absolute threshold for determining good performance—one needs to consider the context surrounding the decision being made.
-I found that Decision Trees performed the best, as measured by Precision, Recall, and F1 Score.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Precision is a measure of the number of identified True Positives divided by the total number of Positive test results (including False Positives). FPs are known as Type I Error.&lt;/li&gt;
-  &lt;li&gt;Recall is the number of identified True Positives divided by the total number of actual Positive samples (including False Negatives). FNs are known as Type II Error.&lt;/li&gt;
-  &lt;li&gt;A F1 Score is a measure of accuracy, calculated as the harmonic mean of Precision and Recall.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When looking at these scores, I was more focused on the ability to predict “1s” than the overall measures. The value 1 represents a POI. Since the data is skewed towards non-POIs (80%+ of the set), the overall numbers give the impression that the models are more highly predictive than what would be representative of their intended use. Similarly, since the goal of the activity is to identify POIs, we might be comfortable with a lower Precision measurement (increased FPs) if it provides a higher Recall (minimized FNs). Similar biases are present in medical testing.&lt;/p&gt;
-
-&lt;p&gt;As an important note, all of my measurements regarding performance are calculated using a “holdout” set or a “fold” that is independent of the data upon which the model is constructed. This is referred to as “validation.” Validation is important because we are trying to generate models that have inference—some predictive capability—on a general population. We want to make sure that our models perform more effectively (much more effectively) than random chance.&lt;/p&gt;
-
-&lt;p&gt;To do this, we use a set of data that the model &lt;em&gt;has never seen&lt;/em&gt; and may not be entirely representative of the distribution of data upon which the model was constructed. Articulating the model’s performance using these metrics helps ensure that we are not “overfitting” the data—models that are highly predictive of the datasets on which they were trained, but perform poorly in general practice. Here is &lt;a href=&quot;https://www.ibm.com/blogs/research/2015/08/preserving-validity-in-adaptive-data-analysis/&quot;&gt;a great article&lt;/a&gt; from IBM Research on preserving validity in analysis.&lt;/p&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-
-&lt;p&gt;This was a fun project that helped hammer home some of the key concepts of data preparation and model selection. Much of my prior training in data science was done in R, and I wanted a guided introduction to scikit-learn, numpy, and pandas. It is amazing how transferable the approach and libraries are for the two languages—at the same time, there are funny anachronisms for how scikit-learn takes data from pandas dataframes vs. numpy arrays.&lt;/p&gt;</content><author><name></name></author><summary type="html">Figuring out what is different about Jeff Skilling.</summary></entry></feed>
+&lt;p&gt;My goal in putting this together was to clarify my own thinking - and to present it in a way that can be challenged and deepened by others. I would be grateful to learn what may resonate (or differ) from your personal perspectives and work.&lt;/p&gt;</content><author><name></name></author><summary type="html">In aggregate, things aren't changing as much as times past.</summary></entry></feed>
