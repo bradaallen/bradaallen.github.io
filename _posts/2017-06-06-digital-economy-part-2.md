@@ -2,16 +2,20 @@
 layout: post
 title: "Digital Economy Part II: Aging & Unproven Learning Models are Headwinds to Growth."
 modified:
-excerpt: "First steps in a data strategy."
+excerpt: "Demographic and structural barriers to progress exist."
 comments: true
 tags: []
 ---
 
+*These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the "march towards AGI was safe." UBI was actively being discussed by Sam Altman and Ray Kurzweil was promoting 10x / exponential thinking. At the same time, economists like Robert Gordon were arguing that we were actually living in a time of low progress.*
 
-*This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the [SVDS Blog][0].*
+*I tried to develop my own perspective on what was happening, with key conclusions presented [at this link][0]. Greater detail supporting other conclusions can be found in [Part I][1] and [Part III][2].*
 
+### Introduction
 
-[0]: https://www.svds.com/understanding-your-data-maturity/
-[1]: https://www.bloomberg.com/news/articles/2016-03-30/starbucks-takes-its-pioneering-mobile-phone-app-to-grande-level
-[2]: https://svds.com/optimizing-your-digital-strategy/
-[3]: https://svds.com/what-are-you-doing-with-your-data/
+XXX
+
+[0]: https://bradaallen.github.io/digital-economy-intro/
+[1]: https://bradaallen.github.io/digital-economy-part-1/
+[2]: https://bradaallen.github.io/digital-economy-part-3/
+[3]: 

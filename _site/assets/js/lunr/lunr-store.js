@@ -186,25 +186,25 @@ var store = [{
         "teaser": null
       },{
         "title": "Exploring Digital's Effect on the Economy: Intro",
-        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog. Introduction Living in Silicon Valley, it is difficult to not get caught up in techno-optimism. The World Economic Forum, many McKinsey reports, and Ray Kurzweil frequently remind...","categories": [],
+        "excerpt":"These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the “march towards AGI was safe.” UBI was actively being discussed by...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/digital-economy-intro/",
         "teaser": null
       },{
         "title": "Digital Economy Part I: Slow Productivity & Strong Incumbents",
-        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog.   ","categories": [],
+        "excerpt":"These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the “march towards AGI was safe.” UBI was actively being discussed by...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/digital-economy-part-1/",
         "teaser": null
       },{
         "title": "Digital Economy Part II: Aging & Unproven Learning Models are Headwinds to Growth.",
-        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog.   ","categories": [],
+        "excerpt":"These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the “march towards AGI was safe.” UBI was actively being discussed by...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/digital-economy-part-2/",
         "teaser": null
       },{
         "title": "Digital Economy Part III: Technology requires deeper integration into our work lives. ",
-        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog.   ","categories": [],
+        "excerpt":"These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the “march towards AGI was safe.” UBI was actively being discussed by...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/digital-economy-part-3/",
         "teaser": null
