@@ -191,7 +191,7 @@ var store = [{
         "url": "http://localhost:4000/understanding-data-maturity/",
         "teaser": null
       },{
-        "title": "Technology is Only a Precondition for Success with Data",
+        "title": "Technology is Not Enough",
         "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog. Success with data involves managing strengths and weaknesses The great data rush is well and truly under way. Across virtually every industry, companies large and small are...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/technology-isnt-everything/",

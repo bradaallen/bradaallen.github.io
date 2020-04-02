@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Technology is Only a Precondition for Success with Data"
+title: "Technology is Not Enough"
 modified:
 excerpt: "Knowing what to do with it is what matters most."
 comments: true
@@ -20,7 +20,7 @@ Their goal was to [use data to empower decision makers][2] across every part of 
 
 ### Sometimes, the business can hold good technology behind
 
-Working with our clinet to articulater their overall data maturity shined a light on areas requiring attention to get the most of their technology investments:
+Working with our client to articulate their overall data maturity shined a light on areas requiring attention to get the most of their technology investments:
 * *Missing links between projects and metrics:* The initiative’s overall success was being measured by a single metric that they could only begin tracking in 2020—at the completion of the transformation. This led to significant uncertainty within project teams building new capabilities and platforms. Many teams were unsure where their analytical work fit in the big into the larger efforts and, more importantly, whether they were contributing to the overall success of the transformation.
 * *Lack of cross-functional teams:* The analytical infrastructure built by the engineering team was impressive, but was sorely underutilized. The data scientists had not been trained to use it and did not know how to access it. We heard from an analytics manager: “Seventy percent of my team’s time is spent on writing UDFs and Pig scripts to access data!” Creating teams that facilitated collaboration between engineers and data scientists was an opportunity for quick productivity gains with expensive talent.
 * *Siloed business functions:* Teams felt a lack of clear objectives that stemmed from communication and information sharing issues with other teams. For example, one team integral to product development described their view of the future as “a dusty window.” Business units on the consumption side of application development experienced very uneven usage of analytical tools. Strengthening these partnerships was crucial as the overarching project’s success relied specifically on strong analytical capabilities throughout the entire organization.
