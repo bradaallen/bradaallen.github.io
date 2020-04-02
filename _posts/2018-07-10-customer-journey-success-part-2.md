@@ -7,7 +7,7 @@ comments: true
 tags: []
 ---
 
-*This article was written during my time at SVDS. The article was first published on the [SVDS Blog][0].*
+*This article was written in 2017 during my time at SVDS. The article was first published on the [SVDS Blog][0].*
 
 *In the [introductory post][1], we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.*
 

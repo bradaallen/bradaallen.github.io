@@ -7,7 +7,7 @@ comments: true
 tags: []
 ---
 
-*This article was written during my time at SVDS. The article was first published on the [SVDS Blog][0].*
+*This article was written in 2017 during my time at SVDS. The article was first published on the [SVDS Blog][0].*
 
 ### Customer journeys allow for a holistic experience
 

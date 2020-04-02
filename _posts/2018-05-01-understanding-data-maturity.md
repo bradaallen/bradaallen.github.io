@@ -8,7 +8,7 @@ tags: []
 ---
 
 
-*This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the [SVDS Blog][0].*
+*This article was co-authored along with Scott Kurth in 2017, based on our experience at SVDS. The article was first published on the [SVDS Blog][0].*
 
 ### How *effective* are you with your capabilities?
 

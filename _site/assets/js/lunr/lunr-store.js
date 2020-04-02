@@ -210,25 +210,25 @@ var store = [{
         "teaser": null
       },{
         "title": "Understanding Your Data Maturity",
-        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog. How effective are you with your capabilities? Businesses today are experiencing rapid change, inside and outside of Silicon Valley. Even coffee isn’t immune—just last year, Starbucks crossed...","categories": [],
+        "excerpt":"This article was co-authored along with Scott Kurth in 2017, based on our experience at SVDS. The article was first published on the SVDS Blog. How effective are you with your capabilities? Businesses today are experiencing rapid change, inside and outside of Silicon Valley. Even coffee isn’t immune—just last year,...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/understanding-data-maturity/",
         "teaser": null
       },{
         "title": "Data Maturity: Technology is Not Enough",
-        "excerpt":"This article was co-authored along with Scott Kurth, based on our experience at SVDS. The article was first published on the SVDS Blog. Success with data involves managing strengths and weaknesses The great data rush is well and truly under way. Across virtually every industry, companies large and small are...","categories": [],
+        "excerpt":"This article was co-authored along with Scott Kurth in 2017, based on our experience at SVDS. The article was first published on the SVDS Blog. Success with data involves managing strengths and weaknesses The great data rush is well and truly under way. Across virtually every industry, companies large and...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/technology-isnt-everything/",
         "teaser": null
       },{
         "title": "Is Your Customer Journey Set Up for Success? Part I.",
-        "excerpt":"This article was written during my time at SVDS. The article was first published on the SVDS Blog. Customer journeys allow for a holistic experience A senior marketer’s ability to find and create valuable experiences for customers has grown dramatically in recent years. Beyond the traditional responsibilities of brand and...","categories": [],
+        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. Customer journeys allow for a holistic experience A senior marketer’s ability to find and create valuable experiences for customers has grown dramatically in recent years. Beyond the traditional responsibilities of...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/customer-journey-success-part-1/",
         "teaser": null
       },{
         "title": "Is Your Customer Journey Set Up for Success? Part II.",
-        "excerpt":"This article was written during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance...","categories": [],
+        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/customer-journey-success-part-2/",
         "teaser": null
