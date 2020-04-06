@@ -233,14 +233,20 @@ var store = [{
         "url": "http://localhost:4000/customer-journey-success-part-2/",
         "teaser": null
       },{
-        "title": "True Agile: Core to a DS Workflow.",
-        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we...","categories": [],
+        "title": "Review of recent trends in Data Science.",
+        "excerpt":"Every week, I spend ~5h reading my favorite newsletters on data science (eg, Data Science Roundup, Data Elixir, Jack Clark, Daniel Meissner). My most recent project prevented me from catching up on these articles for a few months - so I took a few days to catch up and synthesize...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/pulse-on-data-science-trends/",
+        "teaser": null
+      },{
+        "title": "Data Science needs Agile and Product Management.",
+        "excerpt":"Over the last 5 years, I have led directly or been involved in a number of enterprise projects to introduce or expand the use of machine learning. As a Product Manager turned Data Scientist, I have found time and time again that many concepts in Product Management and Agile development...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/data-science-and-agile/",
         "teaser": null
       },{
-        "title": "Preparing Data Scientists to Develop in Agile.",
-        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we...","categories": [],
+        "title": "Agile Data Science: Don't use the 'D' word.",
+        "excerpt":"Even if your company has full stack data scientists, data science is still ultimately a team sport. There are business stakeholders, product managers, designers, members of the infrastructure team - all of whom may have input, questions, and dependencies on the data scientist’s work. Each of these individual members likely...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/developing-agile-data-scientists/",
         "teaser": null

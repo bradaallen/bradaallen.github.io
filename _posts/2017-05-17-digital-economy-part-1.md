@@ -16,7 +16,7 @@ tags: []
 Digitization has had a profound effect on how we live our lives. It has enabled business model innovations (e.g., e-commerce, SaaS) and redefined how we consume media and interact with one another. At the same time, economists believe we may be living in a time in which the net rate of progress is lower than that of prior generations (see chart below; source McKinsey). What explains this apparent paradox?
 
 <figure>
-	<img src="/images/mckinsey_productivity.png">
+	<img src="/images/mckinsey_productivity.PNG">
 </figure>
 
 One thesis for this may be that gains in the technology sector have not effectively led to similar innovation in other sectors of the economy. With this, gains in technology alone cannot have a large influence on overall US economic performance: it [only represents ~7% of total GDP][3].
@@ -36,7 +36,7 @@ When labor is not able to use the gains from these efficiencies to focus on othe
 Disruptive technology should lead to a proliferation of new markets and/or significant churn in existing ones. However, this has not been the case: competition in the United States has slowed in recent decades. This has become [a recent focus of the Council of Economic Advisors][10]: ROIC is increasing (especially for market leaders), [markets are becoming increasingly consolidated][11], M&A activity is increasing, and the rate of firm entry (startups) has been decreasing. 
 
 <figure>
-	<img src="/images/roic_and_business_turnover.png">
+	<img src="/images/roic_and_business_turnover.PNG">
 	<figcaption>Images from the CEA's competition brief.</figcaption>
 </figure>
 

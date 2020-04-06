@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-02T16:08:54-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Perpetually Learning</title><subtitle>Brad Allen's personal blog. I love building things (and learning how to build new things). Preferably those that scale. Keywords: Product Management, Data Science, Data Engineering, Python, Stanford, Stanford GSB, Penn State, Pennsylvania, TFA, Teach For America, Bain, Embrace, Aclima, Peloton Technology, Mechatronics, C+
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-06T15:59:54-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Perpetually Learning</title><subtitle>Brad Allen's personal blog. I love building things (and learning how to build new things). Preferably those that scale. Keywords: Product Management, Data Science, Data Engineering, Python, Stanford, Stanford GSB, Penn State, Pennsylvania, TFA, Teach For America, Bain, Embrace, Aclima, Peloton Technology, Mechatronics, C+
 </subtitle><entry><title type="html">Moving hosting from AWS to Github.</title><link href="http://localhost:4000/moving-to-github/" rel="alternate" type="text/html" title="Moving hosting from AWS to Github." /><published>2020-02-14T00:00:00-08:00</published><updated>2020-02-14T00:00:00-08:00</updated><id>http://localhost:4000/moving-to-github</id><content type="html" xml:base="http://localhost:4000/moving-to-github/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
@@ -16,107 +16,193 @@ https://bryancshepherd.com/data-science/setting-bluehost-dns-github-jekyll-blog/
 
 &lt;p&gt;https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site 
 https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site
-https://medium.com/@kimcodes/setting-up-a-web-page-with-github-pages-f77d45573ab2&lt;/p&gt;</content><author><name></name></author><summary type="html">Quick notes on setting up a gh-pages blog using Windows 10.</summary></entry><entry><title type="html">Preparing Data Scientists to Develop in Agile.</title><link href="http://localhost:4000/developing-agile-data-scientists/" rel="alternate" type="text/html" title="Preparing Data Scientists to Develop in Agile." /><published>2019-06-07T00:00:00-07:00</published><updated>2019-06-07T00:00:00-07:00</updated><id>http://localhost:4000/developing-agile-data-scientists</id><content type="html" xml:base="http://localhost:4000/developing-agile-data-scientists/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+https://medium.com/@kimcodes/setting-up-a-web-page-with-github-pages-f77d45573ab2&lt;/p&gt;</content><author><name></name></author><summary type="html">Quick notes on setting up a gh-pages blog using Windows 10.</summary></entry><entry><title type="html">Agile Data Science: Don’t use the ‘D’ word.</title><link href="http://localhost:4000/developing-agile-data-scientists/" rel="alternate" type="text/html" title="Agile Data Science: Don't use the 'D' word." /><published>2019-06-07T00:00:00-07:00</published><updated>2019-06-07T00:00:00-07:00</updated><id>http://localhost:4000/developing-agile-data-scientists</id><content type="html" xml:base="http://localhost:4000/developing-agile-data-scientists/">&lt;p&gt;Even if your company has &lt;a href=&quot;https://multithreaded.stitchfix.com/blog/2019/03/11/FullStackDS-Generalists/&quot;&gt;full stack data scientists&lt;/a&gt;, data science is still ultimately a team sport. There are business stakeholders, product managers, designers, members of the infrastructure team - all of whom may have input, questions, and dependencies on the data scientist’s work. Each of these individual members likely have different interests, experiences, responsibilities, and patterns for problem solving.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This diversity in perspective can be an asset, when harnessed effectively. However, if not actively managed, these perspectives can also be a huge source of miscommunication, misalignment, lack of trust, and frustration. Acknowledging this, I discourage the word “done” from my projects. Far too often, the phrase “it’s done” is accepted - when a quick review between the two parties will reveal different expectations about what “done” is supposed to mean. For example, if your data scientist says, “the model is done / ready,” do they mean:&lt;/p&gt;
 
-&lt;p&gt;Lead in with Eric Colson blog: https://hbr.org/2019/03/why-data-science-teams-need-generalists-not-specialists&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The code accurately describes the problem, and is written purely in scripts, or&lt;/li&gt;
+  &lt;li&gt;The code is functional and parametric, and accounts for common edge cases, or&lt;/li&gt;
+  &lt;li&gt;The code documented and tested, in a way that can transfer ownership, or&lt;/li&gt;
+  &lt;li&gt;The code is schedulable and optimized, in a way that can run in production&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;•	DS:
-o	Programming &amp;amp; Architecture: 
-	Ability to write tested, functional, modular code.
-	Ability to work with git, in a gitflow environment.
-	Can work in single- and distributed-machine environments with guidance.
-o	ML:
-	Understand the requirements of a full end-to-end ML solution (ie, target definition, ETL, KPI definition, training vs. scoring, model maintenance tooling)
-	Has experience in 2 of 3: classification, regression, optimization. 
-o	Consulting:
-	Developing skills in workplanning, time management, written and verbal communication (pyramid principle – “tailoring the message”)
-	Developing skills in knowing when to involve leadership to “unblock” vs. solving independently
-•	SDS:
-o	Programming &amp;amp; Architecture:
-	Can perform code reviews.
-	Can set up and manage the integrity of a codebase (refactor and redesign as needed, separate out cross-cutting functionality)
-	Can identify the required solution architecture (infrastructure, programming languages req., storage patterns). – SDS2
-o	ML:
-	Can design a full E2E ML solution and offer alternatives based on resources, timeline, and client need.
-o	Consulting:
-	Focus is on module ownership – the ability to iterate a solution’s design to fit the client’s needs, plus the ability to design an E2E workplan for the module.
-	Can begin to design consumable output (ie, feeding into campaign mgmt. system vs. Tableau vs. API vs. application)&lt;/p&gt;
+&lt;p&gt;Depending on where the project is in development - any of these answers could be sufficient. The challenge is when differences exist between how the two parties interpret the message.&lt;/p&gt;
 
-&lt;p&gt;•	Overall (LDS+): Greater appreciation required for the benefits of clean code. Timelines and Gamma experience leads to “tactical programming” instead of “strategic programming.” We prioritize on quick output over the design of clean systems. This leads to bugs and complexity that make changes more difficult – this is where projects get burned.
-•	Overall (LDS+): Better understanding up front of the technical tools required for a solution. Resources aren’t fungible and too much risk if the full team is implementing a new technology for the first time. 
-•	Overall (LDS+): Agile Product Management. Designing full solutions early and adding functionality/complexity over time.
-•	SDS: 
-o	Wide variety in programming and engineering skillset. Many have gaps for what I would consider a high performing DS. Makes it difficult to work with them and focus on the logic of the problem.
-o	Need greater “big picture focus” on how the solution will be owned and maintained by the client. In the solution design, lots of small complexity/optimizations that appear interesting over the course of a project, but end up running out of time, isn’t handed over well, or is not maintainable. Results orientation should be towards “what works 18mo after we leave.” 
-	^^ translates into better workplanning, more curiosity around client dynamics (eg, req. process redesign, teaming, skills)
-o	Need greater focus on the “so what” – being able to understand how we are creating value for the client and designing systems that prove the incremental gain
-•	DS: 
-o	Focus should be on gaining a mental map for what skills are required to be a successful DS. Can be myopic in going very deep in a few areas, with large gaps in other parts. This pattern (and rewarding it) may be a cause for the unevenness in the SDS cohort.&lt;/p&gt;
+&lt;h5 id=&quot;insert-image-here&quot;&gt;&lt;strong&gt;Insert image here&lt;/strong&gt;&lt;/h5&gt;
 
-&lt;p&gt;•	All Martin Fowler / XP programming books on writing clean code and continuous delivery (I can send a list).
-o	Surviving Legacy Code: https://www.jbrains.ca/training/surviving-legacy-code/&lt;/p&gt;</content><author><name></name></author><summary type="html">How to iterate towards valuable, sustainable output.</summary></entry><entry><title type="html">True Agile: Core to a DS Workflow.</title><link href="http://localhost:4000/data-science-and-agile/" rel="alternate" type="text/html" title="True Agile: Core to a DS Workflow." /><published>2019-04-18T00:00:00-07:00</published><updated>2019-04-18T00:00:00-07:00</updated><id>http://localhost:4000/data-science-and-agile</id><content type="html" xml:base="http://localhost:4000/data-science-and-agile/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&quot;best-practices-on-removing-the-word-done-from-your-projects&quot;&gt;Best practices on removing the word “done” from your projects&lt;/h3&gt;
 
-&lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Empower the end user to own the logic:&lt;/em&gt; Sometimes, business users will treat the work of the data scientist as “magic.” This serves nobody - the model is not truly a “black box.” The code that dictates the inputs, the outputs, and the algorithmic approach is all logic. Sometimes the inference for a local prediction can’t be explained directly; that is a different topic than the overall problem design. Encourage conversation.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Educate the end user on the work of model building and management:&lt;/em&gt; There is &lt;a href=&quot;https://www.oreilly.com/radar/lessons-learned-turning-machine-learning-models-into-real-products-and-services/&quot;&gt;a lot of work&lt;/a&gt; to put models into production, and to maintain them once there - for example, with regard to drift, retraining, training/serving skew, security, maintenance, etc. End users should know they are investing in developing a system; the model is an artifact, not an end product, of that system.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Foster a learning culture and growth mindsets:&lt;/em&gt; Most parties working on data science projects are on a learning journey together. There is a significant amount that is “new” - most data scientists learn through apprenticeship – which can create challenges for how to communicate effectively. Simply acknowledging this can make an important difference.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Clearly articulate the tradeoffs with “good enough analysis”:&lt;/em&gt; In the data science workflow, it is easy to get stuck in a variety of local optima. For example, repeatedly asking for ad hoc analyses may give a greater intuition for the problem, while never giving the data scientist the time to professionalize her code. On the other hand, pushing for automation of a system may lead to too narrowly specifying the problem, eroding potential value. With software, there are real tradeoffs between flexibility and automation - and it is important to consider the appropriate balance for the system being defined.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;Include Tristan Handy stuff: https://blog.getdbt.com/4-questions-to-help-you-more-accurately-scope-analytics-engineering-projects/&lt;/p&gt;
+&lt;p&gt;When considering “done”, a large risk present in a “good enough analysis” culture is the potential to create technical debt. Technical debt often goes unrecognized until it is too late, &lt;a href=&quot;https://martinfowler.com/articles/is-quality-worth-cost.html&quot;&gt;creating unacknowledged costs&lt;/a&gt; that will eventually need to be paid down. Even with a high prevalence of ad hoc work, it is not an excuse for running an “unclean” process. Below, please find a few recommendations to “keep things clean.”&lt;/p&gt;
 
-&lt;p&gt;Framing the approach: Data Science requires Agile &amp;amp; Product Management Skills&lt;/p&gt;
+&lt;h5 id=&quot;tips-for-cleanliness-in-development&quot;&gt;&lt;em&gt;Tips for cleanliness in development:&lt;/em&gt;&lt;/h5&gt;
 
-&lt;p&gt;Agile develops products faster by acknowledging the current uncertainty in the final solution. In my workplan, I am trading time for information that helps me manage this uncertainty. 
-At the beginning of a model’s development, I don’t know:
-The client’s preferred metrics for measurement
-Business constraints that shape the necessary inputs/outputs
-The right form factor that will ensure a tool is used
-Any required changes to operational processes if a tool is not currently used (and associated resistance to change)
-The greatest uncertainty should be “pulled forward” the farthest. Things that have material risk on the outcome should be (1) broken down into tests that (2) generate information that (3) allow for decision-making under greater certainty.
-Acknowledging uncertainty is the key differentiator from an Agile and a waterfall process. The fact that my original plan could be wrong is the only reason iterations or adjustments are necessary. J
-Erroneous assumptions can be very dangerous. If I assume a fact without designing a test, I am propagating the risk that I could be wrong “throughout” the project.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Use &lt;a href=&quot;https://www.scaledagileframework.com/spikes/&quot;&gt;code spikes&lt;/a&gt;:&lt;/em&gt; Code spikes are a term from XP Programming that refer to code used to understand a problem rather than develop working code. For data science, I treat EDA as the same - and keep it out of /src within the codebase.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Enforce a good PR process:&lt;/em&gt; Google has a &lt;a href=&quot;https://google.github.io/eng-practices/review/reviewer/&quot;&gt;wonderful guide for code reviewers&lt;/a&gt;. Key quote for me is, “Don’t accept PRs that degrade the code health of the system. Most systems become complex through many small changes that add up, so it’s important to prevent even small complexities in new changes.”&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Refactor and redesign as necessary:&lt;/em&gt; Clean code really pays off, and one should restructure the codebase as the problem definition changes. Here, it’s helpful to think about Martin Fowler’s &lt;a href=&quot;https://martinfowler.com/bliki/Yagni.html&quot;&gt;YAGNI&lt;/a&gt; and &lt;a href=&quot;https://softwareengineering.stackexchange.com/questions/197363/reasoning-to-wait-until-third-time-in-the-rule-of-three&quot;&gt;Rule of Three&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
+&lt;h5 id=&quot;tips-for-cleanliness-in-sprint-planning&quot;&gt;&lt;em&gt;Tips for cleanliness in sprint planning:&lt;/em&gt;&lt;/h5&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Ensure Sprint Goals are output driven:&lt;/em&gt; Writing Sprint Goals are a bit of an art, needing to be both ambitious and achievable. As data scientists practice goal setting, watch out for task-oriented outcomes that make acceptance criteria less valuable and can lead to reduced productivity.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Limit User Stories to 1-2 story points:&lt;/em&gt; Remember that story points are used to size work during sprints. They aren’t a tool to measure a developer’s productivity, and should not shouldn’t bleed across sprints.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Create viable “Plan Bs”:&lt;/em&gt; Creating options is what makes Agile work work well. When building out “Agile tests” (&lt;a href=&quot;https://bradaallen.github.io/data-science-and-agile/&quot;&gt;prior post here&lt;/a&gt;), it is important to have credible alternatives for a path forward. Otherwise, the team won’t be managing risk - they’ll be rationalizing themselves towards a predefined outcome.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;good-luck&quot;&gt;Good luck!&lt;/h3&gt;
+
+&lt;p&gt;Hopefully after reading this, you’ll agree to the danger of using the word “done” in cross-functional teams. Fortunately, with awareness, there are many things that teams can do - in terms of both culture and process - that foster innovation and improve the likelihood of success in data science initiatives.&lt;/p&gt;</content><author><name></name></author><summary type="html">Never say you're 'done'!</summary></entry><entry><title type="html">Data Science needs Agile and Product Management.</title><link href="http://localhost:4000/data-science-and-agile/" rel="alternate" type="text/html" title="Data Science needs Agile and Product Management." /><published>2019-04-18T00:00:00-07:00</published><updated>2019-04-18T00:00:00-07:00</updated><id>http://localhost:4000/data-science-and-agile</id><content type="html" xml:base="http://localhost:4000/data-science-and-agile/">&lt;p&gt;Over the last 5 years, I have led directly or been involved in a number of enterprise projects to introduce or expand the use of machine learning. As a Product Manager turned Data Scientist, I have found time and time again that many concepts in Product Management and Agile development help de-risk and enhance the overall effectiveness of ML solutions.&lt;/p&gt;
+
+&lt;p&gt;In this article, I’ll highlight two key concepts - one from Agile and one from Product Management - and explain how they help build sustainable, reproducible ML systems.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-agile-planning-is-about-managing-uncertainty---you-are-trading-resources-eg-time-for-information-data-science-explorations-adopt-this-mode-of-thinking-well&quot;&gt;1. Agile planning is about managing uncertainty - you are trading resources (eg, time) for information. Data science explorations adopt this mode of thinking well.&lt;/h3&gt;
+
+&lt;p&gt;Acknowledging uncertainty is the key differentiator from an Agile and a waterfall process. The only reason I might need to adjust my backlog or iterate my sprint plans is due to the fact that my original plan could be wrong. Things &lt;strong&gt;where being wrong hurts the most&lt;/strong&gt; should be (1) broken down into tests that (2) generate information that (3) allow for decision-making under greater certainty.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“If it hurts, do it more frequently, and bring the pain forward.” - Jez Humble&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;In my projects, we call this aspect of project design “bringing the pain forward.” This is a concept from Jez Humble’s book on &lt;a href=&quot;https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912&quot;&gt;Continuous Delivery&lt;/a&gt;. His book focuses on automating deployment pipelines (testing, environment management, builds, etc.) to allow for more frequent pushes to production. However, the concept translates to more general risk management as well.&lt;/p&gt;
+
+&lt;p&gt;A primary goal is to eradicate &lt;a href=&quot;https://landing.google.com/sre/sre-book/chapters/eliminating-toil/&quot;&gt;“toil”&lt;/a&gt; - work that doesn’t make a meaningful contribution to the final product. Agile planning for ML models and applications follows a similar logic - seek to eradicate incorrect lines of inquiry, model choices, UI, and technical design as quickly as possible.&lt;/p&gt;
+
+&lt;p&gt;Aspects of the plan that are not tested are assumptions. Erroneous assumptions can be very dangerous. If I assume a fact without designing a test, I am propagating the risk that I could be wrong “throughout” the project.&lt;/p&gt;
+
+&lt;p&gt;Even benign assumptions can kill the value proposition of a solution, so it’s important to treat them with respect. For example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You do a small scale POC on one country’s transaction data using pandas or R. You know that scaling may require a centralized architecture and a distributed system, but you don’t have this discussion until you’ve proven your toy model’s efficacy. In discussing next steps, it becomes apparent your “value” is theoretical - the technical resources do not exist.&lt;/li&gt;
+  &lt;li&gt;You are working to optimize the pricing of in-store goods. Designing an A/B test is difficult - you have a policy of consistent promotions (eg, no holdout) within a state or country to manage against &lt;a href=&quot;https://risnews.com/promotional-pricing-right-side-law&quot;&gt;complicated promotional pricing regulations&lt;/a&gt;. You attempt to &lt;a href=&quot;https://arxiv.org/pdf/1610.07748.pdf&quot;&gt;design a difference-in-differences or synthetic control method&lt;/a&gt; to prove incrementality, but the business sponsor dismisses it as theoretical. You have a conviction you’ve created value, but challenges in proving it.&lt;/li&gt;
+  &lt;li&gt;You are working on a classification problem, e.g., churn. The business user has sold a UI in which every customer has accurate probability predictions and clear rationale supporting each customer’s prediction. However, &lt;a href=&quot;https://www.svds.com/learning-imbalanced-classes/&quot;&gt;low incidence rates (~1%) make probability calibration a challenge&lt;/a&gt;, and the range and nature of churn reasons makes &lt;a href=&quot;https://christophm.github.io/interpretable-ml-book/shap.html&quot;&gt;feature engineering for useful SHAP values&lt;/a&gt; costly and difficult. Had you been involved earlier, you would focus on ranking/discrimination and decoupling rationale from prediction, if possible.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;At the beginning of a ML exercise, make a list of everything that can go wrong - and use that as a starting point for your planning!&lt;/p&gt;
+
+&lt;h3 id=&quot;2-data-science-plans-and-assumptions-are-best-managed-when-framed-around-a-set-of-product-and-technical-requirements&quot;&gt;2. Data science plans and assumptions are best managed when framed around a set of product and technical requirements.&lt;/h3&gt;
+
+&lt;p&gt;Notice above that I mentioned Agile tests are for &lt;em&gt;“where being wrong matters most.”&lt;/em&gt; Experience and judgement really can make the difference between a successful project that completes on time and something that never quite works. Part of leading successful teams requires &lt;a href=&quot;https://blog.getdbt.com/4-questions-to-help-you-more-accurately-scope-analytics-engineering-projects/&quot;&gt;building reserves of trust&lt;/a&gt; with your team, your partners, and stakeholders.&lt;/p&gt;
+
+&lt;p&gt;A good way to build trust is to give a clear conception of the end solution, with a draft set of product and technical requirements. It should be clear that these requirements are assumptions and subject to revision. It is helpful to communicate which requirements have greater uncertainty, and their associated tests in the plan.&lt;/p&gt;
+
+&lt;p&gt;For example, at the beginning of a model and/or application’s development, I may not know:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Any &lt;strong&gt;required changes to operational processes&lt;/strong&gt; necessary for adoption (and the associated resistance to change)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Business constraints&lt;/strong&gt; that shape the necessary inputs/outputs - for example, pricing ladders constrain price outcomes, data loads/availability can affect scoring cadences&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;right form factor&lt;/strong&gt; that will ensure a tool is used&lt;/li&gt;
+  &lt;li&gt;The &lt;strong&gt;preferred business metrics&lt;/strong&gt; for measurement&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By having a solution-mindset, and by trying to define clear product and technical requirements, I can then build slices of functionality that allow me to iterate towards a final solution.&lt;/p&gt;
+
+&lt;p&gt;A useful mental model for how to decompose a problem is shown by the &lt;a href=&quot;https://www.hackster.io/news/starting-with-one-1f0ab62cbed4&quot;&gt;“looks like” vs. “works like”&lt;/a&gt; approach to prototyping. In this approach, the UI/UX of a solution (the “looks like”) and its core functionality (the “works like”) can be developed separately and in parallel. As feedback about each component is collected, it may influence the requirements of the other component. For example, technical limitations may impact requirements for the user experience, and revisions of the user workflow may change the roadmap/priorities of the different technical features.&lt;/p&gt;
+
+&lt;p&gt;Each component of the overall solution can then be further decomposed into basic components, with a priority for collecting quick feedback. This follows John Gall’s famous &lt;a href=&quot;https://quotesondesign.com/john-gall/&quot;&gt;quote&lt;/a&gt;: &lt;em&gt;“A complex system that works is invariably found to have evolved from a simple system that worked.”&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;a-few-recommendations-for-building-out-your-ml-solution&quot;&gt;A few recommendations for building out your ML solution:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;For the solution design, the first simple system should be a &lt;a href=&quot;https://codeclimate.com/blog/kickstart-your-next-project-with-a-walking-skeleton/&quot;&gt;“walking skeleton.”&lt;/a&gt; Having a functional end-to-end pipeline with limited functionality will ferret out any integration issues early, and can surface necessary storage and processing patterns.&lt;/li&gt;
+  &lt;li&gt;For the model design, the first simple system should be the quickest MVP that creates a baseline prediction. &lt;a href=&quot;https://techdevguide.withgoogle.com/resources/rules-of-ml/&quot;&gt;Google’s Rules of ML&lt;/a&gt; suggest using ML only after heuristics become too complex. This logic should extend to ML solutions as well, starting with straightforward implementations that become increasingly sophisticated (eg, start with classical time-series methods for forecasting before testing nonlinear approaches).&lt;/li&gt;
+  &lt;li&gt;For interaction design, design thinking approaches should guide the first simple system:
+    &lt;ul&gt;
+      &lt;li&gt;Generate options for yourself - &lt;a href=&quot;https://www.teachthought.com/critical-thinking/3-modes-of-thought-divergent-convergent-thinking/&quot;&gt;get comfortable exploring ideas using divergent thinking&lt;/a&gt;. Great solutions often steal components from multiple good ideas.&lt;/li&gt;
+      &lt;li&gt;Find ways to &lt;a href=&quot;https://www.wired.com/2014/02/stanford-class-taught-two-normal-guys-star-designers/&quot;&gt;collect user behavior&lt;/a&gt; - information through engagement can often be of higher quality than basic market or user research.&lt;/li&gt;
+      &lt;li&gt;Get engagement through visual tools (eg, &lt;a href=&quot;https://www.experienceux.co.uk/faqs/what-is-wireframing/&quot;&gt;wireframing&lt;/a&gt;, excel mockups) - take time to listen and pay attention to points of friction or counterintuitive (to use) usage&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;applied-ml---managing-the-high-risk-high-reward-tradeoff&quot;&gt;Applied ML - managing the “high risk, high reward” tradeoff.&lt;/h3&gt;
+
+&lt;p&gt;ML systems are known for the tremendous value they can create, as well as their potential for &lt;a href=&quot;https://research.google/pubs/pub43146/&quot;&gt;“high interest” technical debt&lt;/a&gt;, drift, biased predictions, etc. These challenges are often coupled with the need to educate business users on how to interact with such systems, their role and responsibilities, and managing expectations about what can vs. what cannot be done.&lt;/p&gt;
+
+&lt;p&gt;Proven software development approaches for doing this well - particularly Agile and Product Management principles - can create trust and accelerate the adoption of these tools and capabilities.&lt;/p&gt;</content><author><name></name></author><summary type="html">Or, 'how to manage expectations under uncertainty.'</summary></entry><entry><title type="html">Review of recent trends in Data Science.</title><link href="http://localhost:4000/pulse-on-data-science-trends/" rel="alternate" type="text/html" title="Review of recent trends in Data Science." /><published>2019-02-21T00:00:00-08:00</published><updated>2019-02-21T00:00:00-08:00</updated><id>http://localhost:4000/pulse-on-data-science-trends</id><content type="html" xml:base="http://localhost:4000/pulse-on-data-science-trends/">&lt;p&gt;&lt;em&gt;Every week, I spend ~5h reading my favorite newsletters on data science (eg, Data Science Roundup, Data Elixir, Jack Clark, Daniel Meissner). My most recent project prevented me from catching up on these articles for a few months - so I took a few days to catch up and synthesize what I had been seeing. That summary can be found below.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;key-takeaways&quot;&gt;Key takeaways&lt;/h3&gt;
+
+&lt;p&gt;Most of the interesting articles were saying the same things:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;By having a solution-mindset, and by trying to define clear product and technical requirements - I can then build slices of functionality that allow me to iterate towards a final solution.
-Establish an MVP and build complexity over time. Google’s Rules of ML suggest starting after heuristics become too complex.
-UI/UX and “core” (technical) functionality can be developed separately and in parallel. Each informs the other and is driven by usability. Looks like vs. Works like.
-For UI/UX and systems design, design thinking is powerful. Particularly: 
-Prioritizing visual tools (eg, wireframes, excel mockups) for feedback
-Using user feedback to argue for change (BCG tool recommendations are made “on behalf of the user”)
-Effective use of divergent + convergent thinking modes when brainstorming (called out to me by BCG Classics as a particularly powerful method)&lt;/li&gt;
+  &lt;li&gt;Role definition is still happening, but there is alignment that hybrid models in business are useful&lt;/li&gt;
+  &lt;li&gt;Businesses are continuing to invest in these initiatives, more understanding that it is not “magic”&lt;/li&gt;
+  &lt;li&gt;Platforms and cloud tooling continue to enforce the imperative for DS to be able to own models “end to end” - the DS needs to write clean code and launch to production; can be on platforms built by SWE &amp;amp; DE&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;Internal priority #1: Technical debt is a killer - need to trust the process.
-Clean code really pays off - it reduces team velocity and makes it hard to create options
-Code Spikes
-Good PR process - complexity is added in small chunks. 
-Sprint Goals need to be output driven. DS and SDS can have a tendency to be task oriented; it makes acceptance criteria less valuable and can lead to reduced productivity.
-User Stories shouldn’t be more than 1-2 story points. Story Points are used to size work during sprints. They aren’t a tool to measure a developer’s productivity. User Stories shouldn’t bleed between sprints.
-Have a Plan B that is viable. Creating options is what makes Agile work work well.&lt;/p&gt;
+&lt;p&gt;I didn’t see very much interesting on actual techniques (&lt;a href=&quot;https://www.basilica.ai/blog/the-unreasonable-effectiveness-of-deep-feature-extraction/&quot;&gt;besides a very interesting post on transfer learning as deep feature extraction&lt;/a&gt;), but have shared some below. Lots of talk on ethics, some talk on RL and all of the NLP stuff (Bert &amp;amp; ELMo, etc – great summary of this as an ImageNet moment &lt;a href=&quot;https://thegradient.pub/nlp-imagenet&quot;&gt;here&lt;/a&gt;).&lt;/p&gt;
 
-&lt;p&gt;External priority #1: Communication in cross-functional teams is paramount&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Keep high transparency with the business. Onboard them into the “back-office” work of model building and management.
-    &lt;ul&gt;
-      &lt;li&gt;They should know they are on a learning journey, and what we are finding together.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Always be clear - to everyone - on the definition of “done.”
-    &lt;ul&gt;
-      &lt;li&gt;And what level of “done” is appropriate for the problem at hand.&lt;/li&gt;
-      &lt;li&gt;A key client understanding is on the tradeoffs between flexibility and automation.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Nobody should believe the model is a “black box.”
-    &lt;ul&gt;
-      &lt;li&gt;Code is logic. If it can’t be explained clearly, it’s poor logic.&lt;/li&gt;
-      &lt;li&gt;We have a lot of smart people - when we do this, we deny ourselves the opportunity for good feedback.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;What makes this particularly challenging is how orthogonal DS is - and its heavy reliance on apprenticeship – both sides are gaining experience and may not have the language yet to communicate effectively.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;role-of-a-data-engineer&quot;&gt;Role of a Data Engineer&lt;/h3&gt;
 
-&lt;p&gt;“Defining done” is a common source of frustration between Classics and Gamma. 
-Eg, the difference between the same output but where the code is (1) a rough script, vs (2) functional/modular/parametric, vs. (3) tested, vs. (4) automated
-https://www.oreilly.com/radar/lessons-learned-turning-machine-learning-models-into-real-products-and-services/&lt;/p&gt;</content><author><name></name></author><summary type="html">Or, 'how I got good at managing expectations under uncertainty.'</summary></entry><entry><title type="html">Is Your Customer Journey Set Up for Success? Part II.</title><link href="http://localhost:4000/customer-journey-success-part-2/" rel="alternate" type="text/html" title="Is Your Customer Journey Set Up for Success? Part II." /><published>2018-07-10T00:00:00-07:00</published><updated>2018-07-10T00:00:00-07:00</updated><id>http://localhost:4000/customer-journey-success-part-2</id><content type="html" xml:base="http://localhost:4000/customer-journey-success-part-2/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.fishtownanalytics.com/does-my-startup-data-team-need-a-data-engineer-b6f4d68d7da9&quot;&gt;Do I need a data engineer?&lt;/a&gt; Here is a second supporting article, &lt;a href=&quot;https://www.locallyoptimistic.com/post/analytics-engineer/&quot;&gt;distinguishing between DE and an “Analytics Engineer.”&lt;/a&gt; Suggests using stitch, fivetran, dbt as data engineering tools in lieu of Airflow. Natural migration (in startups at least) is to do PoCs, early builds on Airflow and then migrate to a more resilient tool like those listed. Super critical role (and primary responsibilities of our principal data engineers on a project), should be responsible for:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Managing and optimizing core data infrastructure,&lt;/li&gt;
+  &lt;li&gt;Building and maintaining custom ingestion pipelines,&lt;/li&gt;
+  &lt;li&gt;Supporting data team resources with design and performance optimization (think 1 DE for 3 DS) and&lt;/li&gt;
+  &lt;li&gt;Building non-SQL transformation pipelines (PySpark ETL (maybe), geo enrichment)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I thought the idea of removing Airflow for SQL transformations was an interesting trend. I haven’t ever used the three “pipeline-as-a-service” products. For MDS, the above responsibilities were good to have for our primary data engineer (Cloves), with a separate, proper SW developer as the code master. I think I would almost always use someone from Toptal for this 2nd role.&lt;/p&gt;
+
+&lt;h3 id=&quot;more-on-role-definition-the-kinds-of-a-data-scientist&quot;&gt;More on role definition. &lt;a href=&quot;https://hbr.org/2018/11/the-kinds-of-data-scientist&quot;&gt;“The Kinds of a Data Scientist.”&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The VP, DS of Instacart &lt;a href=&quot;https://firstround.com/review/doing-data-science-right-your-most-common-questions-answered/&quot;&gt;split the key types of work&lt;/a&gt; into “Decision Science” vs. “Data Products” to identify skills required. I thought the Decision Science example was pretty interesting.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;*At LinkedIn, the executive team used decision science to make a critical business decision about the visibility of member profiles in search results. Historically, only paid users could see full profiles for everyone in their extended (third-degree) network. The visibility rules were complex, and LinkedIn wanted to simplify them — but not in a way that would undermine its revenue. The stakes were enormous.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The proposed visibility model was a monthly use limit for unpaid users, with a cut-off based on usage. LinkedIn’s decision scientists simulated the effects of this change, using historical behavior to predict the impact on revenue and engagement. The analysis had to extrapolate past behavior on one model to forecast behavior on a radically different one. Nonetheless, the analysis was sufficient to move forward.*&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.locallyoptimistic.com/post/code-as-configuration/&quot;&gt;“Code as Configuration”&lt;/a&gt;. Article written by an experienced DS outlining how DS &amp;amp; SWE/DE should think about working together.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;project-management&quot;&gt;Project management.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hackernoon.com/rethinking-fast-and-slow-in-data-science-b2ce18d5b054&quot;&gt;Doing Agile in Data Science&lt;/a&gt;. Google. Particular focus on taking the scientific method and breaking it down into “less rigorous hypotheses” that can be (1) time bound and (2) better inform the LT hypotheses you want to prove or disprove in an experiment.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://simplystatistics.org/2018/09/14/divergent-and-convergent-phases-of-data-analysis/&quot;&gt;Divergent and convergent thinking in data analysis&lt;/a&gt;. An okay article, on a great concept. With the article above, how do we coach projects to (1) generate good hypotheses with the associated code “spikes”, (2) then fit that into design patterns, etc. that allow us to grow code safely? This can also be very useful for identifying product/project/pilot requirements with business users. I’ve received feedback in projects that “divergent thinking is very uncomfortable” but the decisions it can lead to are almost always of higher value than what a convergent path would provide.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qCKj_K5RNfY&quot;&gt;Design for Continuous Experimentation&lt;/a&gt;. Etsy. How Etsy learned to build stage gates into their product development process and use A/B tests to enable stage gate decisions (!!!) I liked how the Principal Engineer framed the way they used their learning from things that did not go well for future projects&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/coursera-engineering/should-engineering-managers-write-code-wrong-question-ec5fc54d3903&quot;&gt;How much should managers code? Wrong question. Where to write code?&lt;/a&gt; Coursera. Emphasizes being invested in small bug fixes, code reviews, and JIRA to develop a manager’s empathy for the team’s work and foster better outcomes.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.insightdatascience.com/an-introduction-to-the-data-product-management-landscape-ef930afe6de5&quot;&gt;The State of Data Product Management Roles&lt;/a&gt;. Insight Data Science. Highlights 5 domain areas: Infrastructure, Analytics, Applied ML/AI, Platforms, Standardization &amp;amp; Discovery. Note that Analytics and Applied AI/ML roles map well to the two different “kinds of data scientists” outlined above, and the other 3 are DevOps-y in nature.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;experimentation&quot;&gt;Experimentation.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hookedondata.org/guidelines-for-ab-testing&quot;&gt;Guidelines for AB Testing at Etsy&lt;/a&gt;. Advocates for frequentists methods and to establish measurement up front first. Great anecdote on how more measurement up front changed their delivery process for new features. Many, many links for follow on reads.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://varianceexplained.org/r/bayesian-ab-testing/&quot;&gt;Is Bayesian Testing Immune to Peeking? Not Exactly&lt;/a&gt;. Stack Overflow (the company). Less about the Bayesian approach, I thought this was a great way of showing how to use simulation to trust the data behind your decisions (and how p-values can change over time). I fell into a small rabbit hole reading about AB testing from these articles; a theme for me was many different teams using simulation to “shore up” questions around experiment design.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://eng.uber.com/analyzing-experiment-outcomes/&quot;&gt;Analyzing Experiment Outcomes: Beyond ATEs&lt;/a&gt;. Uber. Walks through a metric called Quantile Treatment Effect (QTE) that allows for understanding heterogeneity in treatment effects. Cool.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/airbnb-engineering/experimentation-measurement-for-search-engine-optimization-b64136629760&quot;&gt;Experimentation &amp;amp; Measurement for SEO&lt;/a&gt;. Airbnb. Useful case study of when to use differences-in-differences and some of the idiosyncrasies to account for.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;data--infrastructure-engineering&quot;&gt;Data / infrastructure engineering.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://medium.com/airbnb-engineering/capturing-data-evolution-in-a-service-oriented-architecture-72f7c643ee6f&quot;&gt;Capturing data evolution in a SOA&lt;/a&gt;. Airbnb&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://multithreaded.stitchfix.com/blog/2018/09/05/datahighway/&quot;&gt;Putting the power of Kafka into the hands of data scientists&lt;/a&gt;. Stitch Fix&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oreilly.com/ideas/the-future-of-data-warehousing&quot;&gt;Future of Data Warehousing&lt;/a&gt;. Cloudera/PNC. Short, 5 min video outlining some challenges standing up a distributed system – seen these challenges at all projects and would expect our DE to work with and help the client set up these processes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;techniques-tools--interesting-reads&quot;&gt;Techniques, Tools, &amp;amp; Interesting reads.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://multithreaded.stitchfix.com/blog/2018/11/08/bandits/&quot;&gt;Contextual bandits for content outreach&lt;/a&gt;. Stitch Fix&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://robatwilliams.github.io/decent-code/&quot;&gt;How to write clean code and conduct code reviews&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://exxeta.github.io/2018/10/forecast_sales_in_retail&quot;&gt;Forecast sales in retail&lt;/a&gt;. A good reference for establishing a baseline and packages/methods&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://towardsdatascience.com/3-facts-about-time-series-forecasting-that-surprise-experienced-machine-learning-practitioners-69c18ee89387&quot;&gt;3 facts about time-series analyses that can surprise ML people&lt;/a&gt;. (eg, “The uncertainty of the forecast is just as important as, or even more so, than the forecast itself.”)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://machinelearningmastery.com/time-series-forecasting-methods-in-python-cheat-sheet/&quot;&gt;11 classical time series forecasting methods in Python&lt;/a&gt;. Related: &lt;a href=&quot;https://eng.uber.com/forecasting-introduction/&quot;&gt;Forecasting at Uber&lt;/a&gt;. Interesting to see Uber’s built-in backtesting system.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rise.cs.berkeley.edu/blog/a-short-history-of-prediction-serving-systems/&quot;&gt;A short history of prediction serving systems&lt;/a&gt;. RISE Lab. Discusses the architecture of RISE’s Clipper system, and has an interesting paper from LinkedIn on managing the tradeoff between accuracy and serving latency.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/nteract/papermill#usage&quot;&gt;Papermill&lt;/a&gt;. Parametric, scheduled Jupyter notebooks with the option for aggregate summaries. Used a lot at Netflix.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://better.engineering/convoys/&quot;&gt;Convoys&lt;/a&gt;. PyPI package for time-lagged conversion rates (eg, telco churn..)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">Topics: data engineering, role definition, project management, experimentation, et al.</summary></entry><entry><title type="html">Is Your Customer Journey Set Up for Success? Part II.</title><link href="http://localhost:4000/customer-journey-success-part-2/" rel="alternate" type="text/html" title="Is Your Customer Journey Set Up for Success? Part II." /><published>2018-07-10T00:00:00-07:00</published><updated>2018-07-10T00:00:00-07:00</updated><id>http://localhost:4000/customer-journey-success-part-2</id><content type="html" xml:base="http://localhost:4000/customer-journey-success-part-2/">&lt;p&gt;&lt;em&gt;This article was written in 2017 during my time at SVDS. The article was first published on the &lt;a href=&quot;https://www.svds.com/customer-journey-set-success/&quot;&gt;SVDS Blog&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;In the &lt;a href=&quot;https://bradaallen.github.io/customer-journey-success-part-1/&quot;&gt;introductory post&lt;/a&gt;, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.&lt;/em&gt;&lt;/p&gt;
 
@@ -354,7 +440,7 @@ Redesigning the client’s architecture to identify and articulate the customer�
 &lt;p&gt;This effect of aging on productivity will be even more pronounced as McKinsey estimates that we are entering an era of &lt;a href=&quot;http://www.mckinsey.com/global-themes/employment-and-growth/the-world-at-work&quot;&gt;slow-growing or even shrinking labor forces (see image below)&lt;/a&gt;. To maintain historical rates of GDP growth, it’s estimated that the “aging advanced” economies would need to increase productivity growth by about 60 percent of historical levels, to about 1.9 percent annually. This is a rate that hasn’t been reached since the 1960s. As an extreme example, the Southern Europe cluster will face an even steeper challenge: these economies would need to double their 0.7 percent rate of productivity growth of the past 20 years to sustain growth in GDP per capita.&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;img src=&quot;/images/mckinsey_aging_productivity.png&quot; /&gt;
+	&lt;img src=&quot;/images/mckinsey_aging_productivity.PNG&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;When these productivity challenges are coupled with declining labor force participation rates, the ultimate effect is a deceleration in per capita GDP growth. Future generations could have a lower rate of improvement in living standards than their parents—and in some cases, such as in the Southern Europe cluster, the next generation could be poorer than their parents.&lt;/p&gt;
@@ -388,52 +474,4 @@ Redesigning the client’s architecture to identify and articulate the customer�
   &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-3/&quot;&gt;Part III: Technology requires deeper integration into our work lives.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;My goal in putting this together was to clarify my own thinking - and to present it in a way that can be challenged and deepened by others. I would be grateful to learn what may resonate (or differ) from your personal perspectives and work.&lt;/p&gt;</content><author><name></name></author><summary type="html">Demographic and structural barriers to progress exist.</summary></entry><entry><title type="html">Digital Economy Part I: Slow Productivity &amp;amp; Strong Incumbents</title><link href="http://localhost:4000/digital-economy-part-1/" rel="alternate" type="text/html" title="Digital Economy Part I: Slow Productivity &amp; Strong Incumbents" /><published>2017-05-17T00:00:00-07:00</published><updated>2017-05-17T00:00:00-07:00</updated><id>http://localhost:4000/digital-economy-part-1</id><content type="html" xml:base="http://localhost:4000/digital-economy-part-1/">&lt;p&gt;&lt;em&gt;These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the “march towards AGI was safe.” UBI was actively being discussed by Sam Altman and Ray Kurzweil was promoting 10x / exponential thinking. At the same time, economists like Robert Gordon were arguing that we were actually living in a time of low progress.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;I tried to develop my own perspective on what was happening, with key conclusions presented &lt;a href=&quot;https://bradaallen.github.io/digital-economy-intro/&quot;&gt;at this link&lt;/a&gt;. Greater detail supporting other conclusions can be found in &lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-2/&quot;&gt;Part II&lt;/a&gt; and &lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-3/&quot;&gt;Part III&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;innovation-is-not-improving-quality-of-life-as-quickly-as-experienced-in-prior-generations&quot;&gt;Innovation is not improving quality of life as quickly as experienced in prior generations.&lt;/h3&gt;
-
-&lt;p&gt;Digitization has had a profound effect on how we live our lives. It has enabled business model innovations (e.g., e-commerce, SaaS) and redefined how we consume media and interact with one another. At the same time, economists believe we may be living in a time in which the net rate of progress is lower than that of prior generations (see chart below; source McKinsey). What explains this apparent paradox?&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/mckinsey_productivity.png&quot; /&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;One thesis for this may be that gains in the technology sector have not effectively led to similar innovation in other sectors of the economy. With this, gains in technology alone cannot have a large influence on overall US economic performance: it &lt;a href=&quot;https://www.comptia.org/about-us/newsroom/press-releases/2015/02/10/united-states-tech-industry-employs-6.5-million-in-2014&quot;&gt;only represents ~7% of total GDP&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The performance of US productivity would support this claim. Gains in GDP are divided into two measurements: productivity and labor employment. Productivity, as a rough measure, is the difference between GDP growth and changes in labor employment. For example, in 2014, labor employment grew by 1.7% and GDP grew by 2.4%; &lt;a href=&quot;https://www.conference-board.org/retrievefile.cfm?filename=The-Conference-Board-2015-Productivity-Brief.pdf&amp;amp;type=subsite&quot;&gt;“productivity” grew by the difference, 0.7%&lt;/a&gt;. Productivity is considered to be a proxy for innovation, as it should account for excess value that workers create (relative to historical performance). In the United States, over the last 40 years, this measure of productivity has slowed. In fact, &lt;em&gt;the rate of productivity growth from 2011 to 2015 was the slowest since the five-year period ending in 1982.&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Economists have been trying to figure out this puzzle for many decades, and it is becoming increasingly important. We know that the &lt;a href=&quot;http://faculty.chicagobooth.edu/chad.syverson/research/productivityslowdown.pdf&quot;&gt;slowdown across countries is not correlated with IT production or use&lt;/a&gt;, suggesting that the problem is not &lt;a href=&quot;https://www.brookings.edu/wp-content/uploads/2016/03/ByrneEtAl_ProductivityMeasurement_ConferenceDraft.pdf&quot;&gt;mismeasurement related to IT goods or services&lt;/a&gt;.  We also know that &lt;a href=&quot;http://www.econ.yale.edu/~nordhaus/homepage/productivityandneweconomy.pdf&quot;&gt;the slowdown has been broad-based across industries&lt;/a&gt; and &lt;a href=&quot;http://www.nytimes.com/2016/04/29/upshot/why-is-productivity-so-weak-three-theories.html&quot;&gt;would be similar if industry weights were held fixed&lt;/a&gt; — it does not reflect a rising share of slow-growth industries.&lt;/p&gt;
-
-&lt;p&gt;Robert Gordon, an economist, has a theory that, with regard to innovation, the years from 1870-1970 are unparalleled throughout history and advances in ICT in recent decades simply do not compare to the relatively concurrent inventions of electricity, the internal combustion engine, modern sanitation and plumbing, aviation, pharma products, etc. Coupled with this, ICT advances haven’t made the type of broad-based improvements to the economy that these other technologies have—leaving their overall effect on the economy more muted.&lt;/p&gt;
-
-&lt;p&gt;Is this theory a predictor of what will happen in the future? Certainly not. But one can think about the nature of value creation from advances in ICT. By and large, they have focused on automating routine activities. More modern innovations in AI and data science have focused on further, non-routine automation. These technologies key on reducing cost and price.&lt;/p&gt;
-
-&lt;p&gt;When labor is not able to use the gains from these efficiencies to focus on other, more value-added activities, the role of technology in GDP growth is challenged. As an anecdote, one rationale for the recent merger between Monsanto and Bayer is &lt;a href=&quot;http://www.wsj.com/articles/behind-the-monsanto-deal-doubts-about-the-gmo-revolution-1473880429&quot;&gt;that farmers’ profit has not improved enough to continue to invest in GMO seeds&lt;/a&gt;. The point is clear: if our economy cannot find the kind of growth that creates a “rising tide for all boats,” we stunt the ability to bring new innovations to market.&lt;/p&gt;
-
-&lt;h3 id=&quot;current-business-activity-has-a-strong-focus-on-protecting-existing-profit-pools&quot;&gt;Current business activity has a strong focus on protecting existing profit pools.&lt;/h3&gt;
-
-&lt;p&gt;Disruptive technology should lead to a proliferation of new markets and/or significant churn in existing ones. However, this has not been the case: competition in the United States has slowed in recent decades. This has become &lt;a href=&quot;https://sites.duke.edu/collardwexler/files/2015/01/20160414_cea_competition_issue_brief.pdf&quot;&gt;a recent focus of the Council of Economic Advisors&lt;/a&gt;: ROIC is increasing (especially for market leaders), &lt;a href=&quot;http://www.economist.com/blogs/graphicdetail/2016/03/daily-chart-13&quot;&gt;markets are becoming increasingly consolidated&lt;/a&gt;, M&amp;amp;A activity is increasing, and the rate of firm entry (startups) has been decreasing.&lt;/p&gt;
-
-&lt;figure&gt;
-	&lt;img src=&quot;/images/roic_and_business_turnover.png&quot; /&gt;
-	&lt;figcaption&gt;Images from the CEA's competition brief.&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;To wit: an American firm that was very profitable in 2003 (one with post-tax returns on capital of 15-25%, excluding goodwill) had an 83% chance of still being very profitable in 2013, according to McKinsey. &lt;a href=&quot;http://www.economist.com/news/briefing/21695385-profits-are-too-high-america-needs-giant-dose-competition-too-much-good-thing&quot;&gt;In the previous decade the odds were about 50%&lt;/a&gt;. And since 2008, American firms have engaged in one of the largest rounds of mergers in their country’s history, worth $10 trillion.&lt;/p&gt;
-
-&lt;p&gt;Supporting this, incumbent businesses are using their resources to protect profit—and do so by investing in the continual modernization of their operations. These incremental investments in innovation (e.g., digitization) increase barriers for new entrants as organizations focus on their short-term profit. (Recent papers have noted &lt;a href=&quot;https://faculty.fuqua.duke.edu/~sb135/bio/Science%201%2091%2015.pdf&quot;&gt;a decline in basic and applied research within large corporations&lt;/a&gt;).&lt;/p&gt;
-
-&lt;h3 id=&quot;what-does-it-all-mean&quot;&gt;What does it all mean&lt;/h3&gt;
-
-&lt;p&gt;Due to today’s market structures, dynamism and economic shifts will be slow without large shocks to competition. Digital skills will accrue most at incumbent firms, who have the resources to make investments and can create competitive moats. Public institutions should create incentives to spur investment into basic science R&amp;amp;D - we need leadership to focus on long-term sources of growth and diversify areas of productivity within the economy.&lt;/p&gt;
-
-&lt;p&gt;Additional research, perspective, and detail can be found in the following supporting articles:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-intro/&quot;&gt;Intro: Creating a general framework for current opportunities and challenges.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-2/&quot;&gt;Part II: Aging &amp;amp; unproven learning models are headwinds to growth.&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://bradaallen.github.io/digital-economy-part-3/&quot;&gt;Part III: Technology requires deeper integration into our work lives.&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;My goal in putting this together was to clarify my own thinking - and to present it in a way that can be challenged and deepened by others. I would be grateful to learn what may resonate (or differ) from your personal perspectives and work.&lt;/p&gt;</content><author><name></name></author><summary type="html">In aggregate, things aren't changing as much as times past.</summary></entry></feed>
+&lt;p&gt;My goal in putting this together was to clarify my own thinking - and to present it in a way that can be challenged and deepened by others. I would be grateful to learn what may resonate (or differ) from your personal perspectives and work.&lt;/p&gt;</content><author><name></name></author><summary type="html">Demographic and structural barriers to progress exist.</summary></entry></feed>

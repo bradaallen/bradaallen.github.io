@@ -20,7 +20,7 @@ Aging labor forces have a tremendous effect on productivity. On average, every 1
 This effect of aging on productivity will be even more pronounced as McKinsey estimates that we are entering an era of [slow-growing or even shrinking labor forces (see image below)][4]. To maintain historical rates of GDP growth, it’s estimated that the “aging advanced” economies would need to increase productivity growth by about 60 percent of historical levels, to about 1.9 percent annually. This is a rate that hasn’t been reached since the 1960s. As an extreme example, the Southern Europe cluster will face an even steeper challenge: these economies would need to double their 0.7 percent rate of productivity growth of the past 20 years to sustain growth in GDP per capita. 
 
 <figure>
-	<img src="/images/mckinsey_aging_productivity.png">
+	<img src="/images/mckinsey_aging_productivity.PNG">
 </figure>
 	
 When these productivity challenges are coupled with declining labor force participation rates, the ultimate effect is a deceleration in per capita GDP growth. Future generations could have a lower rate of improvement in living standards than their parents—and in some cases, such as in the Southern Europe cluster, the next generation could be poorer than their parents. 

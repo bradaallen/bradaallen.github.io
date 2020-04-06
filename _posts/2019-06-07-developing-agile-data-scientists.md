@@ -1,57 +1,55 @@
 ---
 layout: post
-title: "Preparing Data Scientists to Develop in Agile."
+title: "Agile Data Science: Don't use the 'D' word."
 modified:
-excerpt: "How to iterate towards valuable, sustainable output."
+excerpt: "Never say you're 'done'!"
 comments: true
 tags: []
 ---
 
-*This article was written in 2017 during my time at SVDS. The article was first published on the [SVDS Blog][0].*
+Even if your company has [full stack data scientists][0], data science is still ultimately a team sport. There are business stakeholders, product managers, designers, members of the infrastructure team - all of whom may have input, questions, and dependencies on the data scientist’s work. Each of these individual members likely have different interests, experiences, responsibilities, and patterns for problem solving. 
 
-*In the [introductory post][1], we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.*
+This diversity in perspective can be an asset, when harnessed effectively. However, if not actively managed, these perspectives can also be a huge source of miscommunication, misalignment, lack of trust, and frustration. Acknowledging this, I discourage the word “done” from my projects. Far too often, the phrase “it’s done” is accepted - when a quick review between the two parties will reveal different expectations about what “done” is supposed to mean. For example, if your data scientist says, “the model is done / ready,” do they mean:
 
-Lead in with Eric Colson blog: https://hbr.org/2019/03/why-data-science-teams-need-generalists-not-specialists
+* The code accurately describes the problem, and is written purely in scripts, or
+* The code is functional and parametric, and accounts for common edge cases, or
+* The code documented and tested, in a way that can transfer ownership, or
+* The code is schedulable and optimized, in a way that can run in production
 
-•	DS:
-o	Programming & Architecture: 
-	Ability to write tested, functional, modular code.
-	Ability to work with git, in a gitflow environment.
-	Can work in single- and distributed-machine environments with guidance.
-o	ML:
-	Understand the requirements of a full end-to-end ML solution (ie, target definition, ETL, KPI definition, training vs. scoring, model maintenance tooling)
-	Has experience in 2 of 3: classification, regression, optimization. 
-o	Consulting:
-	Developing skills in workplanning, time management, written and verbal communication (pyramid principle – “tailoring the message”)
-	Developing skills in knowing when to involve leadership to “unblock” vs. solving independently
-•	SDS:
-o	Programming & Architecture:
-	Can perform code reviews.
-	Can set up and manage the integrity of a codebase (refactor and redesign as needed, separate out cross-cutting functionality)
-	Can identify the required solution architecture (infrastructure, programming languages req., storage patterns). – SDS2
-o	ML:
-	Can design a full E2E ML solution and offer alternatives based on resources, timeline, and client need.
-o	Consulting:
-	Focus is on module ownership – the ability to iterate a solution’s design to fit the client’s needs, plus the ability to design an E2E workplan for the module.
-	Can begin to design consumable output (ie, feeding into campaign mgmt. system vs. Tableau vs. API vs. application)
+Depending on where the project is in development - any of these answers could be sufficient. The challenge is when differences exist between how the two parties interpret the message. 
 
+##### **Insert image here**
 
-•	Overall (LDS+): Greater appreciation required for the benefits of clean code. Timelines and Gamma experience leads to “tactical programming” instead of “strategic programming.” We prioritize on quick output over the design of clean systems. This leads to bugs and complexity that make changes more difficult – this is where projects get burned.
-•	Overall (LDS+): Better understanding up front of the technical tools required for a solution. Resources aren’t fungible and too much risk if the full team is implementing a new technology for the first time. 
-•	Overall (LDS+): Agile Product Management. Designing full solutions early and adding functionality/complexity over time.
-•	SDS: 
-o	Wide variety in programming and engineering skillset. Many have gaps for what I would consider a high performing DS. Makes it difficult to work with them and focus on the logic of the problem.
-o	Need greater “big picture focus” on how the solution will be owned and maintained by the client. In the solution design, lots of small complexity/optimizations that appear interesting over the course of a project, but end up running out of time, isn’t handed over well, or is not maintainable. Results orientation should be towards “what works 18mo after we leave.” 
-	^^ translates into better workplanning, more curiosity around client dynamics (eg, req. process redesign, teaming, skills)
-o	Need greater focus on the “so what” – being able to understand how we are creating value for the client and designing systems that prove the incremental gain
-•	DS: 
-o	Focus should be on gaining a mental map for what skills are required to be a successful DS. Can be myopic in going very deep in a few areas, with large gaps in other parts. This pattern (and rewarding it) may be a cause for the unevenness in the SDS cohort.
+### Best practices on removing the word “done” from your projects
 
+* *Empower the end user to own the logic:* Sometimes, business users will treat the work of the data scientist as “magic.” This serves nobody - the model is not truly a "black box." The code that dictates the inputs, the outputs, and the algorithmic approach is all logic. Sometimes the inference for a local prediction can’t be explained directly; that is a different topic than the overall problem design. Encourage conversation.
+* *Educate the end user on the work of model building and management:* There is [a lot of work][1] to put models into production, and to maintain them once there - for example, with regard to drift, retraining, training/serving skew, security, maintenance, etc. End users should know they are investing in developing a system; the model is an artifact, not an end product, of that system.
+* *Foster a learning culture and growth mindsets:* Most parties working on data science projects are on a learning journey together. There is a significant amount that is “new” - most data scientists learn through apprenticeship – which can create challenges for how to communicate effectively. Simply acknowledging this can make an important difference.
+* *Clearly articulate the tradeoffs with “good enough analysis”:* In the data science workflow, it is easy to get stuck in a variety of local optima. For example, repeatedly asking for ad hoc analyses may give a greater intuition for the problem, while never giving the data scientist the time to professionalize her code. On the other hand, pushing for automation of a system may lead to too narrowly specifying the problem, eroding potential value. With software, there are real tradeoffs between flexibility and automation - and it is important to consider the appropriate balance for the system being defined. 
 
-•	All Martin Fowler / XP programming books on writing clean code and continuous delivery (I can send a list).
-o	Surviving Legacy Code: https://www.jbrains.ca/training/surviving-legacy-code/
+When considering “done”, a large risk present in a “good enough analysis” culture is the potential to create technical debt. Technical debt often goes unrecognized until it is too late, [creating unacknowledged costs][2] that will eventually need to be paid down. Even with a high prevalence of ad hoc work, it is not an excuse for running an “unclean” process. Below, please find a few recommendations to “keep things clean.”
 
+##### *Tips for cleanliness in development:*
 
-[0]: https://www.svds.com/customer-journey-set-success/
-[1]: https://bradaallen.github.io/customer-journey-success-part-1/
-[2]: https://hbr.org/2015/11/competing-on-customer-journeys
+* *Use [code spikes][3]:* Code spikes are a term from XP Programming that refer to code used to understand a problem rather than develop working code. For data science, I treat EDA as the same - and keep it out of /src within the codebase. 
+* *Enforce a good PR process:* Google has a [wonderful guide for code reviewers][4]. Key quote for me is, “Don’t accept PRs that degrade the code health of the system. Most systems become complex through many small changes that add up, so it’s important to prevent even small complexities in new changes.”
+* *Refactor and redesign as necessary:* Clean code really pays off, and one should restructure the codebase as the problem definition changes. Here, it’s helpful to think about Martin Fowler’s [YAGNI][5] and [Rule of Three][6].
+
+##### *Tips for cleanliness in sprint planning:*
+
+* *Ensure Sprint Goals are output driven:* Writing Sprint Goals are a bit of an art, needing to be both ambitious and achievable. As data scientists practice goal setting, watch out for task-oriented outcomes that make acceptance criteria less valuable and can lead to reduced productivity.
+* *Limit User Stories to 1-2 story points:* Remember that story points are used to size work during sprints. They aren’t a tool to measure a developer’s productivity, and should not shouldn’t bleed across sprints.
+* *Create viable “Plan Bs”:* Creating options is what makes Agile work work well. When building out “Agile tests” ([prior post here][7]), it is important to have credible alternatives for a path forward. Otherwise, the team won’t be managing risk - they’ll be rationalizing themselves towards a predefined outcome.  
+
+### Good luck!
+
+Hopefully after reading this, you’ll agree to the danger of using the word “done” in cross-functional teams. Fortunately, with awareness, there are many things that teams can do - in terms of both culture and process - that foster innovation and improve the likelihood of success in data science initiatives. 
+
+[0]: https://multithreaded.stitchfix.com/blog/2019/03/11/FullStackDS-Generalists/
+[1]: https://www.oreilly.com/radar/lessons-learned-turning-machine-learning-models-into-real-products-and-services/
+[2]: https://martinfowler.com/articles/is-quality-worth-cost.html
+[3]: https://www.scaledagileframework.com/spikes/
+[4]: https://google.github.io/eng-practices/review/reviewer/
+[5]: https://martinfowler.com/bliki/Yagni.html
+[6]: https://softwareengineering.stackexchange.com/questions/197363/reasoning-to-wait-until-third-time-in-the-rule-of-three
+[7]: https://bradaallen.github.io/data-science-and-agile/

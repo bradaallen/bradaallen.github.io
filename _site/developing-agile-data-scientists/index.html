@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Preparing Data Scientists to Develop in Agile. &#8211; Perpetually Learning</title>
-<meta name="description" content="How to iterate towards valuable, sustainable output.">
+<title>Agile Data Science: Don't use the 'D' word. &#8211; Perpetually Learning</title>
+<meta name="description" content="Never say you're 'done'!">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Preparing Data Scientists to Develop in Agile.">
-<meta name="twitter:description" content="How to iterate towards valuable, sustainable output.">
+<meta name="twitter:title" content="Agile Data Science: Don't use the 'D' word.">
+<meta name="twitter:description" content="Never say you're 'done'!">
 <meta name="twitter:site" content="@bradaallen">
 <meta name="twitter:creator" content="@bradaallen">
 
@@ -22,8 +22,8 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Preparing Data Scientists to Develop in Agile.">
-<meta property="og:description" content="How to iterate towards valuable, sustainable output.">
+<meta property="og:title" content="Agile Data Science: Don't use the 'D' word.">
+<meta property="og:description" content="Never say you're 'done'!">
 <meta property="og:url" content="http://localhost:4000/developing-agile-data-scientists/">
 <meta property="og:site_name" content="Perpetually Learning">
 
@@ -163,51 +163,55 @@
   <article class="post">
     <div class="headline-wrap">
       
-        <h1><a href="http://localhost:4000/developing-agile-data-scientists/" rel="bookmark" title="Preparing Data Scientists to Develop in Agile.">Preparing Data Scientists to Develop in Agile.</a></h1>
+        <h1><a href="http://localhost:4000/developing-agile-data-scientists/" rel="bookmark" title="Agile Data Science: Don't use the 'D' word.">Agile Data Science: Don't use the 'D' word.</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p><em>This article was written in 2017 during my time at SVDS. The article was first published on the <a href="https://www.svds.com/customer-journey-set-success/">SVDS Blog</a>.</em></p>
+      <p>Even if your company has <a href="https://multithreaded.stitchfix.com/blog/2019/03/11/FullStackDS-Generalists/">full stack data scientists</a>, data science is still ultimately a team sport. There are business stakeholders, product managers, designers, members of the infrastructure team - all of whom may have input, questions, and dependencies on the data scientist’s work. Each of these individual members likely have different interests, experiences, responsibilities, and patterns for problem solving.</p>
 
-<p><em>In the <a href="https://bradaallen.github.io/customer-journey-success-part-1/">introductory post</a>, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.</em></p>
+<p>This diversity in perspective can be an asset, when harnessed effectively. However, if not actively managed, these perspectives can also be a huge source of miscommunication, misalignment, lack of trust, and frustration. Acknowledging this, I discourage the word “done” from my projects. Far too often, the phrase “it’s done” is accepted - when a quick review between the two parties will reveal different expectations about what “done” is supposed to mean. For example, if your data scientist says, “the model is done / ready,” do they mean:</p>
 
-<p>Lead in with Eric Colson blog: https://hbr.org/2019/03/why-data-science-teams-need-generalists-not-specialists</p>
+<ul>
+  <li>The code accurately describes the problem, and is written purely in scripts, or</li>
+  <li>The code is functional and parametric, and accounts for common edge cases, or</li>
+  <li>The code documented and tested, in a way that can transfer ownership, or</li>
+  <li>The code is schedulable and optimized, in a way that can run in production</li>
+</ul>
 
-<p>•	DS:
-o	Programming &amp; Architecture: 
-	Ability to write tested, functional, modular code.
-	Ability to work with git, in a gitflow environment.
-	Can work in single- and distributed-machine environments with guidance.
-o	ML:
-	Understand the requirements of a full end-to-end ML solution (ie, target definition, ETL, KPI definition, training vs. scoring, model maintenance tooling)
-	Has experience in 2 of 3: classification, regression, optimization. 
-o	Consulting:
-	Developing skills in workplanning, time management, written and verbal communication (pyramid principle – “tailoring the message”)
-	Developing skills in knowing when to involve leadership to “unblock” vs. solving independently
-•	SDS:
-o	Programming &amp; Architecture:
-	Can perform code reviews.
-	Can set up and manage the integrity of a codebase (refactor and redesign as needed, separate out cross-cutting functionality)
-	Can identify the required solution architecture (infrastructure, programming languages req., storage patterns). – SDS2
-o	ML:
-	Can design a full E2E ML solution and offer alternatives based on resources, timeline, and client need.
-o	Consulting:
-	Focus is on module ownership – the ability to iterate a solution’s design to fit the client’s needs, plus the ability to design an E2E workplan for the module.
-	Can begin to design consumable output (ie, feeding into campaign mgmt. system vs. Tableau vs. API vs. application)</p>
+<p>Depending on where the project is in development - any of these answers could be sufficient. The challenge is when differences exist between how the two parties interpret the message.</p>
 
-<p>•	Overall (LDS+): Greater appreciation required for the benefits of clean code. Timelines and Gamma experience leads to “tactical programming” instead of “strategic programming.” We prioritize on quick output over the design of clean systems. This leads to bugs and complexity that make changes more difficult – this is where projects get burned.
-•	Overall (LDS+): Better understanding up front of the technical tools required for a solution. Resources aren’t fungible and too much risk if the full team is implementing a new technology for the first time. 
-•	Overall (LDS+): Agile Product Management. Designing full solutions early and adding functionality/complexity over time.
-•	SDS: 
-o	Wide variety in programming and engineering skillset. Many have gaps for what I would consider a high performing DS. Makes it difficult to work with them and focus on the logic of the problem.
-o	Need greater “big picture focus” on how the solution will be owned and maintained by the client. In the solution design, lots of small complexity/optimizations that appear interesting over the course of a project, but end up running out of time, isn’t handed over well, or is not maintainable. Results orientation should be towards “what works 18mo after we leave.” 
-	^^ translates into better workplanning, more curiosity around client dynamics (eg, req. process redesign, teaming, skills)
-o	Need greater focus on the “so what” – being able to understand how we are creating value for the client and designing systems that prove the incremental gain
-•	DS: 
-o	Focus should be on gaining a mental map for what skills are required to be a successful DS. Can be myopic in going very deep in a few areas, with large gaps in other parts. This pattern (and rewarding it) may be a cause for the unevenness in the SDS cohort.</p>
+<h5 id="insert-image-here"><strong>Insert image here</strong></h5>
 
-<p>•	All Martin Fowler / XP programming books on writing clean code and continuous delivery (I can send a list).
-o	Surviving Legacy Code: https://www.jbrains.ca/training/surviving-legacy-code/</p>
+<h3 id="best-practices-on-removing-the-word-done-from-your-projects">Best practices on removing the word “done” from your projects</h3>
+
+<ul>
+  <li><em>Empower the end user to own the logic:</em> Sometimes, business users will treat the work of the data scientist as “magic.” This serves nobody - the model is not truly a “black box.” The code that dictates the inputs, the outputs, and the algorithmic approach is all logic. Sometimes the inference for a local prediction can’t be explained directly; that is a different topic than the overall problem design. Encourage conversation.</li>
+  <li><em>Educate the end user on the work of model building and management:</em> There is <a href="https://www.oreilly.com/radar/lessons-learned-turning-machine-learning-models-into-real-products-and-services/">a lot of work</a> to put models into production, and to maintain them once there - for example, with regard to drift, retraining, training/serving skew, security, maintenance, etc. End users should know they are investing in developing a system; the model is an artifact, not an end product, of that system.</li>
+  <li><em>Foster a learning culture and growth mindsets:</em> Most parties working on data science projects are on a learning journey together. There is a significant amount that is “new” - most data scientists learn through apprenticeship – which can create challenges for how to communicate effectively. Simply acknowledging this can make an important difference.</li>
+  <li><em>Clearly articulate the tradeoffs with “good enough analysis”:</em> In the data science workflow, it is easy to get stuck in a variety of local optima. For example, repeatedly asking for ad hoc analyses may give a greater intuition for the problem, while never giving the data scientist the time to professionalize her code. On the other hand, pushing for automation of a system may lead to too narrowly specifying the problem, eroding potential value. With software, there are real tradeoffs between flexibility and automation - and it is important to consider the appropriate balance for the system being defined.</li>
+</ul>
+
+<p>When considering “done”, a large risk present in a “good enough analysis” culture is the potential to create technical debt. Technical debt often goes unrecognized until it is too late, <a href="https://martinfowler.com/articles/is-quality-worth-cost.html">creating unacknowledged costs</a> that will eventually need to be paid down. Even with a high prevalence of ad hoc work, it is not an excuse for running an “unclean” process. Below, please find a few recommendations to “keep things clean.”</p>
+
+<h5 id="tips-for-cleanliness-in-development"><em>Tips for cleanliness in development:</em></h5>
+
+<ul>
+  <li><em>Use <a href="https://www.scaledagileframework.com/spikes/">code spikes</a>:</em> Code spikes are a term from XP Programming that refer to code used to understand a problem rather than develop working code. For data science, I treat EDA as the same - and keep it out of /src within the codebase.</li>
+  <li><em>Enforce a good PR process:</em> Google has a <a href="https://google.github.io/eng-practices/review/reviewer/">wonderful guide for code reviewers</a>. Key quote for me is, “Don’t accept PRs that degrade the code health of the system. Most systems become complex through many small changes that add up, so it’s important to prevent even small complexities in new changes.”</li>
+  <li><em>Refactor and redesign as necessary:</em> Clean code really pays off, and one should restructure the codebase as the problem definition changes. Here, it’s helpful to think about Martin Fowler’s <a href="https://martinfowler.com/bliki/Yagni.html">YAGNI</a> and <a href="https://softwareengineering.stackexchange.com/questions/197363/reasoning-to-wait-until-third-time-in-the-rule-of-three">Rule of Three</a>.</li>
+</ul>
+
+<h5 id="tips-for-cleanliness-in-sprint-planning"><em>Tips for cleanliness in sprint planning:</em></h5>
+
+<ul>
+  <li><em>Ensure Sprint Goals are output driven:</em> Writing Sprint Goals are a bit of an art, needing to be both ambitious and achievable. As data scientists practice goal setting, watch out for task-oriented outcomes that make acceptance criteria less valuable and can lead to reduced productivity.</li>
+  <li><em>Limit User Stories to 1-2 story points:</em> Remember that story points are used to size work during sprints. They aren’t a tool to measure a developer’s productivity, and should not shouldn’t bleed across sprints.</li>
+  <li><em>Create viable “Plan Bs”:</em> Creating options is what makes Agile work work well. When building out “Agile tests” (<a href="https://bradaallen.github.io/data-science-and-agile/">prior post here</a>), it is important to have credible alternatives for a path forward. Otherwise, the team won’t be managing risk - they’ll be rationalizing themselves towards a predefined outcome.</li>
+</ul>
+
+<h3 id="good-luck">Good luck!</h3>
+
+<p>Hopefully after reading this, you’ll agree to the danger of using the word “done” in cross-functional teams. Fortunately, with awareness, there are many things that teams can do - in terms of both culture and process - that foster innovation and improve the likelihood of success in data science initiatives.</p>
 
 
       <hr />
@@ -226,7 +230,7 @@ o	Surviving Legacy Code: https://www.jbrains.ca/training/surviving-legacy-code/<
     </li>
   </ul>
 </div><!-- /.social-share -->
-        <p class="byline"><strong>Preparing Data Scientists to Develop in Agile.</strong> was published on <time datetime="2019-06-07T00:00:00-07:00">June 07, 2019</time>.</p>
+        <p class="byline"><strong>Agile Data Science: Don't use the 'D' word.</strong> was published on <time datetime="2019-06-07T00:00:00-07:00">June 07, 2019</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   </article>
@@ -262,9 +266,9 @@ s.setAttribute('data-timestamp', +new Date());
     
       <li><a href="http://localhost:4000/moving-to-github/" title="Moving hosting from AWS to Github.">Moving hosting from AWS to Github.</a></li>
     
-      <li><a href="http://localhost:4000/data-science-and-agile/" title="True Agile: Core to a DS Workflow.">True Agile: Core to a DS Workflow.</a></li>
+      <li><a href="http://localhost:4000/data-science-and-agile/" title="Data Science needs Agile and Product Management.">Data Science needs Agile and Product Management.</a></li>
     
-      <li><a href="http://localhost:4000/customer-journey-success-part-2/" title="Is Your Customer Journey Set Up for Success? Part II.">Is Your Customer Journey Set Up for Success? Part II.</a></li>
+      <li><a href="http://localhost:4000/pulse-on-data-science-trends/" title="Review of recent trends in Data Science.">Review of recent trends in Data Science.</a></li>
     
     </ul>
     <hr />

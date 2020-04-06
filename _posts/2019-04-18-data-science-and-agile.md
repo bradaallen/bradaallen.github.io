@@ -1,61 +1,81 @@
 ---
 layout: post
-title: "True Agile: Core to a DS Workflow."
+title: "Data Science needs Agile and Product Management."
 modified:
-excerpt: "Or, 'how I got good at managing expectations under uncertainty.'"
+excerpt: "Or, 'how to manage expectations under uncertainty.'"
 comments: true
 tags: []
 ---
 
-*This article was written in 2017 during my time at SVDS. The article was first published on the [SVDS Blog][0].*
+Over the last 5 years, I have led directly or been involved in a number of enterprise projects to introduce or expand the use of machine learning. As a Product Manager turned Data Scientist, I have found time and time again that many concepts in Product Management and Agile development help de-risk and enhance the overall effectiveness of ML solutions. 
 
-*In the [introductory post][1], we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.*
+In this article, I’ll highlight two key concepts - one from Agile and one from Product Management - and explain how they help build sustainable, reproducible ML systems.
 
-Include Tristan Handy stuff: https://blog.getdbt.com/4-questions-to-help-you-more-accurately-scope-analytics-engineering-projects/
+### 1. Agile planning is about managing uncertainty - you are trading resources (eg, time) for information. Data science explorations adopt this mode of thinking well.
 
-Framing the approach: Data Science requires Agile & Product Management Skills
+Acknowledging uncertainty is the key differentiator from an Agile and a waterfall process. The only reason I might need to adjust my backlog or iterate my sprint plans is due to the fact that my original plan could be wrong. Things **where being wrong hurts the most** should be (1) broken down into tests that (2) generate information that (3) allow for decision-making under greater certainty.
 
-Agile develops products faster by acknowledging the current uncertainty in the final solution. In my workplan, I am trading time for information that helps me manage this uncertainty. 
-At the beginning of a model's development, I don’t know:
-The client’s preferred metrics for measurement
-Business constraints that shape the necessary inputs/outputs
-The right form factor that will ensure a tool is used
-Any required changes to operational processes if a tool is not currently used (and associated resistance to change)
-The greatest uncertainty should be “pulled forward” the farthest. Things that have material risk on the outcome should be (1) broken down into tests that (2) generate information that (3) allow for decision-making under greater certainty.
-Acknowledging uncertainty is the key differentiator from an Agile and a waterfall process. The fact that my original plan could be wrong is the only reason iterations or adjustments are necessary. J
-Erroneous assumptions can be very dangerous. If I assume a fact without designing a test, I am propagating the risk that I could be wrong “throughout” the project.
+> “If it hurts, do it more frequently, and bring the pain forward.” - Jez Humble
 
-1. By having a solution-mindset, and by trying to define clear product and technical requirements - I can then build slices of functionality that allow me to iterate towards a final solution.
-Establish an MVP and build complexity over time. Google's Rules of ML suggest starting after heuristics become too complex.
-UI/UX and “core” (technical) functionality can be developed separately and in parallel. Each informs the other and is driven by usability. Looks like vs. Works like.
-For UI/UX and systems design, design thinking is powerful. Particularly: 
-Prioritizing visual tools (eg, wireframes, excel mockups) for feedback
-Using user feedback to argue for change (BCG tool recommendations are made “on behalf of the user”)
-Effective use of divergent + convergent thinking modes when brainstorming (called out to me by BCG Classics as a particularly powerful method)
+In my projects, we call this aspect of project design “bringing the pain forward.” This is a concept from Jez Humble’s book on [Continuous Delivery][0]. His book focuses on automating deployment pipelines (testing, environment management, builds, etc.) to allow for more frequent pushes to production. However, the concept translates to more general risk management as well.
 
-Internal priority #1: Technical debt is a killer - need to trust the process.
-Clean code really pays off - it reduces team velocity and makes it hard to create options
-Code Spikes
-Good PR process - complexity is added in small chunks. 
-Sprint Goals need to be output driven. DS and SDS can have a tendency to be task oriented; it makes acceptance criteria less valuable and can lead to reduced productivity.
-User Stories shouldn’t be more than 1-2 story points. Story Points are used to size work during sprints. They aren’t a tool to measure a developer’s productivity. User Stories shouldn’t bleed between sprints.
-Have a Plan B that is viable. Creating options is what makes Agile work work well.
+A primary goal is to eradicate [“toil”][1] - work that doesn’t make a meaningful contribution to the final product. Agile planning for ML models and applications follows a similar logic - seek to eradicate incorrect lines of inquiry, model choices, UI, and technical design as quickly as possible. 
 
-External priority #1: Communication in cross-functional teams is paramount
-3. Keep high transparency with the business. Onboard them into the "back-office" work of model building and management.
-	* They should know they are on a learning journey, and what we are finding together.
-4. Always be clear - to everyone - on the definition of "done."
-	* And what level of "done" is appropriate for the problem at hand.
-	* A key client understanding is on the tradeoffs between flexibility and automation. 
-5. Nobody should believe the model is a "black box."
-	* Code is logic. If it can't be explained clearly, it's poor logic.
-	* We have a lot of smart people - when we do this, we deny ourselves the opportunity for good feedback.
-6. What makes this particularly challenging is how orthogonal DS is - and its heavy reliance on apprenticeship – both sides are gaining experience and may not have the language yet to communicate effectively. 
+Aspects of the plan that are not tested are assumptions. Erroneous assumptions can be very dangerous. If I assume a fact without designing a test, I am propagating the risk that I could be wrong “throughout” the project. 
 
-“Defining done” is a common source of frustration between Classics and Gamma. 
-Eg, the difference between the same output but where the code is (1) a rough script, vs (2) functional/modular/parametric, vs. (3) tested, vs. (4) automated
-https://www.oreilly.com/radar/lessons-learned-turning-machine-learning-models-into-real-products-and-services/
+Even benign assumptions can kill the value proposition of a solution, so it’s important to treat them with respect. For example:
 
-[0]: https://www.svds.com/customer-journey-set-success/
-[1]: https://bradaallen.github.io/customer-journey-success-part-1/
-[2]: https://hbr.org/2015/11/competing-on-customer-journeys
+* You do a small scale POC on one country’s transaction data using pandas or R. You know that scaling may require a centralized architecture and a distributed system, but you don’t have this discussion until you’ve proven your toy model’s efficacy. In discussing next steps, it becomes apparent your “value” is theoretical - the technical resources do not exist.
+* You are working to optimize the pricing of in-store goods. Designing an A/B test is difficult - you have a policy of consistent promotions (eg, no holdout) within a state or country to manage against [complicated promotional pricing regulations][2]. You attempt to [design a difference-in-differences or synthetic control method][3] to prove incrementality, but the business sponsor dismisses it as theoretical. You have a conviction you’ve created value, but challenges in proving it.
+* You are working on a classification problem, e.g., churn. The business user has sold a UI in which every customer has accurate probability predictions and clear rationale supporting each customer’s prediction. However, [low incidence rates (~1%) make probability calibration a challenge][4], and the range and nature of churn reasons makes [feature engineering for useful SHAP values][5] costly and difficult. Had you been involved earlier, you would focus on ranking/discrimination and decoupling rationale from prediction, if possible. 
+
+At the beginning of a ML exercise, make a list of everything that can go wrong - and use that as a starting point for your planning!
+
+### 2. Data science plans and assumptions are best managed when framed around a set of product and technical requirements. 
+
+Notice above that I mentioned Agile tests are for *“where being wrong matters most.”* Experience and judgement really can make the difference between a successful project that completes on time and something that never quite works. Part of leading successful teams requires [building reserves of trust][6] with your team, your partners, and stakeholders.
+
+A good way to build trust is to give a clear conception of the end solution, with a draft set of product and technical requirements. It should be clear that these requirements are assumptions and subject to revision. It is helpful to communicate which requirements have greater uncertainty, and their associated tests in the plan. 
+
+For example, at the beginning of a model and/or application's development, I may not know:
+* Any **required changes to operational processes** necessary for adoption (and the associated resistance to change)
+* **Business constraints** that shape the necessary inputs/outputs - for example, pricing ladders constrain price outcomes, data loads/availability can affect scoring cadences
+* The **right form factor** that will ensure a tool is used
+* The **preferred business metrics** for measurement 
+
+By having a solution-mindset, and by trying to define clear product and technical requirements, I can then build slices of functionality that allow me to iterate towards a final solution. 
+
+A useful mental model for how to decompose a problem is shown by the [“looks like” vs. “works like”][7] approach to prototyping. In this approach, the UI/UX of a solution (the “looks like”) and its core functionality (the “works like”) can be developed separately and in parallel. As feedback about each component is collected, it may influence the requirements of the other component. For example, technical limitations may impact requirements for the user experience, and revisions of the user workflow may change the roadmap/priorities of the different technical features.
+
+Each component of the overall solution can then be further decomposed into basic components, with a priority for collecting quick feedback. This follows John Gall’s famous [quote][8]: *“A complex system that works is invariably found to have evolved from a simple system that worked.”*
+
+#### A few recommendations for building out your ML solution:
+
+* For the solution design, the first simple system should be a [“walking skeleton.”][9] Having a functional end-to-end pipeline with limited functionality will ferret out any integration issues early, and can surface necessary storage and processing patterns.
+* For the model design, the first simple system should be the quickest MVP that creates a baseline prediction. [Google's Rules of ML][10] suggest using ML only after heuristics become too complex. This logic should extend to ML solutions as well, starting with straightforward implementations that become increasingly sophisticated (eg, start with classical time-series methods for forecasting before testing nonlinear approaches). 
+* For interaction design, design thinking approaches should guide the first simple system: 
+	* Generate options for yourself - [get comfortable exploring ideas using divergent thinking][11]. Great solutions often steal components from multiple good ideas. 
+	* Find ways to [collect user behavior][12] - information through engagement can often be of higher quality than basic market or user research.
+	* Get engagement through visual tools (eg, [wireframing][13], excel mockups) - take time to listen and pay attention to points of friction or counterintuitive (to use) usage
+
+### Applied ML - managing the “high risk, high reward” tradeoff.
+
+ML systems are known for the tremendous value they can create, as well as their potential for [“high interest” technical debt][14], drift, biased predictions, etc. These challenges are often coupled with the need to educate business users on how to interact with such systems, their role and responsibilities, and managing expectations about what can vs. what cannot be done. 
+
+Proven software development approaches for doing this well - particularly Agile and Product Management principles - can create trust and accelerate the adoption of these tools and capabilities.  
+
+[0]: https://www.amazon.com/Continuous-Delivery-Deployment-Automation-Addison-Wesley/dp/0321601912
+[1]: https://landing.google.com/sre/sre-book/chapters/eliminating-toil/
+[2]: https://risnews.com/promotional-pricing-right-side-law
+[3]: https://arxiv.org/pdf/1610.07748.pdf
+[4]: https://www.svds.com/learning-imbalanced-classes/
+[5]: https://christophm.github.io/interpretable-ml-book/shap.html
+[6]: https://blog.getdbt.com/4-questions-to-help-you-more-accurately-scope-analytics-engineering-projects/
+[7]: https://www.hackster.io/news/starting-with-one-1f0ab62cbed4
+[8]: https://quotesondesign.com/john-gall/
+[9]: https://codeclimate.com/blog/kickstart-your-next-project-with-a-walking-skeleton/
+[10]: https://techdevguide.withgoogle.com/resources/rules-of-ml/
+[11]: https://www.teachthought.com/critical-thinking/3-modes-of-thought-divergent-convergent-thinking/
+[12]: https://www.wired.com/2014/02/stanford-class-taught-two-normal-guys-star-designers/
+[13]: https://www.experienceux.co.uk/faqs/what-is-wireframing/
+[14]: https://research.google/pubs/pub43146/
