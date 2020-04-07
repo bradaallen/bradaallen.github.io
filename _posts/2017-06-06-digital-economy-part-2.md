@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Digital Economy Part II: Aging & Unproven Learning Models are Headwinds to Growth."
+title: "Digital Economy Part II: Aging & unproven learning models are headwinds to growth."
 modified:
 excerpt: "Demographic and structural barriers to progress exist."
 comments: true

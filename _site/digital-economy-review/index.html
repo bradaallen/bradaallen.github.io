@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>How'd I build this thing? &#8211; Perpetually Learning</title>
-<meta name="description" content="TL;DR: How to spend more time than is necessary on plumbing.">
+<title>Digital Economy Review: Update. &#8211; Perpetually Learning</title>
+<meta name="description" content="Exploring the last several years of research on productivity.">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="How'd I build this thing?">
-<meta name="twitter:description" content="TL;DR: How to spend more time than is necessary on plumbing.">
+<meta name="twitter:title" content="Digital Economy Review: Update.">
+<meta name="twitter:description" content="Exploring the last several years of research on productivity.">
 <meta name="twitter:site" content="@bradaallen">
 <meta name="twitter:creator" content="@bradaallen">
 
@@ -22,9 +22,9 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="How'd I build this thing?">
-<meta property="og:description" content="TL;DR: How to spend more time than is necessary on plumbing.">
-<meta property="og:url" content="http://localhost:4000/howd-i-build-this/">
+<meta property="og:title" content="Digital Economy Review: Update.">
+<meta property="og:description" content="Exploring the last several years of research on productivity.">
+<meta property="og:url" content="http://localhost:4000/digital-economy-review/">
 <meta property="og:site_name" content="Perpetually Learning">
 
 <meta property="og:image" content="http://localhost:4000/images/default-thumb.png">
@@ -34,7 +34,7 @@
 
 
 
-<link rel="canonical" href="http://localhost:4000/howd-i-build-this/">
+<link rel="canonical" href="http://localhost:4000/digital-economy-review/">
 <!-- <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Perpetually Learning Feed"> -->
 
 <!-- http://t.co/dKP3o1e -->
@@ -163,90 +163,24 @@
   <article class="post">
     <div class="headline-wrap">
       
-        <h1><a href="http://localhost:4000/howd-i-build-this/" rel="bookmark" title="How'd I build this thing?">How'd I build this thing?</a></h1>
+        <h1><a href="http://localhost:4000/digital-economy-review/" rel="bookmark" title="Digital Economy Review: Update.">Digital Economy Review: Update.</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>First, if you like this format (thanks!) you can download it from my Github page <a href="https://github.com/brad-svds/Apprentice">at this link</a>.
-I built this site with a goal to:</p>
+      <p>When I wrote my first articles on the digital economy in 2016, many economists were writing about a <a href="https://www.newyorker.com/news/john-cassidy/the-great-productivity-puzzle">“productivity puzzle.”</a> Wage growth had been flat (in real terms) since 1970, productivity was at its lowest point since 1980, industry consolidation had been <a href="https://www.richmondfed.org/-/media/richmondfedorg/publications/research/working_papers/2018/pdf/wp18-15.pdf">monotonically rising since 1990</a>, and industry dynamism was near its lowest point since 1975 (as measured by new firm entry and exit rates).</p>
 
+<p>Curious of what we may have learned in the last 3 years, I re-reviewed economic literature, policy papers, and investment recommendations to understand the impact of digital technologies on the economic growth of the United States. In recent years, economist have explored various supporting hypotheses, such as rising markups and market power (<a href="https://www.nber.org/papers/w23583">Gutierrez and Philippon, 2017</a>; <a href="http://www.janeeckhout.com/wp-content/uploads/RMP.pdf">De Loecker, Eeckhout and Unger, 2018</a>; Hall, 2018), the increasing profits of large firms (<a href="https://www.gsb.stanford.edu/sites/gsb/files/jmp_simcha-barkai.pdf">Barkai, 2017</a>), declining labor market dynamism (<a href="https://www.aeaweb.org/articles?id=10.1257/aer.p20171020">Decker, Haltiwanger, Jarmin and Miranda, 2017</a>), and declining wages and declining labor share (e.g. <a href="https://www.nber.org/papers/w23396">Autor, Dorn, Katz, Patterson, and Van Reenen, 2017</a>). All said, <strong>the dynamics underlying the “productivity puzzle” are still prevalent and a continued area of research.</strong></p>
+
+<p>With that in mind, I led an inquiry to understand <strong>some of the more compelling explanations and/or challenges associated with these phenomena</strong>, namely that:</p>
 <ul>
-  <li>use Github/Bitbucket and understand best practices</li>
-  <li>play with HTML, CSS, and markdown</li>
-  <li>get familiar with the AWS console</li>
+  <li>“Superstar firms” may be the strongest indicator of these dynamics: differentiated execution and more successful IT application leads to dispersion in wage growth, with disproportionate impact on low-skill workers</li>
+  <li>Through further automation, the divergence in economic outcomes will persist. The nature of automation and any associated job loss will be industry-specific</li>
+  <li>Workforce development and reskilling remain important for creating a dynamic economy; however, ambiguity in credentialing and role definition make skill development outside of the firm a challenging task</li>
 </ul>
 
-<p>In terms of requirements, I wanted a place where I could share a bit of myself (eg, my photos) 
-and document things I am working on. The site also should be clean and responsive to different
-media - eg, just as comfortable on a tablet or a phone as a laptop. After $1,500 in refunds (I’ll
-explain below) and ~20 hours of cobbling different code together, I am feeling pretty good about 
-where things are at.</p>
+<p>In doing this review, I became increasingly confident that strengthening the US labor force is pressing for the general health and welfare of the economy, and each of these topics includes a review of the current policy levers. Inequality is present - as a result of poor dynamism (lack of firm exit, sluggish development of new skills, lower mobility) and insufficient policy support for those negatively affected by the aggregate gains.</p>
 
-<h2 id="choosing-a-layout">Choosing a layout</h2>
-
-<p>Layouts are easy to download <a href="http://jekyll.tips/templates/">via this Cloud Cannon website</a>. I first started with <a href="https://github.com/CloudCannon/Strata-Jekyll-Theme">Strata</a>, which
-I thought was beautiful and great on a phone, but could not figure out how to set a navigation
-bar for non-blog-related items. I ended up settling on <a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a> since it had similar
-functionality capabilities.</p>
-
-<p>For more involved instructions, <a href="http://jekyllrb.com/">Jekyll RB</a> and <a href="http://jekyll.tips/">Jekyll.tips</a> were very helpful. More
-work than what I am describing is likely - as an example, I had to download Ruby to get the 
-gem package manager, etc.</p>
-
-<h2 id="setting-up-aws">Setting up AWS</h2>
-
-<p>Once the layout is determined, it can be hosted on Amazon S3 for (basically) free. AWS is great 
-as a starting point as well because it scales dynamically and has a <a href="https://aws.amazon.com/free/">Free Tier</a> for the first 
-year of use. One goal was to learn about the AWS Console - and just about anything can be done 
-through it, from storage (S3) to computing (EC2) to different RDBMS, EDW, and NoSQL options. I am 
-hoping to use their AWS IoT product for a home temperature sensing project I have.</p>
-
-<p>To manage the syncing, <a href="https://github.com/laurilehmijoki/s3_website">here is some very simple software and easy instructions</a>. There 
-is some nuance on the AMZN side of this that is not very clear, however. Their instructions 
-for this process <a href="http://docs.aws.amazon.com/AmazonS3/latest/dev/website-hosting-custom-domain-walkthrough.html">can be found through AWS</a>. A few highlights (things I initially did wrong):</p>
-
-<ol>
-  <li>Make two S3 buckets, <strong>one with your root name and one with the “www.” extension</strong></li>
-  <li><strong>Make sure that your <code class="language-plaintext highlighter-rouge">s3_config YML</code> file points to the <code class="language-plaintext highlighter-rouge">_site</code> folder.</strong>
-Otherwise, it will return the <code class="language-plaintext highlighter-rouge">index.html</code> file and there will be no rendering, etc.</li>
-  <li><strong>Have your server be somewhere in the US.</strong> Originally, I thought it was cool to have my
-site hosted in Tokyo or Buenos Aires or whatever- but actually, this just created extra work
-in my <code class="language-plaintext highlighter-rouge">s3_config</code> file. So, if you go this route, make sure you’re synced up in all of your files!</li>
-  <li><strong>Use AMZN for domain registration.</strong> For networking, I bought my domain at <a href="www.bluehost.com">BlueHost</a> which 
-is a cheap/not great place. I had to call to cancel hosting (couldn’t do it online), I had to 
-<em>opt-out</em> of additional services I didn’t want, etc. I was generally unhappy - I also couldn’t 
-download any of the A or CNAME files, which AMZN suggested doing. Ultimately, I just had to point 
-all of the nameservers to where they were hosted at AWS - but it wasn’t a pleasant process.</li>
-  <li><strong>NEVER post your private key online!</strong> This may seem obvious, but I’ve learned the beauty of
-<code class="language-plaintext highlighter-rouge">.gitignore</code> the hard way. Less than 12 hours after I originally uploaded my site to Github,
-I received an email from AMZN that my key had been scraped and used to set up more than 150 EC2
-instances around the world. I was being charged computing services at a rate of ~$2,800 a day.</li>
-</ol>
-
-<figure>
-	<img src="/images/Not_Smart_Brad.png" />
-	<figcaption>Not smart, Brad.</figcaption>
-</figure>
-
-<h2 id="making-modifications">Making modifications</h2>
-
-<p>I don’t have a sense of how the site will evolve, but I wanted to allow for the functionality
-to upload photos, or create landing pages for events/dinners, etc. I’ve just created the photos
-functionality, for now. I found two things I really liked:</p>
-
-<ol>
-  <li><a href="http://christianspecht.de/2014/08/22/jekyll-lightbox2-image-gallery-another-approach/">A Lightbox2 carousel</a>. This is a JQuery script that has the image “pop out” to a layer
-above the original screen. All photos on the page can then be cycled through. I liked the code
-(and the <code class="language-plaintext highlighter-rouge">for</code> loop that allowed the photos to be accessed through a <code class="language-plaintext highlighter-rouge">.MD</code> file), but didn’t
-like that <a href="http://jekyll-gallery-example.christianspecht.de/gallery-text2/">all of the photos were only in one column</a>.</li>
-  <li><a href="http://alijafarian.com/demos/responsive-image-grids-using-css/">Responsive image grids</a>. I think this is super cool - but the original code has the 
-image files directly in the HTML, so that would need to be edited if I ever wanted to add photos.
-Also, since my space for photos is the right 65% of any screen, I removed the option for a 4
-column grid.</li>
-</ol>
-
-<p>Mashing the two together - a Lightbox <code class="language-plaintext highlighter-rouge">_include</code> function, a <code class="language-plaintext highlighter-rouge">for loop</code> in the HTML file and a new
-<code class="language-plaintext highlighter-rouge">photo.html</code> file in the <code class="language-plaintext highlighter-rouge">_layouts</code> folder sets up the site to its final state!</p>
+<p>At the same time, my goal in putting this together was to clarify my own thinking - and to present it in a way that can be challenged and deepened by others. I would be grateful to learn what may resonate (or differ) from your personal perspectives and work.</p>
 
 
       <hr />
@@ -255,17 +189,17 @@ column grid.</li>
   <h4>Share on</h4>
   <ul>
     <li>
-      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/howd-i-build-this/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+      <a href="https://twitter.com/intent/tweet?text=http://localhost:4000/digital-economy-review/" class="twitter" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
     </li>
     <li>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/howd-i-build-this/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:4000/digital-economy-review/" class="facebook" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
     </li>
     <li>
-      <a href="https://plus.google.com/share?url=http://localhost:4000/howd-i-build-this/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+      <a href="https://plus.google.com/share?url=http://localhost:4000/digital-economy-review/" class="google-plus" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
     </li>
   </ul>
 </div><!-- /.social-share -->
-        <p class="byline"><strong>How'd I build this thing?</strong> was published on <time datetime="2015-11-30T00:00:00-08:00">November 30, 2015</time>.</p>
+        <p class="byline"><strong>Digital Economy Review: Update.</strong> was published on <time datetime="2019-12-20T00:00:00-08:00">December 20, 2019</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   </article>
@@ -303,7 +237,7 @@ s.setAttribute('data-timestamp', +new Date());
     
       <li><a href="http://localhost:4000/digital-economy-superstar-firms/" title="Divergence, via 'superstar firms' and wage dispersion.">Divergence, via 'superstar firms' and wage dispersion.</a></li>
     
-      <li><a href="http://localhost:4000/digital-economy-review/" title="Digital Economy Review: Update.">Digital Economy Review: Update.</a></li>
+      <li><a href="http://localhost:4000/developing-agile-data-scientists/" title="Agile Data Science: Don't use the 'D' word.">Agile Data Science: Don't use the 'D' word.</a></li>
     
     </ul>
     <hr />

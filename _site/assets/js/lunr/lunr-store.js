@@ -197,7 +197,7 @@ var store = [{
         "url": "http://localhost:4000/digital-economy-part-1/",
         "teaser": null
       },{
-        "title": "Digital Economy Part II: Aging & Unproven Learning Models are Headwinds to Growth.",
+        "title": "Digital Economy Part II: Aging & unproven learning models are headwinds to growth.",
         "excerpt":"These articles are part of exploration that started in late 2015 and early 2016. It was a confusing time: autonomous vehicles and Boston Dynamics were frequently in the news and OpenAI was just formed to make sure that the “march towards AGI was safe.” UBI was actively being discussed by...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/digital-economy-part-2/",
@@ -249,6 +249,18 @@ var store = [{
         "excerpt":"Even if your company has full stack data scientists, data science is still ultimately a team sport. There are business stakeholders, product managers, designers, members of the infrastructure team - all of whom may have input, questions, and dependencies on the data scientist’s work. Each of these individual members likely...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/developing-agile-data-scientists/",
+        "teaser": null
+      },{
+        "title": "Digital Economy Review: Update.",
+        "excerpt":"When I wrote my first articles on the digital economy in 2016, many economists were writing about a “productivity puzzle.” Wage growth had been flat (in real terms) since 1970, productivity was at its lowest point since 1980, industry consolidation had been monotonically rising since 1990, and industry dynamism was...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/digital-economy-review/",
+        "teaser": null
+      },{
+        "title": "Divergence, via 'superstar firms' and wage dispersion.",
+        "excerpt":"When I wrote my first articles on the digital economy in 2016, many economists were writing about a “productivity puzzle.” This article explores the role of ICT in those changes. The introduction can be found here. Additional articles on the relationship between job skills &amp; automation (on demand, retraining, and...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/digital-economy-superstar-firms/",
         "teaser": null
       },{
         "title": "Moving hosting from AWS to Github.",

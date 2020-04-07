@@ -31,7 +31,7 @@ When considering “done”, a large risk present in a “good enough analysis�
 
 ##### *Tips for cleanliness in development:*
 
-* *Use [code spikes][3]:* Code spikes are a term from XP Programming that refer to code used to understand a problem rather than develop working code. For data science, I treat EDA as the same - and keep it out of /src within the codebase. 
+* *Use code spikes:* [Code spikes][3] are a term from XP Programming that refer to code used to understand a problem rather than develop working code. For data science, I treat EDA as the same - and keep it out of /src within the codebase. 
 * *Enforce a good PR process:* Google has a [wonderful guide for code reviewers][4]. Key quote for me is, “Don’t accept PRs that degrade the code health of the system. Most systems become complex through many small changes that add up, so it’s important to prevent even small complexities in new changes.”
 * *Refactor and redesign as necessary:* Clean code really pays off, and one should restructure the codebase as the problem definition changes. Here, it’s helpful to think about Martin Fowler’s [YAGNI][5] and [Rule of Three][6].
 

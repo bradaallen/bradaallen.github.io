@@ -20,13 +20,13 @@ I didn’t see very much interesting on actual techniques ([besides a very inter
   
 ### Role of a Data Engineer
 
-[Do I need a data engineer?][2] Here is a second supporting article, [distinguishing between DE and an “Analytics Engineer.”][3] Suggests using stitch, fivetran, dbt as data engineering tools in lieu of Airflow. Natural migration (in startups at least) is to do PoCs, early builds on Airflow and then migrate to a more resilient tool like those listed. Super critical role (and primary responsibilities of our principal data engineers on a project), should be responsible for:
+[Do I need a data engineer?][2] Here is a second article, [distinguishing between DE and an “Analytics Engineer.”][3] Suggests using stitch, fivetran, dbt as data engineering tools in lieu of Airflow. Natural migration (in startups at least) is to do PoCs, early builds on Airflow and then migrate to a more resilient tool like those listed. Super critical role (and primary responsibilities of our principal data engineers on a project), should be responsible for:
 * Managing and optimizing core data infrastructure,
 * Building and maintaining custom ingestion pipelines,
 * Supporting data team resources with design and performance optimization (think 1 DE for 3 DS) and
 * Building non-SQL transformation pipelines (PySpark ETL (maybe), geo enrichment)
 
-I thought the idea of removing Airflow for SQL transformations was an interesting trend. I haven’t ever used the three “pipeline-as-a-service” products. For MDS, the above responsibilities were good to have for our primary data engineer (Cloves), with a separate, proper SW developer as the code master. I think I would almost always use someone from Toptal for this 2nd role.
+I thought the idea of removing Airflow for SQL transformations was an interesting trend. I haven’t ever used the three “pipeline-as-a-service” products. For my own projects, the above responsibilities were good to have for our primary data engineer, with a separate, proper SW developer as the code master. 
  
 ### More on role definition. [“The Kinds of a Data Scientist.”][4]
 * The VP, DS of Instacart [split the key types of work][5] into “Decision Science” vs. “Data Products” to identify skills required. I thought the Decision Science example was pretty interesting.
