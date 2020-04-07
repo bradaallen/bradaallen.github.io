@@ -274,4 +274,16 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/moving-to-github/",
         "teaser": null
+      },{
+        "title": "Job Skills & Automation: The persistent 'skills gap.'",
+        "excerpt":"Every few years, I review literature on productivity and automation. As a data scientist working in large enterprises, I have a front row seat to an emerging skillset that fits into our digital economy. As a former educator, I have a specific bias towards skill and capability development. These reviews...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/skills-and-automation-skills-gap/",
+        "teaser": null
+      },{
+        "title": "Job Skills & Automation: Partnerships & Policy Efforts",
+        "excerpt":"Every few years, I review literature on productivity and automation. As a data scientist working in large enterprises, I have a front row seat to an emerging skillset that fits into our digital economy. As a former educator, I have a specific bias towards skill and capability development. These reviews...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/skills-and-automation-partnership-policy/",
+        "teaser": null
       }]
