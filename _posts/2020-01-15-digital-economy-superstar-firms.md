@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Divergence, via 'superstar firms' and wage dispersion."
+title: "A Diverging Economy: 'Superstar firms' and wage dispersion."
 modified:
 excerpt: "A potential impact of unequal adoption of ICT."
 comments: true

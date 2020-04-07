@@ -251,16 +251,22 @@ var store = [{
         "url": "http://localhost:4000/developing-agile-data-scientists/",
         "teaser": null
       },{
-        "title": "Digital Economy Review: Update.",
+        "title": "The Digital Economy: Update.",
         "excerpt":"When I wrote my first articles on the digital economy in 2016, many economists were writing about a “productivity puzzle.” Wage growth had been flat (in real terms) since 1970, productivity was at its lowest point since 1980, industry consolidation had been monotonically rising since 1990, and industry dynamism was...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/digital-economy-review/",
         "teaser": null
       },{
-        "title": "Divergence, via 'superstar firms' and wage dispersion.",
+        "title": "A Diverging Economy: 'Superstar firms' and wage dispersion.",
         "excerpt":"When I wrote my first articles on the digital economy in 2016, many economists were writing about a “productivity puzzle.” This article explores the role of ICT in those changes. The introduction can be found here. Additional articles on the relationship between job skills &amp; automation (on demand, retraining, and...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/digital-economy-superstar-firms/",
+        "teaser": null
+      },{
+        "title": "Job Skills & Automation: The importance of demand.",
+        "excerpt":"Every few years, I review literature on productivity and automation. As a data scientist working in large enterprises, I have a front row seat to an emerging skillset that fits into our digital economy. As a former educator, I have a specific bias towards skill and capability development. These reviews...","categories": [],
+        "tags": [],
+        "url": "http://localhost:4000/skills-and-automation-demand/",
         "teaser": null
       },{
         "title": "Moving hosting from AWS to Github.",

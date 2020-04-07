@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Digital Economy Review: Update."
+title: "The Digital Economy: Update."
 modified:
 excerpt: "Exploring the last several years of research on productivity."
 comments: true
