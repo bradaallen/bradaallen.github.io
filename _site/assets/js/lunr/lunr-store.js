@@ -269,8 +269,8 @@ var store = [{
         "url": "http://localhost:4000/skills-and-automation-demand/",
         "teaser": null
       },{
-        "title": "Moving hosting from AWS to Github.",
-        "excerpt":"This article was written in 2017 during my time at SVDS. The article was first published on the SVDS Blog. In the introductory post, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we...","categories": [],
+        "title": "Setting up a Jekyll gh-pages site on Github.",
+        "excerpt":"When I first set up this blog, I knew I wanted to use a Jekyll layout - they’re nice, responsive, and work well across devices and browsers. They also have nice coupling with Github, which should make serving easy and free. The problem was that getting Ruby and Windows to...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/moving-to-github/",
         "teaser": null

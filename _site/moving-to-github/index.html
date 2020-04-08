@@ -5,14 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Moving hosting from AWS to Github. &#8211; Perpetually Learning</title>
-<meta name="description" content="Quick notes on setting up a gh-pages blog using Windows 10.">
+<title>Setting up a Jekyll gh-pages site on Github. &#8211; Perpetually Learning</title>
+<meta name="description" content="Quick notes for easy setup if you have Windows 10.">
 <meta name="keywords" content="">
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="Moving hosting from AWS to Github.">
-<meta name="twitter:description" content="Quick notes on setting up a gh-pages blog using Windows 10.">
+<meta name="twitter:title" content="Setting up a Jekyll gh-pages site on Github.">
+<meta name="twitter:description" content="Quick notes for easy setup if you have Windows 10.">
 <meta name="twitter:site" content="@bradaallen">
 <meta name="twitter:creator" content="@bradaallen">
 
@@ -22,8 +22,8 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Moving hosting from AWS to Github.">
-<meta property="og:description" content="Quick notes on setting up a gh-pages blog using Windows 10.">
+<meta property="og:title" content="Setting up a Jekyll gh-pages site on Github.">
+<meta property="og:description" content="Quick notes for easy setup if you have Windows 10.">
 <meta property="og:url" content="http://localhost:4000/moving-to-github/">
 <meta property="og:site_name" content="Perpetually Learning">
 
@@ -163,28 +163,34 @@
   <article class="post">
     <div class="headline-wrap">
       
-        <h1><a href="http://localhost:4000/moving-to-github/" rel="bookmark" title="Moving hosting from AWS to Github.">Moving hosting from AWS to Github.</a></h1>
+        <h1><a href="http://localhost:4000/moving-to-github/" rel="bookmark" title="Setting up a Jekyll gh-pages site on Github.">Setting up a Jekyll gh-pages site on Github.</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p><em>This article was written in 2017 during my time at SVDS. The article was first published on the <a href="https://www.svds.com/customer-journey-set-success/">SVDS Blog</a>.</em></p>
+      <p>When I first set up this blog, I knew I wanted to use a Jekyll layout - they’re nice, responsive, and work well across devices and browsers. They also have nice coupling with Github, which should make serving easy and free. The problem was that getting Ruby and Windows to work well together weren’t obvious (not much experience), and WSL had its own issues at the time - although promising. So, I set up the site to serve from AWS via S3 and wrote about that process <a href="https://www.svds.com/customer-journey-set-success/">here</a>.</p>
 
-<p><em>In the <a href="https://bradaallen.github.io/customer-journey-success-part-1/">introductory post</a>, we walked through some examples of how SVDS has seen data capabilities determine the success of customer journey initiatives for our clients. In this post, we offer guidance on the data-related initiatives that you can start today to begin fostering closer ties with your customers—regardless of where you currently are in your specific state of development.</em></p>
+<p> <Enter></Enter></p>
 
-<p>GH Pages:1. Use WSL, don’t mess with the devkits: https://kiazhi.github.io/blog/Working-with-Jekyll-and-Ruby-on-Windows-for-GitHub-Pages/#getting-started-with-jekyll-on-windows-10-using-windows-subsystem-for-linux</p>
+<p>Good news - all of these challenges have now come a long way, and setting up everything locally and having GH do the work for you is super easy! So, I’ve moved from AWS back to Github. I also find that I am actually writing more now - calling <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code> from the Ubuntu terminal is no sweat, and after a commit, the work is out there in less than 1m. There are a few minor things that tripped me up - documenting here to make easier for others.</p>
+
+<h3 id="steps-to-getting-your-blog-up-on-gh-via-windows-10">Steps to getting your blog up on GH via Windows 10</h3>
+
 <ol>
-  <li>Use rbenv, don’t mess with bare installations: https://brainwipe.github.io/jekyll/hyde/ubuntu/2017/05/16/pulling-jekyll-teeth/</li>
-  <li>Make sure you are using the gh-pages dependencies for Ruby and Jekyll: https://pages.github.com/versions/* if you had other versions pre-installed, make sure you are loading from rbenv (eg, the shims in ruby and jekyll)</li>
-  <li>Pick your theme; I like minimal mistakes: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/</li>
-  <li>Follow this site for then creating your GH repo, testing locally, etc: https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll</li>
-  <li>Set up a custom domain, if desired: https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site
-Don’t forget the ~/.bashrc and . in jekyll new! rbenv init -, etc.
-https://bryancshepherd.com/data-science/setting-bluehost-dns-github-jekyll-blog/  </li>
+  <li><strong>Use WSL and the Ubuntu terminal!</strong> The Ruby devkits for Windows were known to be challenging - it required a <strong>very</strong> strong desire to make it work. I would <a href="https://kiazhi.github.io/blog/Working-with-Jekyll-and-Ruby-on-Windows-for-GitHub-Pages/#getting-started-with-jekyll-on-windows-10-using-windows-subsystem-for-linux">follow these directions</a> for getting WSL and bash set up on your terminal - but stop before it recommends downloading Ruby!!</li>
+  <li><strong>Don’t mess with bare installations, use rbenv.</strong> This was <a href="https://brainwipe.github.io/jekyll/hyde/ubuntu/2017/05/16/pulling-jekyll-teeth/">a good article</a> documenting <code class="language-plaintext highlighter-rouge">PATH</code> challenges when not using rbenv, as well as scripts for getting everything up and running.
+    <ul>
+      <li><strong>When installing Ruby and Jekyll, make sure to use the gh-pages specified dependencies</strong>: Link is <a href="https://pages.github.com/versions/">here</a>. If you had other versions pre-installed, make sure you are loading from rbenv (eg, the shims in ruby and jekyll)</li>
+    </ul>
+  </li>
+  <li><strong>Create and initialize your GH repo.</strong> Github has good instructions for this <a href="https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site-with-jekyll">here</a>. I made sure to have the bundler installed. </li>
+  <li><strong>Pick your theme.</strong> Github has a list of <a href="https://pages.github.com/themes/">supported themes</a> - these work out of the box, and are specified in your config file. Github also <a href="https://talk.jekyllrb.com/t/remote-themes-on-github-pages/1214">supports remote themes now</a>. This requires a little bit of extra work, but expands the number of layouts you can use. I like and use <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/">minimal mistakes</a>. </li>
+  <li><strong>Set up a custom domain, if desired.</strong> <a href="https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">Github has a good walkthrough</a>, and many folks on the internet have worked through this themselves. Depending on where you buy your domain, each company has slightly different ways for managing the CNAME, A records, etc. I originally had been using bluehost and <a href="https://bryancshepherd.com/data-science/setting-bluehost-dns-github-jekyll-blog/">found this guidance helpful</a>.   </li>
+  <li><strong>Write your first post!</strong> Your post will be in the <code class="language-plaintext highlighter-rouge">_posts</code> folder for the repo (which is created when you instantiate with <code class="language-plaintext highlighter-rouge">jekyll new</code>). The filename will be the date of the posting + the URL path for the post. For example <code class="language-plaintext highlighter-rouge">2018-05-02-setting-up-blog.md</code> will render as posted on May 2nd at your site: <code class="language-plaintext highlighter-rouge">xxx.github.io/setting-up-blog</code>.</li>
 </ol>
 
-<p>https://help.github.com/en/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site 
-https://help.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site
-https://medium.com/@kimcodes/setting-up-a-web-page-with-github-pages-f77d45573ab2</p>
+<p> <Enter></Enter></p>
+
+<p>I hope this is helpful. If you have any questions, thoughts, or comments - please let me know!</p>
 
 
       <hr />
@@ -203,7 +209,7 @@ https://medium.com/@kimcodes/setting-up-a-web-page-with-github-pages-f77d45573ab
     </li>
   </ul>
 </div><!-- /.social-share -->
-        <p class="byline"><strong>Moving hosting from AWS to Github.</strong> was published on <time datetime="2020-02-14T00:00:00-08:00">February 14, 2020</time>.</p>
+        <p class="byline"><strong>Setting up a Jekyll gh-pages site on Github.</strong> was published on <time datetime="2020-02-14T00:00:00-08:00">February 14, 2020</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
   </article>

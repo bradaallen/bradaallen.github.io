@@ -13,17 +13,19 @@ I'm a Pennsylvanian dropped in San Francisco. I moved to the West Coast a few ye
 
 &nbsp;<Enter> 
 
-I'm fascinated by the changing role of information in products and society, and get to explore this transformation daily with BCG Gamma, [BCG's Advanced Analytics and Data Science][1] team. My hope is to use this site for practice and to share some things I've learned (thus, "Perpetually Learning").
+I believe machine learning has the potential to change the way we do business, and am fortunate get to explore this transformation daily with BCG Gamma, [BCG's Advanced Analytics and Data Science][1] team. 
 
 &nbsp;<Enter>
 
-I'm passionate about the development and scaling of technologies that provide broad social benefit - including prior work at [Peloton Technology][2] (automating freight transportation), [Aclima][3] (air quality sensing), and [Embrace][4] (developing world healthcare). 
+Making effective use of ML is a hard challenge - it's new technology, new techniques, and asks us to change our habits and interactions. **My hope is to use this site in three ways:**
+* To **share what I've learned in leading ML projects** (in the event it might be useful for others)
+* To **work through ideas around effective reskilling** and growing ML capabilities in organizations (particularly via government and public-private initiatives)
+* To **document my own ongoing practice** and learning - there is always more to know. :)
+
+Because of this, "Perpetually Learning" seemed like the right name for the blog.
 
 &nbsp;<Enter>
 
-In prior lives, I was a Bain consultant and Teach For America corps member. I love soccer, education (and educational equity), ramen, whiskey, the Rockies, The Last Waltz, and whiskey. Please feel free to reach out at any time!
+Outside of work, a few things that are important to me: supporting my friends and family, education (and educational equity), live concerts (or watching - The Last Waltz!), soccer, whiskey, and the Rockies. Please feel free to reach out at any time. I would love to hear from you.
 
-[1]: http://www.svds.com/
-[2]: http://www.peloton-tech.com/
-[3]: http://aclima.io/
-[4]: http://www.embraceinnovations.com/
+[1]: https://www.bcg.com/beyond-consulting/bcg-gamma/default.aspx

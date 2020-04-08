@@ -18,7 +18,10 @@ This diversity in perspective can be an asset, when harnessed effectively. Howev
 
 Depending on where the project is in development - any of these answers could be sufficient. The challenge is when differences exist between how the two parties interpret the message. 
 
-##### **Insert image here**
+<figure>
+	<img src="/images/defining_done.PNG">
+	<figcaption>Some quick heuristics for language vs. development robustness.</figcaption>
+</figure>
 
 ### Best practices on removing the word “done” from your projects
 
